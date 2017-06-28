@@ -1,1 +1,2 @@
-# esri-hub
+## esri-hub
+The Esri-Hub vocabulary models Content (Items) and Community (Users, Groups) in the ArcGIS REST API documentation. The goal of the vocabulary is to formalize mappings between existing ArcGIS Online Entities (Users, Groups, and Items: Applications, Datafiles, Layers, Maps, and Tools) and their Qualities (Tags: Theme, Locality, Temporality). Both Community and Content resources can be tagged with instances of the Tags class. The Theme tags are mapped across existing schema including INSPIRE, FGDC, and ISO19115 standards.

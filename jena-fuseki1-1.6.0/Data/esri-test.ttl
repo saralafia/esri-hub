@@ -1,0 +1,66 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hub: <http://www.esri-hub.com/vocab/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://hub.arcgis.com/datasets/DCGIS::address-points>
+hub:Item [ dc:title "Address Points" ;
+hub:hasAudience hub:Civic ;
+hub:hasCategory hub:Addresses_INSPIRE ;
+hub:hasIndicator hub:PovertyIndex ;
+hub:hasItemIdentifier "DCGIS::address-points" ;
+hub:hasItemName "Address Points" ;
+hub:hasItemDescription "Address points in the District of Columbia which are typically placed on the buildings." ;
+hub:hasLocality hub:City ;
+hub:hasTemporality hub:Annually ;
+hub:hasTheme hub:Livable_Hub ;
+hub:hasTopic hub:Housing ;
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Location_WebMercator/MapServer/0> ] .
+
+<https://hub.arcgis.com/datasets/DCGIS::public-schools>
+hub:Item [ dc:title "Public Schools" ;
+hub:hasAudience hub:Education ;
+hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasIndicator hub:SchoolAttendance ;
+hub:hasItemIdentifier "DCGIS::public-schools" ;
+hub:hasItemName "Public Schools" ;
+hub:hasItemDescription "School Ground locations." ;
+hub:hasLocality hub:City ;
+hub:hasTemporality hub:Annually ;
+hub:hasTheme hub:Wellrun_Hub ;
+hub:hasTopic hub:Schools ;
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/5> ] .
+
+<https://hub.arcgis.com/datasets/DCGIS::street-centerlines>
+hub:Item [ dc:title "Street Centerlines" ;
+hub:hasAudience hub:Mobility ;
+hub:hasCategory hub:Transportation_ISO ;
+hub:hasIndicator hub:TrafficAccidents ;
+hub:hasItemIdentifier "DCGIS::street-centerlines" ;
+hub:hasItemName "Street Centerlines" ;
+hub:hasItemDescription "A single line, segmented at all intersections representing each street in the District. " ;
+hub:hasLocality hub:City ;
+hub:hasTemporality hub:Annually ;
+hub:hasTheme hub:Safe_Hub ;
+hub:hasTopic hub:Streets ;
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> ] .
+
+<https://ucsb.maps.arcgis.com/home/group.html?id=72c19e0ed89641ac83045a4597a6c9dc#overview>
+hub:Group [ dc:title "DCGIS Open Data: Location" ;
+hub:hasAudience hub:Streets ;
+hub:hasDepartment hub:Streets ;
+hub:hasGroupIdentifier hub:Streets ;
+hub:hasGroupName hub:Streets ;
+hub:hasGroupType hub:Streets ;
+hub:hasIndustry hub:Streets ;
+hub:hasInitative hub:Streets ;
+hub:hasItem hub:Streets ;
+hub:hasMember hub:Streets ] .
+
+<https://ucsb.maps.arcgis.com/home/group.html?id=62be2f179f674941b393f1c9bc8ca73e#overview>
+hub:Group [ dc:title "DCGIS Open Data: Education" ] .
+
+<https://ucsb.maps.arcgis.com/home/group.html?id=6664e0b92948483ab633b3080d466122#overview>
+hub:Group [ dc:title "DCGIS Open Data: Transportation" ] .
+
+<https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata>
+hub:User [ dc:title "DCGISopendata" ] .

@@ -1,0 +1,4435 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.esri-hub.com/vocab/"
+     xml:base="http://www.esri-hub.com/vocab/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.esri-hub.com/vocab/">
+        <owl:versionIRI rdf:resource="http://www.esri-hub.com/vocab/1.0/hub"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/ArcGIS/Hub/blob/master/categories.md</rdfs:isDefinedBy>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">andrew_turner</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sara_lafia</dc:creator>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esri Hub Ontology</terms:title>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-23T00:00:00</terms:date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hub intends to categorize information that is foremost understandable by the broad community who are not familiar with the organizational or hierarchical details of their government or industry standards. Additionally, content has many aspects beyond mere categorization depending on the user audience, intended use, intended place of use, background knowledge required, etc. However, all colloquial categorizations should still be organizable within stricter organizational norms.
+
+This document suggests a framework for Content and Aspects which can be organized through structured tags. A structured tag is &lt;aspect&gt;:&lt;value&gt;. By example, theme:prosperous and audience:teachers. Structured tags support better metadata and allow the same value to apply to different aspects. This is an initial proposal for a subset of eventual Themes and Categories. The intent is to start with a manageable, but extensible, corpus that fits the initial needs for Hub initiatives and tools. Themes are based on Smart Communities and categories from original Living Atlas work by Allen Carroll.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esri-Hub Ontology</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology drafted for the Esri Hub Intiative (Hub, https://github.com/ArcGIS/Hub).  The ontology is available at: http://www.esri-hub.com/vocab/1.0/hub.owl. The ontology uses the namespace prefix hub.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/relation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAudience -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasAudience">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isAudienceOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Indicator"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Item"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Tool"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Topic"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasCategory">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isCategoryOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasDepartment">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isDepartmentOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasGroup">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isGroupOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasIdentifier">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isIdentifierOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Item"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasIdentifierScheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasIdentifierScheme">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isIdentifierSchemeOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Identifier"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/IdentifierScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasIndicator">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isIndicatorOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Indicator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasIndustry -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasIndustry">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isIndustryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Industry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasInitiative -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasInitiative">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isInitiativeOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Initiatives"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasInterest">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isInterestOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasItem">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isItemOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Group"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasKnowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasKnowledge">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isKnowledgeOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/User"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Knowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasLocality -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasLocality">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isLocalityOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasMember">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Group"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasRole">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isRoleOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/User"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasSkill">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isSkillOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/User"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasTemporality -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasTemporality">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isTemporalityOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasTheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasTheme">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Indicator"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Initiatives"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Item"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasTopic">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isTopicOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Indicator"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Initiatives"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Item"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasUser">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isUserOf"/>
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasUtility -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/hasUtility">
+        <owl:inverseOf rdf:resource="http://www.esri-hub.com/vocab/isUtilityOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Indicator"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Initiatives"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Item"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Tool"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isAudienceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isAudienceOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isCategoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isCategoryOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isDepartmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isDepartmentOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isGroupOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isGroupOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isIdentifierOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isIdentifierOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isIdentifierSchemeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isIdentifierSchemeOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isIndicatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isIndicatorOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isIndustryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isIndustryOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isInitiativeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isInitiativeOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isInterestOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isInterestOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isItemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isItemOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isKnowledgeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isKnowledgeOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isLocalityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isLocalityOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isMemberOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isRoleOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isSkillOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isSkillOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isTemporalityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isTemporalityOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isTopicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isTopicOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isUserOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isUserOf"/>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/isUtilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.esri-hub.com/vocab/isUtilityOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressClass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressClass">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general classification of how the structure or location represented by the site address point is used - FacilitySite Subtype Classification</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainSiteAddressClass</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressNumberPrefix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressNumberPrefix">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The address number prefix</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressNumberSuffix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressNumberSuffix">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The address number suffix</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressPointID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressPointID">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unique address point identifier - Foreign Key</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressRange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressRange">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address range when a point describes a set of addresses</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressUnitNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressUnitNumber">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The address unit designation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAddressUnitType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAddressUnitType">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The address unit type</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainAddressUnitType</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAlternateAddressUnitNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAlternateAddressUnitNumber">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alternate or secondary address unit designation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasAlternateAddressUnitType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasAlternateAddressUnitType">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alternate or secondary address unit type</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasCaptureMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasCaptureMethod">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/SchoolSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capture method for address point</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainPointCollectionMethod</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasDescription">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of the facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasEmergencyServiceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasEmergencyServiceNumber">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Emergency Service Number the site address resides in</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFacilityArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFacilityArea">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area of the facility computed from the facility site area</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFacilityIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFacilityIdentifier">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locally assigned Facility Identifier</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFacilityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFacilityName">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFeatureCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFeatureCode">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The facility site feature code</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFullAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFullAddress">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/SchoolSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address information combined into one text field. In your community, this may include the following fields: PREADDRNUM, ADDRNUM, ADDRNUMSUF, FULLNAME, UNITTYPE, UNITID, ALTUNITTYPE, and ALTUNITID.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFullAddressNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFullAddressNumber">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The full address number</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasFullName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/RoadSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The full name of the road including any prefix and/or suffix</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasLastEditor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasLastEditor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/RoadSchema"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/SchoolSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user who performed the last update</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasLastUpdate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasLastUpdate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/RoadSchema"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/SchoolSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date the feature was last updated in the maintenance database</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasLocationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasLocationType">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location represented by the point</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasMSAGCommunity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasMSAGCommunity">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The valid service community name identified by the MSAG</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasMunicipalityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasMunicipalityName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Address"/>
+                    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/SchoolSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the physical municipality the site address resides in</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasNumberOfStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasNumberOfStudents">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NUMSTUDENT</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasOwnerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasOwnerName">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owner or managing agency for facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasOwnerType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasOwnerType">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A classification of the owner</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasPlaceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasPlaceName">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A common name or vanity address for the site or service delivery address</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasPointType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasPointType">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general description of the physical location represented by the site address point</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainSiteAddressLocation</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasPublicSafetyAnsweringPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasPublicSafetyAnsweringPoint">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Public Safety Answering Point the site address resides in</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasRecordLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasRecordLength">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/RoadSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The record length of the roadway segment</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasSegmentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasSegmentID">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/RoadSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The segment identification number</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasSiteAddressID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasSiteAddressID">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locally assigned site address point identifier</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasStateName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasStateName">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/SchoolSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The state abbreviation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasStatus">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The status of the site address</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/hasUSNGCoordinateValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esri-hub.com/vocab/hasUSNGCoordinateValue">
+        <rdfs:domain rdf:resource="http://www.esri-hub.com/vocab/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The USNG coordinate value</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Address -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Address">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Feature_Service"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site address points represent the location of site or service delivery addresses assigned by local governments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#SiteAddressPoint</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addresses</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site Address Point</skos:related>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://schema.org/address</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Addresses_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Addresses_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Administration_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Administration_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Wellrun_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Administration_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Administration_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Administrative_Boundaries_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Administrative_Boundaries_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Administrative_units_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Administrative_units_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Administrator -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Administrator">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administrators can add users to their organizations and have access to all content within the organization.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administrator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Aerial_Imagery_and_LiDAR_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Aerial_Imagery_and_LiDAR_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Affordable_and_Clean_Energy_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Affordable_and_Clean_Energy_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Agricultural_and_aquaculture_facilities_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Agricultural_and_aquaculture_facilities_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Agriculture_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Agriculture_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Farming_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Industry_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Prosperous_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Agriculture_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Agriculture_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Air_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Air_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Environment_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Airway_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Airway_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Analyst -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Analyst">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Analyze -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Analyze">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/App_Builder_Extension -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/App_Builder_Extension">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Application -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Application">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web and mobile applications whose content is provided by web maps</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Area_management_restriction_regulation_zones_and_reporting_units_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Area_management_restriction_regulation_zones_and_reporting_units_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Arts_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Arts_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Atmospheric_conditions_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Atmospheric_conditions_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Audience -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Audience">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Who will use the content</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Automobile_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Automobile_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Bathymetry_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Bathymetry_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Water_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Biogeographical_regions_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Biogeographical_regions_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Biota_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Biota_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Biota_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Biota_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Ecology_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Block -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Block">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Border_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Border_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Security_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Boundaries_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Boundaries_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Build -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Build">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Buildings_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Buildings_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Infrastructure_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Buildings_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Buildings_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Bus_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Bus_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Business -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Business">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enterprise</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Business_Economic_Development_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Business_Economic_Development_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Business_Industry_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Business_Industry_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CAD_Drawing -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/CAD_Drawing">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CSV -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/CSV">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cadastral_parcels_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cadastral_parcels_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cadastre_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cadastre_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Cadastre_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Administration_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cadastre_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cadastre_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Care_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Care_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Healthy_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Care_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Care_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Category -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Category">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How information are organized</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Category</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Child -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Child">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Citizen -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Citizen">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/City -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/City">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Regional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CityEngine_Web_Scene -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/CityEngine_Web_Scene">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Map"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Civic -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Civic">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Civic_Advocate -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Civic_Advocate">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Civic_Leader -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Civic_Leader">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Clean_Water_and_Sanitation_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Clean_Water_and_Sanitation_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ClimateWeather_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/ClimateWeather_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Climate_Hub"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Climate_Action_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Climate_Action_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Climate_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Climate_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Sustainable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Code_Attachment -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Code_Attachment">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Collaborator -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Collaborator">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Color_Set -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Color_Set">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Commercial_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Commercial_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Communications_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Communications_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Wellrun_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Coordinate_reference_systems_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Coordinate_reference_systems_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/County -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/County">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Regional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Create -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Create">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Crime_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Crime_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Justice_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CulturalResources_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/CulturalResources_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cultural_Society_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cultural_Society_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Culture_History_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Culture_History_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Culture_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Culture_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Livable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cyber_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cyber_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Security_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cycle_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cycle_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Cyclist -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Cyclist">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Mobility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Daily -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Daily">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Dashboard -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Dashboard">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Datafile -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Datafile">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Files that can be uploaded, stored, and downloaded and in certain cases, activated to create services (map layers)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataFile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Decent_Work_and_Economic_Growth_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Decent_Work_and_Economic_Growth_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Demographics_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Demographics_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Demographics_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Demographics_LivingAtlas">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Demography_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Demography_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Demography_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Prosperous_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Department -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Department">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unit to which a user or a group belongs</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Developer -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Developer">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Disaster_Hazards_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Disaster_Hazards_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/DisastersHazards_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/DisastersHazards_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Safe_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Disease_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Disease_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Healthy_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Document_Link -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Document_Link">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Driver -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Driver">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Mobility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Ecology_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Ecology_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Sustainable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Ecology_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Ecology_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Economy_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Economy_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Economy_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Prosperous_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Economy_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Economy_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Education -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Education">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Specialty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Education_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Education_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Education_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Education_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Prosperous_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Education_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Education_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Education_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Education_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Elevation_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Elevation_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Elevation_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Elevation_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Elevation_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Elevation_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Elevation_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Elevation_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Elevation_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Elevation_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Emergency_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Emergency_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Care_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Emergency_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Emergency_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Energy_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Energy_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Sustainable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Energy_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Energy_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Energy_Resources_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Energy_Resources_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Environment_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Environment_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Environment_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Environment_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Environment_ISO"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Environment_LivingAtlas"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Sustainable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Environment_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Environment_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Environment_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Environment_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Environmental_monitoring_Facilities_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Environmental_monitoring_Facilities_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Evening -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Evening">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Events -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Events">
+        <rdfs:comment>Something that happens at a given place and time</rdfs:comment>
+        <rdfs:label>Events</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Facility_and_Structure_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Facility_and_Structure_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Farming_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Farming_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Fauna_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Fauna_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Ecology_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Feature_Collection -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Feature_Collection">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Feature_Collection_Template -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Feature_Collection_Template">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Feature_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Feature_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ArcGIS Server Feature Service; The URL to the service is stored in the url property of the item. Optional JSON data contains overridden service properties.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feature Service</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data, Service, Feature Service, ArcGIS Server, Feature Access</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/File_Geodatabase -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/File_Geodatabase">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Finances_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Finances_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Wellrun_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Financials_Procurement_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Financials_Procurement_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Fishery_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Fishery_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Water_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Flora_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Flora_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Ecology_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Food_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Food_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Healthy_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Food_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Food_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Forest_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Forest_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Form -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Form">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Gender_Equality_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Gender_Equality_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geocoding_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geocoding_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ArcGIS Server Geocoding Service; The URL to the service is stored in the url property of the item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geocoding Service</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tool, Service, Geocoding Service, Locator Service, ArcGIS Server, Locator</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geodata_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geodata_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/GeodeticControl_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/GeodeticControl_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Geodetic_Control_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geodetic_Control_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geodetic_Control_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Planning_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geographical_grid_systems_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geographical_grid_systems_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geographical_names_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geographical_names_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geology_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geology_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Geology_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geology_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geology_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geology_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geology_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geometry_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geometry_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Geoprocessing_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Geoprocessing_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/GeoscientificInformation_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/GeoscientificInformation_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Globe_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Globe_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Good_Health_and_Wellbeing_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Good_Health_and_Wellbeing_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Goods_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Goods_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Government -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Government">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Government_Units_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Government_Units_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Administration_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Group -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Group">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Group resource represents a group (for example, San Bernardino Fires) within the portal. The owner is automatically an administrator and is returned in the list of admins. Administrators can invite, add to, or remove members from a group as well as update or delete the group. The administrator for an organization can also reassign the group to another member of the organization. Group members can leave the group. Authenticated users can apply to join a group unless the group is by invitation only. The visibility of the group by other users is determined by the access property. If the group is private, no one other than the administrators and members of the group will be able to see it. If the group is shared with an organization, all members of the organization will be able to find it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Group/02r30000006m000000/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Habitats_and_biotopes_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Habitats_and_biotopes_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Health_Human_Services_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Health_Human_Services_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Health_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Health_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Healthy_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Health_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Health_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Healthy_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Healthy_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/History_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/History_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Housing_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Housing_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Livable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Housing_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Housing_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hub_Initiative -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Hub_Initiative">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hub_Page -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Hub_Page">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hub_Site_Application -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Hub_Site_Application">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Human_health_and_safety_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Human_health_and_safety_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hurricane_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Hurricane_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/DisastersHazards_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hydrography_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Hydrography_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INSPIRE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ISO19115 -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/ISO19115">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO19115</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Identifier -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Identifier">
+        <rdfs:comment>Capturing various forms of identifiers, e.g., DOIs, ARKs, local strings, UUID strings, etc. Can be any URI that is understood as identifier of an entity, or a blank node, in which case, hasIdentifierScheme and hasIdentifierValue properties should be used to provide details.</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/IdentifierScheme -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/IdentifierScheme">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents URIs of identifier schemes, e.g., http://purl.org/spar/datacite/ark for ARK, or
+http://purl.org/spar/datacite/doi for DOI.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IdentifierScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Image -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Image">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Image_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Image_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Imagery_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Imagery_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Imagery_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Planning_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Imagery_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Imagery_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Impaired -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Impaired">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Mobility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Indicator -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Indicator">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A  value on a scale of measurement derived from a series of observed facts that can reveal relative changes as a function of time</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Industry -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Industry">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How departments are organized</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Industry_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Industry_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Prosperous_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Industry_Innovation_and_Infrastructure_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Industry_Innovation_and_Infrastructure_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Inform -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Inform">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Infrastructure_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Infrastructure_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Structure_ISO"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Sustainable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Initiatives -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Initiatives">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the first of a series of actions</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initiative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/InlandWaters_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/InlandWaters_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/WaterInland_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Inland_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Inland_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/WaterInland_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Water_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Insights_Model -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Insights_Model">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Insights_Page -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Insights_Page">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Insights_Workbook -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Insights_Workbook">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/IntelligenceMilitary_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/IntelligenceMilitary_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Security_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Interest -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Interest">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citizen-defined persona of their interests</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interest</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.esri-hub.com/vocab/Knowledge"/>
+        <rdfs:seeAlso rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Item -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Item">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portals allows users to store and share a variety of items. Each item has a type, such as Web Map or Feature Service, and a set of type keywords that provide additional information on the characteristics of the type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Items_and_item_types/02r3000000ms000000/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Justice_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Justice_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Safe_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/KML -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/KML">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/KML_Collection -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/KML_Collection">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Knowledge -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Knowledge">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skillfulness by virtue of possessing special knowledge</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knowledge</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Knowledge_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Knowledge_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Industry_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/LandUseLandCover_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/LandUseLandCover_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Land_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Land_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Environment_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Land_Use_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Land_Use_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Land_cover_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Land_cover_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Land_use_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Land_use_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Layer -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Layer">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feature, map and image services that can be added as layers in web maps</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Layer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Learn -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Learn">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Legal_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Legal_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Leisure_Tourism_Recreation_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Leisure_Tourism_Recreation_LivingAtlas">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Recreation_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Life_Below_Water_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Life_Below_Water_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Life_on_Land_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Life_on_Land_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Listen -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Listen">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Livable_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Livable_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/LivingAtlasEsri -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/LivingAtlasEsri">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">from Allen Carroll</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://livingatlas.arcgis.com</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Living Atlas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Local -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Local">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Locality -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Locality">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The local areas to which the tag applies</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Location_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Location_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Long -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Long">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Management -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Management">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Manmade_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Manmade_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/DisastersHazards_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Manufacturing_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Manufacturing_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Industry_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Map -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Map">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web maps that can be displayed on all supported platforms (web, mobile, and desktop)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Map_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Map_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Meteorological_geographical_features_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Meteorological_geographical_features_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Metro_Area -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Metro_Area">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Regional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Microsoft_Excel -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Microsoft_Excel">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Microsoft_Powerpoint -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Microsoft_Powerpoint">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Microsoft_Word -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Microsoft_Word">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Mineral_Resources_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Mineral_Resources_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Mobile_Application -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Mobile_Application">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Mobility -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Mobility">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Money_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Money_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Monthly -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Monthly">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Monument -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Monument">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Morning -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Morning">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Music_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Music_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FGDC Topics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Native_Application -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Native_Application">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Native_Application_Installer -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Native_Application_Installer">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Native_Application_Template -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Native_Application_Template">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Natural_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Natural_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/DisastersHazards_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Natural_Resources_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Natural_Resources_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Natural_risk_zones_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Natural_risk_zones_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Neighborhood -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Neighborhood">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Network_Analysis_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Network_Analysis_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/No_Poverty_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/No_Poverty_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Ocean_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Ocean_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Oceans_ISO"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Water_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Oceanographic_geographical_features_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Oceanographic_geographical_features_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Oceans_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Oceans_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/OpenDataDC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/OpenDataDC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.dc.gov/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Data D.C.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/OpenEligibilityHumanServices -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Open Eligibility Project is a collaborative for a better human service taxonomy. The taxonomy is a simple way to categorize human services and human situations. With these common categories, we, as service providers, navigators, and people in need, can find human services quickly and easily.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/auntbertha/openeligibility</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Eligibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Operation_View -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Operation_View">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Operations_Dashboard_Add_In -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Operations_Dashboard_Add_In">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Operations_Dashboard_Extension -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Operations_Dashboard_Extension">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Orthoimagery_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Orthoimagery_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Owner -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Owner">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/PDF -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/PDF">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Parcel -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Parcel">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Parent -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Parent">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Park -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Park">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Participant -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Participant">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Partnerships_for_the_Goals_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Partnerships_for_the_Goals_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Peace_Justice_and_Strong_Institutions_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Peace_Justice_and_Strong_Institutions_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Pedestrian -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Pedestrian">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Mobility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Pedestrian_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Pedestrian_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Performance_Metrics_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Performance_Metrics_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Pharmaceutical_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Pharmaceutical_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Care_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Place -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Place">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Place</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://schema.org/Place</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Plain_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Plain_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/PlanningCadastre_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/PlanningCadastre_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Planning_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Planning_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Planning_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Wellrun_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Planning_Landuse_Zoning_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Planning_Landuse_Zoning_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Policy_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Policy_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Wellrun_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Population_distribution_and_demography_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Population_distribution_and_demography_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Pro_Map -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Pro_Map">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Map"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Production_and_industrial_facilities_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Production_and_industrial_facilities_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Property_Land_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Property_Land_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Prosperous_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Prosperous_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prosperous</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Protected_sites_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Protected_sites_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Public_Health_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Public_Health_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Public_Safety_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Public_Safety_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Public_Safety_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Public_Safety_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Public_Service_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Public_Service_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Publisher -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publishers within an organization can create services based on data files that they upload. These hosted services run on an elastic infrastructure that is part of arcgis.com.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publisher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Quality_Education_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Quality_Education_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Rail_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Rail_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Housing_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/RealProperty_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/RealProperty_NGDA">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Real_Property_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Real_Property_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Real_Property_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Administration_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Recreation_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Recreation_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Recreation_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Recreation_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Reduced_Inequalities_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Reduced_Inequalities_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Region -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Region">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Regional -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Regional">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Relational_Database_Connection -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Relational_Database_Connection">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Report -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Report">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Utility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Report_Template -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Report_Template">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Resident -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Resident">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Residential_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Residential_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Responsible_Consumption_and_Production_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Responsible_Consumption_and_Production_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/RoadSchema -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/RoadSchema">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Feature_Service"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The centerline representation of public roadways or streets. These are a subset of the road segments found in the RoadCenterline feature class and only those actively managed by a local government public works organization. The information typically is derived from a RoadCenterline layer maintained for address assignment and is a framework for the management of streets, roads and work activities associated with such.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#Street</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roads</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Streets</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Roads_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Roads_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Infrastructure_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Role -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Role">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User persona</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agent</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On September 25th 2015, countries adopted a set of goals to end poverty, protect the planet, and ensure prosperity for all as part of a new sustainable development agenda. Each goal has specific targets to be achieved over the next 15 years.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.un.org/sustainabledevelopment/sustainable-development-goals/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustainable Development Goals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Safe_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Safe_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Scene_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Scene_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/School -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/School">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/SchoolSchema -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/SchoolSchema">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Feature_Service"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The published representation of educational facilities (schools, colleges, etc.) managed in the facility site point feature class, combined with service information and organized for consumption in desktop and web applications.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#EducationFacility</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schools</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building, Critical Insfrastructure</skos:related>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://schema.org/School</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Sea_regions_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Sea_regions_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Security_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Security_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Safe_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Service_Definition -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Service_Definition">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Shapefile -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Shapefile">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shapefile (.zip), can be published as a feature service using the Portal API Publish call.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shapefile</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data, Shapefile</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Short -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Short">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Skill -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Skill">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ability that has been acquired by training</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skill</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Society_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Society_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Soil_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Soil_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Soils_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Soil_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Soil_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Soils_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Soils_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Specialty -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Specialty">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Species_distribution_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Species_distribution_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Sports_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Sports_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Culture_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Staff -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Staff">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Business"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Statistical_Data_Collection -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Statistical_Data_Collection">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Statistical_units_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Statistical_units_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Street -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Street">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Structure_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Structure_ISO">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Student -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Student">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Education"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Support -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Support">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Surveyor -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Surveyor">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Sustainable_Cities_and_Communities_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Sustainable_Cities_and_Communities_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Sustainable_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Sustainable_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustainable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Symbol_Set -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Symbol_Set">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Teacher -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Teacher">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Temporality -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Temporality">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Periodicity, length</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temporality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Terrain_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Terrain_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Land_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Theme -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Theme">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-level concepts (how people feel)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Tool -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Tool">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geocoding, routing, and other task-based services that can be used by applications</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Topic -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Topic">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specific subject matter</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Tourist -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Tourist">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transit -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transit">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Mobility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transit_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transit_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transport_networks_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transport_networks_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transportation_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transportation_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Transportation_ISO"/>
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Transportation_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Livable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transportation_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Transportation_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transportation_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Transportation_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/User -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/User">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user resource representing a registered user of the portal. Personal details of the user, such as e-mail and groups, are returned only to the user or the administrator of the user&apos;s organization (the properties in the Response Properties table below). A user is not visible to any other user (except the organization&apos;s administrator) if their access setting is set to &quot;private.&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000m2000000</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Utilities_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/ISO19115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Utilities_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Utilities_Hub">
+        <owl:equivalentClass rdf:resource="http://www.esri-hub.com/vocab/Utilities_NGDA"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Livable_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Utilities_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Utilities_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Utility -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Utility">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How content will be used</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Utility_Communication_DC -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Utility_Communication_DC">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenDataDC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Utility_and_governmental_services_INSPIRE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Utility_and_governmental_services_INSPIRE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/INSPIRE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Vector_Tile_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Vector_Tile_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Visio_Document -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Visio_Document">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Visitor -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Visitor">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Civic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/WFS -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/WFS">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/WMS -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/WMS">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/WMTS -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/WMTS">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/WaterInland_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/WaterInland_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/NGDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Water_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Water_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Environment_Hub"/>
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Healthy_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Water_Sanitation_LivingAtlas -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Water_Sanitation_LivingAtlas">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/LivingAtlasEsri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Weather_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Weather_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Air_Hub"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Web_Map -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Web_Map">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Map"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web map authored using the arcgis.com Javascript Web Map viewer. Usable by web, mobile, and desktop clients. Collector refers to a web map that is Collector ready and will be available in Collector. The Map contains at least one editable layer that supports versioning. Offline refers to the web map being capable of working offline. The map contains only layers that are offline capable.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Map</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Map, Explorer Web Map, Map, Online Map, ArcGIS Online, Collector, Offline</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Web_Mapping_Application -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Web_Mapping_Application">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A web mapping application built using: ArcGIS API for JavaScript, ArcGIS API for Flex, ArcGIS API for Silverlight, Java Web Application Developer Framework, .NET Web Application Developer Framework; Client must supply the appropriate technology and purpose keywords (Ready To Use, Configurable, Code Sample) when adding this item. The URL to the service is stored in the url property of the item.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Mapping Application</rdfs:label>
+        <skos:related rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Map, Map, Online Map, Mapping Site</skos:related>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Web_Scene -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Web_Scene">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Map"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Weekly -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Weekly">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Temporality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Wellrun_Hub -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Wellrun_Hub">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Well-run</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Work_OE -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Work_OE">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Workflow_Manager_Service -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Workflow_Manager_Service">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Workforce_Project -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Workforce_Project">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Zero_Hunger_SDG -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/Zero_Hunger_SDG">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/SDG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/iWork_Keynote -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/iWork_Keynote">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/iWork_Numbers -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/iWork_Numbers">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/iWork_Pages -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/iWork_Pages">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Datafile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/360_VR_Experience -->
+
+    <owl:Class rdf:about="http://www.esri-hub.com/vocab/360_VR_Experience">
+        <rdfs:subClassOf rdf:resource="http://www.esri-hub.com/vocab/Map"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/AccessToCleanDrinkingWater -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/AccessToCleanDrinkingWater">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Indicator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/AddressLayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/AddressLayer">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Feature_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Agriculture -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Agriculture">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/AppreciatesHistory -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/AppreciatesHistory">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/BikeAdvocacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/BikeAdvocacy">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/BikeLanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/BikeLanes">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/BuildingAssessments -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/BuildingAssessments">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CPR -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/CPR">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Collisions -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Collisions">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CommutesBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/CommutesBy">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/CouncilDistrict -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/CouncilDistrict">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Datathon -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Datathon">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Events"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/DeptOfTransportation -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/DeptOfTransportation">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Design">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Drugs -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Drugs">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/EndPoverty -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/EndPoverty">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Initiatives"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Enforcement -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Enforcement">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Feedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Feedback">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Events"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/French -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/French">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Hackathon -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Hackathon">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Events"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/HasTwoKids -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/HasTwoKids">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Healthy_Hub -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Healthy_Hub">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/HowToPlantATree -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/HowToPlantATree">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Indoors -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Indoors">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Events"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Javascript -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Javascript">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/LandManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/LandManagement">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Livable_Hub -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Livable_Hub">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/LivesInWardSix -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/LivesInWardSix">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Interest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/MoistureIndex -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/MoistureIndex">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/MoreAffordableHousing -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/MoreAffordableHousing">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Initiatives"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ORCID -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/ORCID">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/IdentifierScheme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Outdoors -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Outdoors">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Events"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Parks -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Parks">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/PovertyIndex -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/PovertyIndex">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Indicator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/PreventZika -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/PreventZika">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Initiatives"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/PublicWorks -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/PublicWorks">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/ReportBlightedProperties -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/ReportBlightedProperties">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Safe_Hub -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Safe_Hub">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/SafetyLensExplorer -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/SafetyLensExplorer">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Tool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/SignLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/SignLanguage">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/SixthWard -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/SixthWard">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Locality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Transportation -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Transportation">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Trees -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Trees">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/VisionZero -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/VisionZero">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Initiatives"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/VisionZeroCoreTeam -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/VisionZeroCoreTeam">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/VisionZeroStrategyDoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/VisionZeroStrategyDoc">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Item"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/Zoning -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/Zoning">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.esri-hub.com/vocab/genericDOI -->
+
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/vocab/genericDOI">
+        <rdf:type rdf:resource="http://www.esri-hub.com/vocab/IdentifierScheme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genericDOI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Healthy_Hub">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Healthy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Livable_Hub">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Livable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.esri-hub.com/vocab/Safe_Hub">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safe</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

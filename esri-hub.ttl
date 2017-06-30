@@ -1,0 +1,3184 @@
+@prefix : <http://www.esri-hub.com/vocab/> .
+@prefix hub: <http://www.esri-hub.com/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.esri-hub.com/vocab/> .
+
+<http://www.esri-hub.com/vocab/> rdf:type owl:Ontology ;
+                                  owl:versionIRI <http://www.esri-hub.com/vocab/1.0/hub> ;
+                                  rdfs:isDefinedBy "https://github.com/ArcGIS/Hub/blob/master/categories.md"^^xsd:anyURI ;
+                                  owl:versionInfo 1.0 ;
+                                  <http://purl.org/dc/elements/1.1/creator> "andrew_turner"^^xsd:string ,
+                                                                            "sara_lafia"^^xsd:string ;
+                                  <http://purl.org/dc/terms/title> "Esri Hub Ontology"^^xsd:string ;
+                                  <http://purl.org/dc/terms/date> "2017-06-23T00:00:00"^^xsd:dateTime ;
+                                  rdfs:comment """Hub intends to categorize information that is foremost understandable by the broad community who are not familiar with the organizational or hierarchical details of their government or industry standards. Additionally, content has many aspects beyond mere categorization depending on the user audience, intended use, intended place of use, background knowledge required, etc. However, all colloquial categorizations should still be organizable within stricter organizational norms.
+
+This document suggests a framework for Content and Aspects which can be organized through structured tags. A structured tag is <aspect>:<value>. By example, theme:prosperous and audience:teachers. Structured tags support better metadata and allow the same value to apply to different aspects. This is an initial proposal for a subset of eventual Themes and Categories. The intent is to start with a manageable, but extensible, corpus that fits the initial needs for Hub initiatives and tools. Themes are based on Smart Communities and categories from original Living Atlas work by Allen Carroll."""^^xsd:string ;
+                                  rdfs:label "Esri-Hub Ontology"^^xsd:string ;
+                                  rdfs:comment "An ontology drafted for the Esri Hub Intiative (Hub, https://github.com/ArcGIS/Hub).  The ontology is available at: http://www.esri-hub.com/vocab/1.0/hub.owl. The ontology uses the namespace prefix hub."^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/relation
+<http://purl.org/dc/elements/1.1/relation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.esri-hub.com/vocab/hasAdministrator
+hub:hasAdministrator rdf:type owl:ObjectProperty ;
+                     owl:inverseOf hub:isAdministratorOf ;
+                     rdfs:domain hub:Group ;
+                     rdfs:range hub:Administrator .
+
+
+###  http://www.esri-hub.com/vocab/hasAudience
+hub:hasAudience rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isAudienceOf ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( hub:Events
+                                            hub:Group
+                                            hub:Indicator
+                                            hub:Item
+                                            hub:Tool
+                                            hub:Topic
+                                            hub:User
+                                          )
+                            ] ;
+                rdfs:range hub:Audience ;
+                rdfs:label "hasAudience" .
+
+
+###  http://www.esri-hub.com/vocab/hasCategory
+hub:hasCategory rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isCategoryOf ;
+                rdfs:domain hub:Item ;
+                rdfs:range hub:Category ;
+                rdfs:label "hasCategory" .
+
+
+###  http://www.esri-hub.com/vocab/hasDepartment
+hub:hasDepartment rdf:type owl:ObjectProperty ;
+                  owl:inverseOf hub:isDepartmentOf ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( hub:Events
+                                              hub:Group
+                                              hub:User
+                                            )
+                              ] ;
+                  rdfs:range hub:Department ;
+                  rdfs:label "hasDepartment" .
+
+
+###  http://www.esri-hub.com/vocab/hasGroupType
+hub:hasGroupType rdf:type owl:ObjectProperty ;
+                 owl:inverseOf hub:isGroupTypeOf ;
+                 rdfs:domain hub:Group ;
+                 rdfs:range hub:GroupType ;
+                 rdfs:label "hasGroupType" .
+
+
+###  http://www.esri-hub.com/vocab/hasIdentifierScheme
+hub:hasIdentifierScheme rdf:type owl:ObjectProperty ;
+                        owl:inverseOf hub:isIdentifierSchemeOf .
+
+
+###  http://www.esri-hub.com/vocab/hasIndicator
+hub:hasIndicator rdf:type owl:ObjectProperty ;
+                 owl:inverseOf hub:isIndicatorOf ;
+                 rdfs:domain hub:Item ;
+                 rdfs:range hub:Indicator ;
+                 rdfs:label "hasIndicator" .
+
+
+###  http://www.esri-hub.com/vocab/hasIndustry
+hub:hasIndustry rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isIndustryOf ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( hub:Department
+                                            hub:Group
+                                            hub:User
+                                          )
+                            ] ;
+                rdfs:range hub:Industry ;
+                rdfs:label "hasIndustry" .
+
+
+###  http://www.esri-hub.com/vocab/hasInitiative
+hub:hasInitiative rdf:type owl:ObjectProperty ;
+                  owl:inverseOf hub:isInitiativeOf ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( hub:Group
+                                              hub:User
+                                            )
+                              ] ;
+                  rdfs:range hub:Initiatives ;
+                  rdfs:label "hasInitiative" .
+
+
+###  http://www.esri-hub.com/vocab/hasInterest
+hub:hasInterest rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isInterestOf ;
+                rdfs:domain hub:User ;
+                rdfs:range hub:Interest ;
+                rdfs:label "hasInterest" .
+
+
+###  http://www.esri-hub.com/vocab/hasItem
+hub:hasItem rdf:type owl:ObjectProperty ;
+            owl:inverseOf hub:isItemOf ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( hub:Group
+                                        hub:User
+                                      )
+                        ] ;
+            rdfs:range hub:Item ;
+            rdfs:label "hasItem" .
+
+
+###  http://www.esri-hub.com/vocab/hasItemType
+hub:hasItemType rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isItemTypeOf ;
+                rdfs:domain hub:Item ;
+                rdfs:range hub:ItemType ;
+                rdfs:label "hasItemType" .
+
+
+###  http://www.esri-hub.com/vocab/hasKnowledge
+hub:hasKnowledge rdf:type owl:ObjectProperty ;
+                 owl:inverseOf hub:isKnowledgeOf ;
+                 rdfs:domain hub:User ;
+                 rdfs:range hub:Knowledge ;
+                 rdfs:label "hasKnowledge" .
+
+
+###  http://www.esri-hub.com/vocab/hasLocality
+hub:hasLocality rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isLocalityOf ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( hub:Events
+                                            hub:Item
+                                          )
+                            ] ;
+                rdfs:range hub:Locality ;
+                rdfs:label "hasLocality" .
+
+
+###  http://www.esri-hub.com/vocab/hasRole
+hub:hasRole rdf:type owl:ObjectProperty ;
+            owl:inverseOf hub:isRoleOf ;
+            rdfs:domain hub:User ;
+            rdfs:range hub:Role ;
+            rdfs:label "hasRole" .
+
+
+###  http://www.esri-hub.com/vocab/hasShared
+hub:hasShared rdf:type owl:ObjectProperty ;
+              owl:inverseOf hub:isSharedBy .
+
+
+###  http://www.esri-hub.com/vocab/hasSkill
+hub:hasSkill rdf:type owl:ObjectProperty ;
+             owl:inverseOf hub:isSkillOf ;
+             rdfs:domain hub:User ;
+             rdfs:range hub:Skill ;
+             rdfs:label "hasSkill" .
+
+
+###  http://www.esri-hub.com/vocab/hasTemporality
+hub:hasTemporality rdf:type owl:ObjectProperty ;
+                   owl:inverseOf hub:isTemporalityOf ;
+                   rdfs:domain hub:Item ;
+                   rdfs:range hub:Temporality ;
+                   rdfs:label "hasTemporality" .
+
+
+###  http://www.esri-hub.com/vocab/hasTheme
+hub:hasTheme rdf:type owl:ObjectProperty ;
+             owl:inverseOf hub:isThemeOf ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( hub:Department
+                                         hub:Indicator
+                                         hub:Initiatives
+                                         hub:Item
+                                       )
+                         ] ;
+             rdfs:range hub:Theme ;
+             rdfs:label "hasTheme" .
+
+
+###  http://www.esri-hub.com/vocab/hasTopic
+hub:hasTopic rdf:type owl:ObjectProperty ;
+             owl:inverseOf hub:isTopicOf ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( hub:Events
+                                         hub:Indicator
+                                         hub:Initiatives
+                                         hub:Item
+                                       )
+                         ] ;
+             rdfs:range hub:Topic ;
+             rdfs:label "hasTopic" .
+
+
+###  http://www.esri-hub.com/vocab/hasUser
+hub:hasUser rdf:type owl:ObjectProperty ;
+            owl:inverseOf hub:isUserOf ;
+            rdfs:domain hub:Group ;
+            rdfs:range hub:User ;
+            rdfs:label "hasUser" .
+
+
+###  http://www.esri-hub.com/vocab/hasUserType
+hub:hasUserType rdf:type owl:ObjectProperty ;
+                owl:inverseOf hub:isUserTypeOf ;
+                rdfs:domain hub:User ;
+                rdfs:range hub:UserType ;
+                rdfs:label "hasUserType" .
+
+
+###  http://www.esri-hub.com/vocab/hasUtility
+hub:hasUtility rdf:type owl:ObjectProperty ;
+               owl:inverseOf hub:isUtilityOf ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( hub:Indicator
+                                           hub:Initiatives
+                                           hub:Item
+                                         )
+                           ] ;
+               rdfs:range hub:Utility ;
+               rdfs:label "hasUtility" .
+
+
+###  http://www.esri-hub.com/vocab/isAdministratorOf
+hub:isAdministratorOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isAudienceOf
+hub:isAudienceOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "isAudienceOf" .
+
+
+###  http://www.esri-hub.com/vocab/isCategoryOf
+hub:isCategoryOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "isCategoryOf" .
+
+
+###  http://www.esri-hub.com/vocab/isDepartmentOf
+hub:isDepartmentOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "isDepartmentOf" .
+
+
+###  http://www.esri-hub.com/vocab/isGroupTypeOf
+hub:isGroupTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isIdentifierSchemeOf
+hub:isIdentifierSchemeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isIndicatorOf
+hub:isIndicatorOf rdf:type owl:ObjectProperty ;
+                  rdfs:label "isIndicatorOf" .
+
+
+###  http://www.esri-hub.com/vocab/isIndustryOf
+hub:isIndustryOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "isIndustryOf" .
+
+
+###  http://www.esri-hub.com/vocab/isInitiativeOf
+hub:isInitiativeOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "isInitiativeOf" .
+
+
+###  http://www.esri-hub.com/vocab/isInterestOf
+hub:isInterestOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "isInterestOf" .
+
+
+###  http://www.esri-hub.com/vocab/isItemOf
+hub:isItemOf rdf:type owl:ObjectProperty ;
+             rdfs:label "isItemOf" .
+
+
+###  http://www.esri-hub.com/vocab/isItemTypeOf
+hub:isItemTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isKnowledgeOf
+hub:isKnowledgeOf rdf:type owl:ObjectProperty ;
+                  rdfs:label "isKnowledgeOf" .
+
+
+###  http://www.esri-hub.com/vocab/isLocalityOf
+hub:isLocalityOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "isLocalityOf" .
+
+
+###  http://www.esri-hub.com/vocab/isRoleOf
+hub:isRoleOf rdf:type owl:ObjectProperty ;
+             rdfs:label "isRoleOf" .
+
+
+###  http://www.esri-hub.com/vocab/isSharedBy
+hub:isSharedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain hub:Item ;
+               rdfs:range hub:UserType .
+
+
+###  http://www.esri-hub.com/vocab/isSkillOf
+hub:isSkillOf rdf:type owl:ObjectProperty ;
+              rdfs:label "isSkillOf" .
+
+
+###  http://www.esri-hub.com/vocab/isTemporalityOf
+hub:isTemporalityOf rdf:type owl:ObjectProperty ;
+                    rdfs:label "isTemporalityOf" .
+
+
+###  http://www.esri-hub.com/vocab/isThemeOf
+hub:isThemeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isTopicOf
+hub:isTopicOf rdf:type owl:ObjectProperty ;
+              rdfs:label "isTopicOf" .
+
+
+###  http://www.esri-hub.com/vocab/isUserOf
+hub:isUserOf rdf:type owl:ObjectProperty ;
+             rdfs:label "isUserOf" .
+
+
+###  http://www.esri-hub.com/vocab/isUserTypeOf
+hub:isUserTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.esri-hub.com/vocab/isUtilityOf
+hub:isUtilityOf rdf:type owl:ObjectProperty ;
+                rdfs:label "isUtilityOf" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.esri-hub.com/vocab/hasAddressClass
+hub:hasAddressClass rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:Address ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "A general classification of how the structure or location represented by the site address point is used - FacilitySite Subtype Classification"^^xsd:string ;
+                    rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainSiteAddressClass"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressNumberPrefix
+hub:hasAddressNumberPrefix rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hub:Address ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "The address number prefix"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressNumberSuffix
+hub:hasAddressNumberSuffix rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hub:Address ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "The address number suffix"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressPointID
+hub:hasAddressPointID rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hub:Address ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Unique address point identifier - Foreign Key"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressRange
+hub:hasAddressRange rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:Address ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Address range when a point describes a set of addresses"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressUnitNumber
+hub:hasAddressUnitNumber rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hub:Address ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "The address unit designation"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAddressUnitType
+hub:hasAddressUnitType rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hub:Address ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "The address unit type"^^xsd:string ;
+                       rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainAddressUnitType"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/hasAlternateAddressUnitNumber
+hub:hasAlternateAddressUnitNumber rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hub:Address ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "The alternate or secondary address unit designation"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasAlternateAddressUnitType
+hub:hasAlternateAddressUnitType rdf:type owl:DatatypeProperty ;
+                                rdfs:domain hub:Address ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "The alternate or secondary address unit type"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasCaptureMethod
+hub:hasCaptureMethod rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( hub:Address
+                                                 hub:SchoolSchema
+                                               )
+                                 ] ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Capture method for address point"^^xsd:string ;
+                     rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainPointCollectionMethod"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/hasDescription
+hub:hasDescription rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hub:SchoolSchema ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Description of the facility"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasEmergencyServiceNumber
+hub:hasEmergencyServiceNumber rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hub:Address ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "The Emergency Service Number the site address resides in"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFacilityArea
+hub:hasFacilityArea rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:SchoolSchema ;
+                    rdfs:range xsd:double ;
+                    rdfs:comment "The area of the facility computed from the facility site area"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFacilityIdentifier
+hub:hasFacilityIdentifier rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hub:SchoolSchema ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Locally assigned Facility Identifier"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFacilityName
+hub:hasFacilityName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:SchoolSchema ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The name of the facility"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFeatureCode
+hub:hasFeatureCode rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hub:SchoolSchema ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The facility site feature code"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFullAddress
+hub:hasFullAddress rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( hub:Address
+                                               hub:SchoolSchema
+                                             )
+                               ] ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Address information combined into one text field. In your community, this may include the following fields: PREADDRNUM, ADDRNUM, ADDRNUMSUF, FULLNAME, UNITTYPE, UNITID, ALTUNITTYPE, and ALTUNITID."^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFullAddressNumber
+hub:hasFullAddressNumber rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hub:Address ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "The full address number"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasFullName
+hub:hasFullName rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( hub:Address
+                                            hub:RoadSchema
+                                          )
+                            ] ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The full name of the road including any prefix and/or suffix"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasGroupDescription
+hub:hasGroupDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hub:Group ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "hasGroupDescription" .
+
+
+###  http://www.esri-hub.com/vocab/hasGroupIdentifier
+hub:hasGroupIdentifier rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hub:Group ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Identifier of Group as defined by ArcGIS Online API" ;
+                       rdfs:label "hasGroupIdentifier" .
+
+
+###  http://www.esri-hub.com/vocab/hasGroupName
+hub:hasGroupName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:Group ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of group defined by group in ArcGIS Online" ;
+                 rdfs:label "hasGroupName" .
+
+
+###  http://www.esri-hub.com/vocab/hasItemDescription
+hub:hasItemDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hub:Item ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "The free text description of the item provided by the User or Group" ;
+                       rdfs:label "hasItemDescription" .
+
+
+###  http://www.esri-hub.com/vocab/hasItemIdentifier
+hub:hasItemIdentifier rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hub:Item ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasItemName
+hub:hasItemName rdf:type owl:DatatypeProperty ;
+                rdfs:domain hub:Item ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Name of Item in ArcGIS Online defined by user" ;
+                rdfs:label "hasItemName" .
+
+
+###  http://www.esri-hub.com/vocab/hasLastEditor
+hub:hasLastEditor rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( hub:Address
+                                              hub:RoadSchema
+                                              hub:SchoolSchema
+                                            )
+                              ] ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The user who performed the last update"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasLastUpdate
+hub:hasLastUpdate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( hub:Address
+                                              hub:RoadSchema
+                                              hub:SchoolSchema
+                                            )
+                              ] ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "The date the feature was last updated in the maintenance database"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasLocationType
+hub:hasLocationType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:SchoolSchema ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Location represented by the point"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasMSAGCommunity
+hub:hasMSAGCommunity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hub:Address ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The valid service community name identified by the MSAG"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasMunicipalityName
+hub:hasMunicipalityName rdf:type owl:DatatypeProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( hub:Address
+                                                    hub:SchoolSchema
+                                                  )
+                                    ] ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "The name of the physical municipality the site address resides in"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasNumberOfStudents
+hub:hasNumberOfStudents rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hub:SchoolSchema ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "NUMSTUDENT"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasOwnerName
+hub:hasOwnerName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:SchoolSchema ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Owner or managing agency for facility"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasOwnerType
+hub:hasOwnerType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:SchoolSchema ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A classification of the owner"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasPlaceName
+hub:hasPlaceName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:Address ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A common name or vanity address for the site or service delivery address"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasPointType
+hub:hasPointType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:Address ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A general description of the physical location represented by the site address point"^^xsd:string ;
+                 rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#DomainSiteAddressLocation"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/hasPublicSafetyAnsweringPoint
+hub:hasPublicSafetyAnsweringPoint rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hub:Address ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "The Public Safety Answering Point the site address resides in"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasRecordLength
+hub:hasRecordLength rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hub:RoadSchema ;
+                    rdfs:range xsd:double ;
+                    rdfs:comment "The record length of the roadway segment"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasSegmentID
+hub:hasSegmentID rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:RoadSchema ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The segment identification number"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasSiteAddressID
+hub:hasSiteAddressID rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hub:Address ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Locally assigned site address point identifier"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasStateName
+hub:hasStateName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hub:SchoolSchema ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The state abbreviation"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasStatus
+hub:hasStatus rdf:type owl:DatatypeProperty ;
+              rdfs:domain hub:Address ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The status of the site address"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasUSNGCoordinateValue
+hub:hasUSNGCoordinateValue rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hub:Address ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "The USNG coordinate value"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hasUserIdentifier
+hub:hasUserIdentifier rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hub:User ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Identifier of User as defined in ArcGIS Online" ;
+                      rdfs:label "hasUserIdentifier" .
+
+
+###  http://www.esri-hub.com/vocab/hasUserName
+hub:hasUserName rdf:type owl:DatatypeProperty ;
+                rdfs:domain hub:User ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Name of User as defined in ArcGIS Online" ;
+                rdfs:label "hasUserName" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.esri-hub.com/vocab/Academia
+hub:Academia rdf:type owl:Class ;
+             rdfs:subClassOf hub:GroupType ;
+             rdfs:label "Academia" .
+
+
+###  http://www.esri-hub.com/vocab/Address
+hub:Address rdf:type owl:Class ;
+            rdfs:subClassOf hub:Feature_Service ;
+            rdfs:comment "Site address points represent the location of site or service delivery addresses assigned by local governments."^^xsd:string ;
+            rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#SiteAddressPoint"^^xsd:anyURI ;
+            rdfs:label "Addresses"^^xsd:string ;
+            <http://www.w3.org/2004/02/skos/core#related> "Site Address Point"^^xsd:string ,
+                                                          "http://schema.org/address"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/Addresses_INSPIRE
+hub:Addresses_INSPIRE rdf:type owl:Class ;
+                      rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Administration_Hub
+hub:Administration_Hub rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Wellrun_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Administration_LivingAtlas
+hub:Administration_LivingAtlas rdf:type owl:Class ;
+                               rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Administrative_Boundaries_DC
+hub:Administrative_Boundaries_DC rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Administrative_units_INSPIRE
+hub:Administrative_units_INSPIRE rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Administrator
+hub:Administrator rdf:type owl:Class ;
+                  rdfs:subClassOf hub:UserType ;
+                  rdfs:comment "Administrators can add users to their organizations and have access to all content within the organization."^^xsd:string ;
+                  rdfs:label "Administrator"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Aerial_Imagery_and_LiDAR_DC
+hub:Aerial_Imagery_and_LiDAR_DC rdf:type owl:Class ;
+                                rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Affordable_and_Clean_Energy_SDG
+hub:Affordable_and_Clean_Energy_SDG rdf:type owl:Class ;
+                                    rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Agricultural_and_aquaculture_facilities_INSPIRE
+hub:Agricultural_and_aquaculture_facilities_INSPIRE rdf:type owl:Class ;
+                                                    rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Agriculture_Hub
+hub:Agriculture_Hub rdf:type owl:Class ;
+                    owl:equivalentClass hub:Farming_ISO ;
+                    rdfs:subClassOf hub:Industry_Hub ,
+                                    hub:Land_Hub ,
+                                    hub:Prosperous_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Agriculture_LivingAtlas
+hub:Agriculture_LivingAtlas rdf:type owl:Class ;
+                            rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Air_Hub
+hub:Air_Hub rdf:type owl:Class ;
+            rdfs:subClassOf hub:Environment_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Airway_Hub
+hub:Airway_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Analyst
+hub:Analyst rdf:type owl:Class ;
+            rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Analyze
+hub:Analyze rdf:type owl:Class ;
+            rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Annually
+hub:Annually rdf:type owl:Class ;
+             rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/App_Builder_Extension
+hub:App_Builder_Extension rdf:type owl:Class ;
+                          rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Application
+hub:Application rdf:type owl:Class ;
+                rdfs:subClassOf hub:ItemType ;
+                rdfs:comment "Web and mobile applications whose content is provided by web maps"^^xsd:string ;
+                rdfs:label "Application"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Area_management_restriction_regulation_zones_and_reporting_units_INSPIRE
+hub:Area_management_restriction_regulation_zones_and_reporting_units_INSPIRE rdf:type owl:Class ;
+                                                                             rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Arts_Hub
+hub:Arts_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Culture_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Atmospheric_conditions_INSPIRE
+hub:Atmospheric_conditions_INSPIRE rdf:type owl:Class ;
+                                   rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Audience
+hub:Audience rdf:type owl:Class ;
+             rdfs:comment "Who will use the content"^^xsd:string ;
+             rdfs:label "Audience"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Automobile_Hub
+hub:Automobile_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Bathymetry_Hub
+hub:Bathymetry_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Water_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Biogeographical_regions_INSPIRE
+hub:Biogeographical_regions_INSPIRE rdf:type owl:Class ;
+                                    rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Biota_ISO
+hub:Biota_ISO rdf:type owl:Class ;
+              rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Biota_NGDA
+hub:Biota_NGDA rdf:type owl:Class ;
+               owl:equivalentClass hub:Ecology_Hub ;
+               rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Block
+hub:Block rdf:type owl:Class ;
+          rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Border_Hub
+hub:Border_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Security_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Boundaries_ISO
+hub:Boundaries_ISO rdf:type owl:Class ;
+                   owl:equivalentClass hub:GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA ;
+                   rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Build
+hub:Build rdf:type owl:Class ;
+          rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Buildings_Hub
+hub:Buildings_Hub rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Infrastructure_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Buildings_INSPIRE
+hub:Buildings_INSPIRE rdf:type owl:Class ;
+                      rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Bus_Hub
+hub:Bus_Hub rdf:type owl:Class ;
+            rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Business
+hub:Business rdf:type owl:Class ;
+             rdfs:subClassOf hub:Audience ,
+                             hub:Role ;
+             <http://www.w3.org/2004/02/skos/core#related> "Enterprise"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Business_Economic_Development_DC
+hub:Business_Economic_Development_DC rdf:type owl:Class ;
+                                     rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Business_Industry_LivingAtlas
+hub:Business_Industry_LivingAtlas rdf:type owl:Class ;
+                                  rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Businesses
+hub:Businesses rdf:type owl:Class ;
+               rdfs:subClassOf hub:GroupType ;
+               rdfs:label "Businesses" .
+
+
+###  http://www.esri-hub.com/vocab/CAD_Drawing
+hub:CAD_Drawing rdf:type owl:Class ;
+                rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/CSV
+hub:CSV rdf:type owl:Class ;
+        rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Cadastral_parcels_INSPIRE
+hub:Cadastral_parcels_INSPIRE rdf:type owl:Class ;
+                              rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Cadastre_Hub
+hub:Cadastre_Hub rdf:type owl:Class ;
+                 owl:equivalentClass hub:Cadastre_NGDA ;
+                 rdfs:subClassOf hub:Administration_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Cadastre_NGDA
+hub:Cadastre_NGDA rdf:type owl:Class ;
+                  rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Care_Hub
+hub:Care_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Healthy_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Care_OE
+hub:Care_OE rdf:type owl:Class ;
+            rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Category
+hub:Category rdf:type owl:Class ;
+             rdfs:comment "How information are organized"^^xsd:string ;
+             rdfs:label "Category"^^xsd:string ;
+             rdfs:seeAlso hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/Child
+hub:Child rdf:type owl:Class ;
+          rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/Citizen
+hub:Citizen rdf:type owl:Class ;
+            rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/Citizens
+hub:Citizens rdf:type owl:Class ;
+             rdfs:subClassOf hub:GroupType ;
+             rdfs:label "Citizens" .
+
+
+###  http://www.esri-hub.com/vocab/City
+hub:City rdf:type owl:Class ;
+         rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/CityEngine_Web_Scene
+hub:CityEngine_Web_Scene rdf:type owl:Class ;
+                         rdfs:subClassOf hub:Map .
+
+
+###  http://www.esri-hub.com/vocab/Civic
+hub:Civic rdf:type owl:Class ;
+          rdfs:subClassOf hub:Audience .
+
+
+###  http://www.esri-hub.com/vocab/Civic_Advocate
+hub:Civic_Advocate rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/Civic_Leader
+hub:Civic_Leader rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/Clean_Water_and_Sanitation_SDG
+hub:Clean_Water_and_Sanitation_SDG rdf:type owl:Class ;
+                                   rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/ClimateWeather_NGDA
+hub:ClimateWeather_NGDA rdf:type owl:Class ;
+                        owl:equivalentClass hub:Climate_Hub ,
+                                            hub:ClimatologyMeteorologyAtmosphere_ISO ;
+                        rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Climate_Action_SDG
+hub:Climate_Action_SDG rdf:type owl:Class ;
+                       rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Climate_Hub
+hub:Climate_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Sustainable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO
+hub:ClimatologyMeteorologyAtmosphere_ISO rdf:type owl:Class ;
+                                         rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Code_Attachment
+hub:Code_Attachment rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Collaborator
+hub:Collaborator rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Color_Set
+hub:Color_Set rdf:type owl:Class ;
+              rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Commercial_Hub
+hub:Commercial_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Communications_Hub
+hub:Communications_Hub rdf:type owl:Class ;
+                       owl:equivalentClass hub:UtilitiesCommunication_ISO ;
+                       rdfs:subClassOf hub:Wellrun_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Coordinate_reference_systems_INSPIRE
+hub:Coordinate_reference_systems_INSPIRE rdf:type owl:Class ;
+                                         rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/CouncilMeetings
+hub:CouncilMeetings rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/County
+hub:County rdf:type owl:Class ;
+           rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Create
+hub:Create rdf:type owl:Class ;
+           rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Crime_Hub
+hub:Crime_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Justice_Hub .
+
+
+###  http://www.esri-hub.com/vocab/CulturalResources_NGDA
+hub:CulturalResources_NGDA rdf:type owl:Class ;
+                           owl:equivalentClass hub:Culture_Hub ;
+                           rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Cultural_Society_DC
+hub:Cultural_Society_DC rdf:type owl:Class ;
+                        rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Culture_History_LivingAtlas
+hub:Culture_History_LivingAtlas rdf:type owl:Class ;
+                                rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Culture_Hub
+hub:Culture_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Livable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Cyber_Hub
+hub:Cyber_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Security_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Cycle_Hub
+hub:Cycle_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Cyclist
+hub:Cyclist rdf:type owl:Class ;
+            rdfs:subClassOf hub:Mobility .
+
+
+###  http://www.esri-hub.com/vocab/Daily
+hub:Daily rdf:type owl:Class ;
+          rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Dashboard
+hub:Dashboard rdf:type owl:Class ;
+              rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Datafile
+hub:Datafile rdf:type owl:Class ;
+             rdfs:subClassOf hub:ItemType ;
+             rdfs:comment "Files that can be uploaded, stored, and downloaded and in certain cases, activated to create services (map layers)"^^xsd:string ;
+             rdfs:label "DataFile"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Decent_Work_and_Economic_Growth_SDG
+hub:Decent_Work_and_Economic_Growth_SDG rdf:type owl:Class ;
+                                        rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Demographics_DC
+hub:Demographics_DC rdf:type owl:Class ;
+                    rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Demographics_LivingAtlas
+hub:Demographics_LivingAtlas rdf:type owl:Class ;
+                             owl:equivalentClass hub:Demography_Hub ;
+                             rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Demography_Hub
+hub:Demography_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Prosperous_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Department
+hub:Department rdf:type owl:Class .
+
+
+###  http://www.esri-hub.com/vocab/Developer
+hub:Developer rdf:type owl:Class ;
+              rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Disaster_Hazards_LivingAtlas
+hub:Disaster_Hazards_LivingAtlas rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/DisastersHazards_Hub
+hub:DisastersHazards_Hub rdf:type owl:Class ;
+                         rdfs:subClassOf hub:Safe_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Disease_Hub
+hub:Disease_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Healthy_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Document_Link
+hub:Document_Link rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Downtown
+hub:Downtown rdf:type owl:Class ;
+             rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Driver
+hub:Driver rdf:type owl:Class ;
+           rdfs:subClassOf hub:Mobility .
+
+
+###  http://www.esri-hub.com/vocab/Ecology_Hub
+hub:Ecology_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Sustainable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Ecology_LivingAtlas
+hub:Ecology_LivingAtlas rdf:type owl:Class ;
+                        rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/EconomicDevelopment
+hub:EconomicDevelopment rdf:type owl:Class ;
+                        rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Economy_Hub
+hub:Economy_Hub rdf:type owl:Class ;
+                owl:equivalentClass hub:Economy_ISO ;
+                rdfs:subClassOf hub:Prosperous_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Economy_ISO
+hub:Economy_ISO rdf:type owl:Class ;
+                rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Education
+hub:Education rdf:type owl:Class ;
+              rdfs:subClassOf hub:Audience .
+
+
+###  http://www.esri-hub.com/vocab/Education_DC
+hub:Education_DC rdf:type owl:Class ;
+                 rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Education_Hub
+hub:Education_Hub rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Prosperous_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Education_LivingAtlas
+hub:Education_LivingAtlas rdf:type owl:Class ;
+                          rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Education_OE
+hub:Education_OE rdf:type owl:Class ;
+                 rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Elevation_Hub
+hub:Elevation_Hub rdf:type owl:Class ;
+                  owl:equivalentClass hub:Elevation_NGDA ;
+                  rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Elevation_INSPIRE
+hub:Elevation_INSPIRE rdf:type owl:Class ;
+                      rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Elevation_ISO
+hub:Elevation_ISO rdf:type owl:Class ;
+                  owl:equivalentClass hub:Elevation_NGDA ;
+                  rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Elevation_NGDA
+hub:Elevation_NGDA rdf:type owl:Class ;
+                   rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/EmergencyDispatch
+hub:EmergencyDispatch rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/EmergencyManagement
+hub:EmergencyManagement rdf:type owl:Class ;
+                        rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Emergency_Hub
+hub:Emergency_Hub rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Care_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Emergency_OE
+hub:Emergency_OE rdf:type owl:Class ;
+                 rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Employment
+hub:Employment rdf:type owl:Class ;
+               rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Energy_Hub
+hub:Energy_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Sustainable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Energy_LivingAtlas
+hub:Energy_LivingAtlas rdf:type owl:Class ;
+                       rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Energy_Resources_INSPIRE
+hub:Energy_Resources_INSPIRE rdf:type owl:Class ;
+                             rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Environment_DC
+hub:Environment_DC rdf:type owl:Class ;
+                   rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Environment_Hub
+hub:Environment_Hub rdf:type owl:Class ;
+                    owl:equivalentClass hub:Environment_ISO ,
+                                        hub:Environment_LivingAtlas ,
+                                        hub:ImageryBaseMapsEarthCover_ISO ;
+                    rdfs:subClassOf hub:Sustainable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Environment_ISO
+hub:Environment_ISO rdf:type owl:Class ;
+                    rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Environment_LivingAtlas
+hub:Environment_LivingAtlas rdf:type owl:Class ;
+                            rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Environmental
+hub:Environmental rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Environmental_monitoring_Facilities_INSPIRE
+hub:Environmental_monitoring_Facilities_INSPIRE rdf:type owl:Class ;
+                                                rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Evening
+hub:Evening rdf:type owl:Class ;
+            rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Events
+hub:Events rdf:type owl:Class ;
+           rdfs:comment "Something that happens at a given place and time" ;
+           rdfs:label "Events" .
+
+
+###  http://www.esri-hub.com/vocab/Facilities
+hub:Facilities rdf:type owl:Class ;
+               rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Facility_and_Structure_DC
+hub:Facility_and_Structure_DC rdf:type owl:Class ;
+                              rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Farming_ISO
+hub:Farming_ISO rdf:type owl:Class ;
+                rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Fauna_Hub
+hub:Fauna_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Ecology_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Feature_Collection
+hub:Feature_Collection rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Feature_Collection_Template
+hub:Feature_Collection_Template rdf:type owl:Class ;
+                                rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Feature_Service
+hub:Feature_Service rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Layer ;
+                    rdfs:comment "ArcGIS Server Feature Service; The URL to the service is stored in the url property of the item. Optional JSON data contains overridden service properties."^^xsd:string ;
+                    rdfs:label "Feature Service"^^xsd:string ;
+                    <http://www.w3.org/2004/02/skos/core#related> "Data, Service, Feature Service, ArcGIS Server, Feature Access"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/File_Geodatabase
+hub:File_Geodatabase rdf:type owl:Class ;
+                     rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Finances_Hub
+hub:Finances_Hub rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Wellrun_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Financials_Procurement_DC
+hub:Financials_Procurement_DC rdf:type owl:Class ;
+                              rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/FireEMS
+hub:FireEMS rdf:type owl:Class ;
+            rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Fishery_Hub
+hub:Fishery_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Water_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Flora_Hub
+hub:Flora_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Ecology_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Food_Hub
+hub:Food_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Healthy_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Food_OE
+hub:Food_OE rdf:type owl:Class ;
+            rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Forest_Hub
+hub:Forest_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Form
+hub:Form rdf:type owl:Class ;
+         rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Gender_Equality_SDG
+hub:Gender_Equality_SDG rdf:type owl:Class ;
+                        rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Geocoding_Service
+hub:Geocoding_Service rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Tool ;
+                      rdfs:comment "ArcGIS Server Geocoding Service; The URL to the service is stored in the url property of the item."^^xsd:string ;
+                      rdfs:label "Geocoding Service"^^xsd:string ;
+                      <http://www.w3.org/2004/02/skos/core#related> "Tool, Service, Geocoding Service, Locator Service, ArcGIS Server, Locator"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Geodata_Service
+hub:Geodata_Service rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/GeodeticControl_NGDA
+hub:GeodeticControl_NGDA rdf:type owl:Class ;
+                         owl:equivalentClass hub:Geodetic_Control_Hub ;
+                         rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Geodetic_Control_Hub
+hub:Geodetic_Control_Hub rdf:type owl:Class ;
+                         rdfs:subClassOf hub:Planning_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Geographical_grid_systems_INSPIRE
+hub:Geographical_grid_systems_INSPIRE rdf:type owl:Class ;
+                                      rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Geographical_names_INSPIRE
+hub:Geographical_names_INSPIRE rdf:type owl:Class ;
+                               rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Geology_Hub
+hub:Geology_Hub rdf:type owl:Class ;
+                owl:equivalentClass hub:Geology_NGDA ;
+                rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Geology_INSPIRE
+hub:Geology_INSPIRE rdf:type owl:Class ;
+                    rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Geology_NGDA
+hub:Geology_NGDA rdf:type owl:Class ;
+                 rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Geometry_Service
+hub:Geometry_Service rdf:type owl:Class ;
+                     rdfs:subClassOf hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/Geoprocessing_Service
+hub:Geoprocessing_Service rdf:type owl:Class ;
+                          rdfs:subClassOf hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/GeoscientificInformation_ISO
+hub:GeoscientificInformation_ISO rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Globe_Service
+hub:Globe_Service rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Good_Health_and_Wellbeing_SDG
+hub:Good_Health_and_Wellbeing_SDG rdf:type owl:Class ;
+                                  rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Goods_OE
+hub:Goods_OE rdf:type owl:Class ;
+             rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Government
+hub:Government rdf:type owl:Class ;
+               rdfs:subClassOf hub:GroupType .
+
+
+###  http://www.esri-hub.com/vocab/Government_Units_Hub
+hub:Government_Units_Hub rdf:type owl:Class ;
+                         owl:equivalentClass hub:GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA ;
+                         rdfs:subClassOf hub:Administration_Hub .
+
+
+###  http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA
+hub:GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA rdf:type owl:Class ;
+                                                              rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Group
+hub:Group rdf:type owl:Class ;
+          rdfs:comment "The Group resource represents a group (for example, San Bernardino Fires) within the portal. The owner is automatically an administrator and is returned in the list of admins. Administrators can invite, add to, or remove members from a group as well as update or delete the group. The administrator for an organization can also reassign the group to another member of the organization. Group members can leave the group. Authenticated users can apply to join a group unless the group is by invitation only. The visibility of the group by other users is determined by the access property. If the group is private, no one other than the administrators and members of the group will be able to see it. If the group is shared with an organization, all members of the organization will be able to find it."^^xsd:string ;
+          rdfs:isDefinedBy "http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Group/02r30000006m000000/"^^xsd:anyURI ;
+          rdfs:label "Group"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/GroupType
+hub:GroupType rdf:type owl:Class .
+
+
+###  http://www.esri-hub.com/vocab/Habitats_and_biotopes_INSPIRE
+hub:Habitats_and_biotopes_INSPIRE rdf:type owl:Class ;
+                                  rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Health_Human_Services_DC
+hub:Health_Human_Services_DC rdf:type owl:Class ;
+                             rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Health_ISO
+hub:Health_ISO rdf:type owl:Class ;
+               owl:equivalentClass hub:Healthy_Hub ;
+               rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Health_OE
+hub:Health_OE rdf:type owl:Class ;
+              rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Healthy_Hub
+hub:Healthy_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/History_Hub
+hub:History_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Culture_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Hospitals
+hub:Hospitals rdf:type owl:Class ;
+              rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Housing
+hub:Housing rdf:type owl:Class ;
+            rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Housing_Hub
+hub:Housing_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Livable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Housing_OE
+hub:Housing_OE rdf:type owl:Class ;
+               rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Hub_Initiative
+hub:Hub_Initiative rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Hub_Page
+hub:Hub_Page rdf:type owl:Class ;
+             rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Hub_Site_Application
+hub:Hub_Site_Application rdf:type owl:Class ;
+                         rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/HumanServices
+hub:HumanServices rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Human_health_and_safety_INSPIRE
+hub:Human_health_and_safety_INSPIRE rdf:type owl:Class ;
+                                    rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Hurricane_Hub
+hub:Hurricane_Hub rdf:type owl:Class ;
+                  rdfs:subClassOf hub:DisastersHazards_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Hydrography_INSPIRE
+hub:Hydrography_INSPIRE rdf:type owl:Class ;
+                        rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/INSPIRE
+hub:INSPIRE rdf:type owl:Class ;
+            rdfs:subClassOf hub:Category ;
+            rdfs:label "INSPIRE"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/ISO19115
+hub:ISO19115 rdf:type owl:Class ;
+             rdfs:subClassOf hub:Category ;
+             rdfs:label "ISO19115"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Image
+hub:Image rdf:type owl:Class ;
+          rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Image_Service
+hub:Image_Service rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO
+hub:ImageryBaseMapsEarthCover_ISO rdf:type owl:Class ;
+                                  rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Imagery_Hub
+hub:Imagery_Hub rdf:type owl:Class ;
+                owl:equivalentClass hub:Imagery_NGDA ;
+                rdfs:subClassOf hub:Planning_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Imagery_NGDA
+hub:Imagery_NGDA rdf:type owl:Class ;
+                 rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Impaired
+hub:Impaired rdf:type owl:Class ;
+             rdfs:subClassOf hub:Mobility .
+
+
+###  http://www.esri-hub.com/vocab/Indicator
+hub:Indicator rdf:type owl:Class ;
+              rdfs:comment "A  value on a scale of measurement derived from a series of observed facts that can reveal relative changes as a function of time"^^xsd:string ;
+              rdfs:label "Indicator"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Industry
+hub:Industry rdf:type owl:Class ;
+             rdfs:comment "How departments are organized"^^xsd:string ;
+             rdfs:label "Industry"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Industry_Hub
+hub:Industry_Hub rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Prosperous_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Industry_Innovation_and_Infrastructure_SDG
+hub:Industry_Innovation_and_Infrastructure_SDG rdf:type owl:Class ;
+                                               rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Inform
+hub:Inform rdf:type owl:Class ;
+           rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Infrastructure_Hub
+hub:Infrastructure_Hub rdf:type owl:Class ;
+                       owl:equivalentClass hub:Infrastructure_LivingAtlas ,
+                                           hub:Structure_ISO ;
+                       rdfs:subClassOf hub:Sustainable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas
+hub:Infrastructure_LivingAtlas rdf:type owl:Class ;
+                               rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Initiatives
+hub:Initiatives rdf:type owl:Class ;
+                rdfs:comment "the first of a series of actions"^^xsd:string ;
+                rdfs:label "Initiative"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/InlandWaters_ISO
+hub:InlandWaters_ISO rdf:type owl:Class ;
+                     owl:equivalentClass hub:WaterInland_NGDA ;
+                     rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Inland_Hub
+hub:Inland_Hub rdf:type owl:Class ;
+               owl:equivalentClass hub:WaterInland_NGDA ;
+               rdfs:subClassOf hub:Water_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Insights_Model
+hub:Insights_Model rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Insights_Page
+hub:Insights_Page rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Insights_Workbook
+hub:Insights_Workbook rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/IntelligenceMilitary_ISO
+hub:IntelligenceMilitary_ISO rdf:type owl:Class ;
+                             owl:equivalentClass hub:Security_Hub ;
+                             rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Interest
+hub:Interest rdf:type owl:Class ;
+             rdfs:comment "Citizen-defined persona of their interests"^^xsd:string ;
+             rdfs:label "Interest"^^xsd:string ;
+             rdfs:seeAlso hub:Knowledge ,
+                          hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/Item
+hub:Item rdf:type owl:Class ;
+         rdfs:comment "Portals allows users to store and share a variety of items. Each item has a type, such as Web Map or Feature Service, and a set of type keywords that provide additional information on the characteristics of the type."^^xsd:string ;
+         rdfs:isDefinedBy "http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Items_and_item_types/02r3000000ms000000/"^^xsd:anyURI ;
+         rdfs:label "Item"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/ItemType
+hub:ItemType rdf:type owl:Class .
+
+
+###  http://www.esri-hub.com/vocab/Journalism
+hub:Journalism rdf:type owl:Class ;
+               rdfs:subClassOf hub:GroupType ;
+               rdfs:label "Journalism" .
+
+
+###  http://www.esri-hub.com/vocab/Justice_Hub
+hub:Justice_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Safe_Hub .
+
+
+###  http://www.esri-hub.com/vocab/KML
+hub:KML rdf:type owl:Class ;
+        rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/KML_Collection
+hub:KML_Collection rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Knowledge
+hub:Knowledge rdf:type owl:Class ;
+              rdfs:comment "Skillfulness by virtue of possessing special knowledge"^^xsd:string ;
+              rdfs:label "Knowledge"^^xsd:string ;
+              rdfs:seeAlso hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/Knowledge_Hub
+hub:Knowledge_Hub rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Industry_Hub .
+
+
+###  http://www.esri-hub.com/vocab/LandRecords
+hub:LandRecords rdf:type owl:Class ;
+                rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/LandUseLandCover_NGDA
+hub:LandUseLandCover_NGDA rdf:type owl:Class ;
+                          owl:equivalentClass hub:Land_Hub ;
+                          rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Land_Hub
+hub:Land_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Environment_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Land_Use_LivingAtlas
+hub:Land_Use_LivingAtlas rdf:type owl:Class ;
+                         rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Land_cover_INSPIRE
+hub:Land_cover_INSPIRE rdf:type owl:Class ;
+                       rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Land_use_INSPIRE
+hub:Land_use_INSPIRE rdf:type owl:Class ;
+                     rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/LawEnforcement
+hub:LawEnforcement rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Layer
+hub:Layer rdf:type owl:Class ;
+          rdfs:subClassOf hub:ItemType ;
+          rdfs:comment "Feature, map and image services that can be added as layers in web maps"^^xsd:string ;
+          rdfs:label "Layer"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Learn
+hub:Learn rdf:type owl:Class ;
+          rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Legal_OE
+hub:Legal_OE rdf:type owl:Class ;
+             rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Leisure_Tourism_Recreation_LivingAtlas
+hub:Leisure_Tourism_Recreation_LivingAtlas rdf:type owl:Class ;
+                                           owl:equivalentClass hub:Recreation_Hub ;
+                                           rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Life_Below_Water_SDG
+hub:Life_Below_Water_SDG rdf:type owl:Class ;
+                         rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Life_on_Land_SDG
+hub:Life_on_Land_SDG rdf:type owl:Class ;
+                     rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Listen
+hub:Listen rdf:type owl:Class ;
+           rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Livable_Hub
+hub:Livable_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/LivingAtlasEsri
+hub:LivingAtlasEsri rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Category ;
+                    rdfs:comment "from Allen Carroll"^^xsd:string ;
+                    rdfs:isDefinedBy "https://livingatlas.arcgis.com"^^xsd:string ;
+                    rdfs:label "Living Atlas"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Locality
+hub:Locality rdf:type owl:Class ;
+             rdfs:comment "The local areas to which the tag applies"^^xsd:string ;
+             rdfs:label "Locality"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Location_ISO
+hub:Location_ISO rdf:type owl:Class ;
+                 rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Long
+hub:Long rdf:type owl:Class ;
+         rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Management
+hub:Management rdf:type owl:Class ;
+               rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Manmade_Hub
+hub:Manmade_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:DisastersHazards_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Manufacturing_Hub
+hub:Manufacturing_Hub rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Industry_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Map
+hub:Map rdf:type owl:Class ;
+        rdfs:subClassOf hub:ItemType ;
+        rdfs:comment "Web maps that can be displayed on all supported platforms (web, mobile, and desktop)"^^xsd:string ;
+        rdfs:label "Map"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Map_Service
+hub:Map_Service rdf:type owl:Class ;
+                rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Meteorological_geographical_features_INSPIRE
+hub:Meteorological_geographical_features_INSPIRE rdf:type owl:Class ;
+                                                 rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Metro_Area
+hub:Metro_Area rdf:type owl:Class ;
+               rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Microsoft_Excel
+hub:Microsoft_Excel rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Microsoft_Powerpoint
+hub:Microsoft_Powerpoint rdf:type owl:Class ;
+                         rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Microsoft_Word
+hub:Microsoft_Word rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Mineral_Resources_INSPIRE
+hub:Mineral_Resources_INSPIRE rdf:type owl:Class ;
+                              rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Mobile_Application
+hub:Mobile_Application rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Mobility
+hub:Mobility rdf:type owl:Class ;
+             rdfs:subClassOf hub:Audience .
+
+
+###  http://www.esri-hub.com/vocab/Money_OE
+hub:Money_OE rdf:type owl:Class ;
+             rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Monthly
+hub:Monthly rdf:type owl:Class ;
+            rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Monument
+hub:Monument rdf:type owl:Class ;
+             rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Morning
+hub:Morning rdf:type owl:Class ;
+            rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Music_Hub
+hub:Music_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Culture_Hub .
+
+
+###  http://www.esri-hub.com/vocab/NGDA
+hub:NGDA rdf:type owl:Class ;
+         rdfs:subClassOf hub:Category ;
+         rdfs:label "FGDC Topics"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/National
+hub:National rdf:type owl:Class ;
+             rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Native_Application
+hub:Native_Application rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Native_Application_Installer
+hub:Native_Application_Installer rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Native_Application_Template
+hub:Native_Application_Template rdf:type owl:Class ;
+                                rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/NaturalResources
+hub:NaturalResources rdf:type owl:Class ;
+                     rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Natural_Hub
+hub:Natural_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:DisastersHazards_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Natural_Resources_LivingAtlas
+hub:Natural_Resources_LivingAtlas rdf:type owl:Class ;
+                                  rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Natural_risk_zones_INSPIRE
+hub:Natural_risk_zones_INSPIRE rdf:type owl:Class ;
+                               rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Neighborhood
+hub:Neighborhood rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Network_Analysis_Service
+hub:Network_Analysis_Service rdf:type owl:Class ;
+                             rdfs:subClassOf hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/No_Poverty_SDG
+hub:No_Poverty_SDG rdf:type owl:Class ;
+                   rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Nonprofits
+hub:Nonprofits rdf:type owl:Class ;
+               rdfs:subClassOf hub:GroupType ;
+               rdfs:label "Nonprofits" .
+
+
+###  http://www.esri-hub.com/vocab/Ocean_Hub
+hub:Ocean_Hub rdf:type owl:Class ;
+              owl:equivalentClass hub:Oceans_ISO ,
+                                  hub:WaterOceansCoasts_NGDA ;
+              rdfs:subClassOf hub:Water_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Oceanographic_geographical_features_INSPIRE
+hub:Oceanographic_geographical_features_INSPIRE rdf:type owl:Class ;
+                                                rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Oceans_ISO
+hub:Oceans_ISO rdf:type owl:Class ;
+               owl:equivalentClass hub:WaterOceansCoasts_NGDA ;
+               rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/OpenDataDC
+hub:OpenDataDC rdf:type owl:Class ;
+               rdfs:subClassOf hub:Category ;
+               rdfs:isDefinedBy "http://opendata.dc.gov/"^^xsd:anyURI ;
+               rdfs:label "Open Data D.C."^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/OpenEligibilityHumanServices
+hub:OpenEligibilityHumanServices rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:Category ;
+                                 rdfs:comment "The Open Eligibility Project is a collaborative for a better human service taxonomy. The taxonomy is a simple way to categorize human services and human situations. With these common categories, we, as service providers, navigators, and people in need, can find human services quickly and easily."^^xsd:string ;
+                                 rdfs:isDefinedBy "https://github.com/auntbertha/openeligibility"^^xsd:anyURI ;
+                                 rdfs:label "Open Eligibility"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Operation_View
+hub:Operation_View rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Operations_Dashboard_Add_In
+hub:Operations_Dashboard_Add_In rdf:type owl:Class ;
+                                rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Operations_Dashboard_Extension
+hub:Operations_Dashboard_Extension rdf:type owl:Class ;
+                                   rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Orthoimagery_INSPIRE
+hub:Orthoimagery_INSPIRE rdf:type owl:Class ;
+                         rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Owner
+hub:Owner rdf:type owl:Class ;
+          rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/PDF
+hub:PDF rdf:type owl:Class ;
+        rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Parcel
+hub:Parcel rdf:type owl:Class ;
+           rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Parent
+hub:Parent rdf:type owl:Class ;
+           rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/Park
+hub:Park rdf:type owl:Class ;
+         rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Participant
+hub:Participant rdf:type owl:Class ;
+                rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Partnerships_for_the_Goals_SDG
+hub:Partnerships_for_the_Goals_SDG rdf:type owl:Class ;
+                                   rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Peace_Justice_and_Strong_Institutions_SDG
+hub:Peace_Justice_and_Strong_Institutions_SDG rdf:type owl:Class ;
+                                              rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Pedestrian
+hub:Pedestrian rdf:type owl:Class ;
+               rdfs:subClassOf hub:Mobility .
+
+
+###  http://www.esri-hub.com/vocab/Pedestrian_Hub
+hub:Pedestrian_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Performance_Metrics_DC
+hub:Performance_Metrics_DC rdf:type owl:Class ;
+                           rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Permitting
+hub:Permitting rdf:type owl:Class ;
+               rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Pharmaceutical_Hub
+hub:Pharmaceutical_Hub rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Care_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Plain_Hub
+hub:Plain_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Planning
+hub:Planning rdf:type owl:Class ;
+             rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/PlanningCadastre_ISO
+hub:PlanningCadastre_ISO rdf:type owl:Class ;
+                         owl:equivalentClass hub:Planning_Hub ;
+                         rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Planning_Hub
+hub:Planning_Hub rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Wellrun_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Planning_Landuse_Zoning_DC
+hub:Planning_Landuse_Zoning_DC rdf:type owl:Class ;
+                               rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Policy
+hub:Policy rdf:type owl:Class ;
+           rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Policy_Hub
+hub:Policy_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Wellrun_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Population_distribution_and_demography_INSPIRE
+hub:Population_distribution_and_demography_INSPIRE rdf:type owl:Class ;
+                                                   rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Pro_Map
+hub:Pro_Map rdf:type owl:Class ;
+            rdfs:subClassOf hub:Map .
+
+
+###  http://www.esri-hub.com/vocab/Production_and_industrial_facilities_INSPIRE
+hub:Production_and_industrial_facilities_INSPIRE rdf:type owl:Class ;
+                                                 rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Property_Land_DC
+hub:Property_Land_DC rdf:type owl:Class ;
+                     rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Prosperous_Hub
+hub:Prosperous_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Theme ;
+                   rdfs:label "Prosperous"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Protected_sites_INSPIRE
+hub:Protected_sites_INSPIRE rdf:type owl:Class ;
+                            rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/PublicHealth
+hub:PublicHealth rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/PublicWorks
+hub:PublicWorks rdf:type owl:Class ;
+                rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Public_Health_LivingAtlas
+hub:Public_Health_LivingAtlas rdf:type owl:Class ;
+                              rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Public_Safety_DC
+hub:Public_Safety_DC rdf:type owl:Class ;
+                     rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Public_Safety_LivingAtlas
+hub:Public_Safety_LivingAtlas rdf:type owl:Class ;
+                              rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Public_Service_DC
+hub:Public_Service_DC rdf:type owl:Class ;
+                      rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Publisher
+hub:Publisher rdf:type owl:Class ;
+              rdfs:subClassOf hub:UserType ;
+              rdfs:comment "Publishers within an organization can create services based on data files that they upload. These hosted services run on an elastic infrastructure that is part of arcgis.com."^^xsd:string ;
+              rdfs:label "Publisher"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/PublisherUser
+hub:PublisherUser rdf:type owl:Class ;
+                  rdfs:subClassOf hub:UserType ;
+                  rdfs:comment "privileges plus the ability to publish features and map tiles as hosted web layers." ;
+                  rdfs:label "PublisherUser" .
+
+
+###  http://www.esri-hub.com/vocab/Quality_Education_SDG
+hub:Quality_Education_SDG rdf:type owl:Class ;
+                          rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Rail_Hub
+hub:Rail_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Housing_Hub .
+
+
+###  http://www.esri-hub.com/vocab/RealProperty_NGDA
+hub:RealProperty_NGDA rdf:type owl:Class ;
+                      owl:equivalentClass hub:Real_Property_Hub ;
+                      rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Real_Property_Hub
+hub:Real_Property_Hub rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Administration_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Recreation_DC
+hub:Recreation_DC rdf:type owl:Class ;
+                  rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Recreation_Hub
+hub:Recreation_Hub rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Culture_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Redevelopment
+hub:Redevelopment rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Reduced_Inequalities_SDG
+hub:Reduced_Inequalities_SDG rdf:type owl:Class ;
+                             rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Region
+hub:Region rdf:type owl:Class ;
+           rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Relational_Database_Connection
+hub:Relational_Database_Connection rdf:type owl:Class ;
+                                   rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Report
+hub:Report rdf:type owl:Class ;
+           rdfs:subClassOf hub:Utility .
+
+
+###  http://www.esri-hub.com/vocab/Report_Template
+hub:Report_Template rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Resident
+hub:Resident rdf:type owl:Class ;
+             rdfs:subClassOf hub:Civic ;
+             rdfs:label "Resident"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Residential_Hub
+hub:Residential_Hub rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Responsible_Consumption_and_Production_SDG
+hub:Responsible_Consumption_and_Production_SDG rdf:type owl:Class ;
+                                               rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/RoadSchema
+hub:RoadSchema rdf:type owl:Class ;
+               rdfs:subClassOf hub:Feature_Service ;
+               rdfs:comment "The centerline representation of public roadways or streets. These are a subset of the road segments found in the RoadCenterline feature class and only those actively managed by a local government public works organization. The information typically is derived from a RoadCenterline layer maintained for address assignment and is a framework for the management of streets, roads and work activities associated with such."^^xsd:string ;
+               rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#Street"^^xsd:anyURI ;
+               rdfs:label "Roads"^^xsd:string ;
+               <http://www.w3.org/2004/02/skos/core#related> "Streets"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Roads_Hub
+hub:Roads_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Infrastructure_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Role
+hub:Role rdf:type owl:Class ;
+         rdfs:comment "User persona"^^xsd:string ;
+         rdfs:label "Role"^^xsd:string ;
+         <http://www.w3.org/2004/02/skos/core#related> "Agent"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/SDG
+hub:SDG rdf:type owl:Class ;
+        rdfs:subClassOf hub:Category ;
+        rdfs:comment "On September 25th 2015, countries adopted a set of goals to end poverty, protect the planet, and ensure prosperity for all as part of a new sustainable development agenda. Each goal has specific targets to be achieved over the next 15 years."^^xsd:string ;
+        rdfs:isDefinedBy "http://www.un.org/sustainabledevelopment/sustainable-development-goals/"^^xsd:anyURI ;
+        rdfs:label "Sustainable Development Goals"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Safe_Hub
+hub:Safe_Hub rdf:type owl:Class ;
+             rdfs:subClassOf hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/Scene_Service
+hub:Scene_Service rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/School
+hub:School rdf:type owl:Class ;
+           rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/SchoolSchema
+hub:SchoolSchema rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Feature_Service ;
+                 rdfs:comment "The published representation of educational facilities (schools, colleges, etc.) managed in the facility site point feature class, combined with service information and organized for consumption in desktop and web applications."^^xsd:string ;
+                 rdfs:isDefinedBy "http://solutions.arcgis.com/local-government/help/local-government-information-model/get-started/DataDictionary/DataDictionary.htm#EducationFacility"^^xsd:anyURI ;
+                 rdfs:label "Schools"^^xsd:string ;
+                 <http://www.w3.org/2004/02/skos/core#related> "Building, Critical Insfrastructure"^^xsd:string ,
+                                                               "http://schema.org/School"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/Sea_regions_INSPIRE
+hub:Sea_regions_INSPIRE rdf:type owl:Class ;
+                        rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Security_Hub
+hub:Security_Hub rdf:type owl:Class ;
+                 rdfs:subClassOf hub:Safe_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Service_Definition
+hub:Service_Definition rdf:type owl:Class ;
+                       rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Shapefile
+hub:Shapefile rdf:type owl:Class ;
+              rdfs:subClassOf hub:Datafile ;
+              rdfs:comment "A shapefile (.zip), can be published as a feature service using the Portal API Publish call."^^xsd:string ;
+              rdfs:label "Shapefile"^^xsd:string ;
+              <http://www.w3.org/2004/02/skos/core#related> "Data, Shapefile"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Short
+hub:Short rdf:type owl:Class ;
+          rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Skill
+hub:Skill rdf:type owl:Class ;
+          rdfs:comment "An ability that has been acquired by training"^^xsd:string ;
+          rdfs:label "Skill"^^xsd:string ;
+          rdfs:seeAlso hub:Interest .
+
+
+###  http://www.esri-hub.com/vocab/Society_ISO
+hub:Society_ISO rdf:type owl:Class ;
+                rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Soil_Hub
+hub:Soil_Hub rdf:type owl:Class ;
+             owl:equivalentClass hub:Soils_NGDA ;
+             rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Soil_INSPIRE
+hub:Soil_INSPIRE rdf:type owl:Class ;
+                 rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Soils_NGDA
+hub:Soils_NGDA rdf:type owl:Class ;
+               rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Species_distribution_INSPIRE
+hub:Species_distribution_INSPIRE rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Sports_Hub
+hub:Sports_Hub rdf:type owl:Class ;
+               rdfs:subClassOf hub:Culture_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Staff
+hub:Staff rdf:type owl:Class ;
+          rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Startups
+hub:Startups rdf:type owl:Class ;
+             rdfs:subClassOf hub:GroupType ;
+             rdfs:label "Startups" .
+
+
+###  http://www.esri-hub.com/vocab/State
+hub:State rdf:type owl:Class ;
+          rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Statistical_Data_Collection
+hub:Statistical_Data_Collection rdf:type owl:Class ;
+                                rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Statistical_units_INSPIRE
+hub:Statistical_units_INSPIRE rdf:type owl:Class ;
+                              rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Street
+hub:Street rdf:type owl:Class ;
+           rdfs:subClassOf hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Structure_ISO
+hub:Structure_ISO rdf:type owl:Class ;
+                  rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Student
+hub:Student rdf:type owl:Class ;
+            rdfs:subClassOf hub:Education ;
+            rdfs:label "Student"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Support
+hub:Support rdf:type owl:Class ;
+            rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Surveyor
+hub:Surveyor rdf:type owl:Class ;
+             rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Sustainable_Cities_and_Communities_SDG
+hub:Sustainable_Cities_and_Communities_SDG rdf:type owl:Class ;
+                                           rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/Sustainable_Hub
+hub:Sustainable_Hub rdf:type owl:Class ;
+                    rdfs:subClassOf hub:Theme ;
+                    rdfs:label "Sustainable"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Symbol_Set
+hub:Symbol_Set rdf:type owl:Class ;
+               rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Teacher
+hub:Teacher rdf:type owl:Class ;
+            rdfs:subClassOf hub:Education .
+
+
+###  http://www.esri-hub.com/vocab/TechnologyInfrastructure
+hub:TechnologyInfrastructure rdf:type owl:Class ;
+                             rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Temporality
+hub:Temporality rdf:type owl:Class ;
+                rdfs:comment "Periodicity, length"^^xsd:string ;
+                rdfs:label "Temporality"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Terrain_Hub
+hub:Terrain_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Land_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Theme
+hub:Theme rdf:type owl:Class ;
+          rdfs:comment "High-level concepts (how people feel)"^^xsd:string ;
+          rdfs:label "Theme"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Tool
+hub:Tool rdf:type owl:Class ;
+         rdfs:subClassOf hub:ItemType ;
+         rdfs:comment "Geocoding, routing, and other task-based services that can be used by applications"^^xsd:string ;
+         rdfs:label "Tool"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Topic
+hub:Topic rdf:type owl:Class ;
+          rdfs:comment "Specific subject matter"^^xsd:string ;
+          rdfs:label "Topic"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Tourist
+hub:Tourist rdf:type owl:Class ;
+            rdfs:subClassOf hub:Role .
+
+
+###  http://www.esri-hub.com/vocab/Transit
+hub:Transit rdf:type owl:Class ;
+            rdfs:subClassOf hub:Mobility .
+
+
+###  http://www.esri-hub.com/vocab/Transit_OE
+hub:Transit_OE rdf:type owl:Class ;
+               rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Transport_networks_INSPIRE
+hub:Transport_networks_INSPIRE rdf:type owl:Class ;
+                               rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Transportation
+hub:Transportation rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Transportation_DC
+hub:Transportation_DC rdf:type owl:Class ;
+                      rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Transportation_Hub
+hub:Transportation_Hub rdf:type owl:Class ;
+                       owl:equivalentClass hub:Transportation_ISO ,
+                                           hub:Transportation_NGDA ;
+                       rdfs:subClassOf hub:Livable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Transportation_ISO
+hub:Transportation_ISO rdf:type owl:Class ;
+                       owl:equivalentClass hub:Transportation_NGDA ;
+                       rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Transportation_LivingAtlas
+hub:Transportation_LivingAtlas rdf:type owl:Class ;
+                               rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Transportation_NGDA
+hub:Transportation_NGDA rdf:type owl:Class ;
+                        rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/User
+hub:User rdf:type owl:Class ;
+         rdfs:comment "A user resource representing a registered user of the portal. Personal details of the user, such as e-mail and groups, are returned only to the user or the administrator of the user's organization (the properties in the Response Properties table below). A user is not visible to any other user (except the organization's administrator) if their access setting is set to \"private.\""^^xsd:string ;
+         rdfs:isDefinedBy "http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000m2000000"^^xsd:anyURI ;
+         rdfs:label "User"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/UserType
+hub:UserType rdf:type owl:Class .
+
+
+###  http://www.esri-hub.com/vocab/UserViewer
+hub:UserViewer rdf:type owl:Class ;
+               rdfs:subClassOf hub:UserType ;
+               rdfs:comment "privileges plus the ability to see a customized view of the site, use the organization's maps, apps, layers, and tools, and join groups owned by the organization" ;
+               rdfs:label "UserViewer" .
+
+
+###  http://www.esri-hub.com/vocab/Utilities
+hub:Utilities rdf:type owl:Class ;
+              rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO
+hub:UtilitiesCommunication_ISO rdf:type owl:Class ;
+                               owl:equivalentClass hub:Utilities_NGDA ;
+                               rdfs:subClassOf hub:ISO19115 .
+
+
+###  http://www.esri-hub.com/vocab/Utilities_Hub
+hub:Utilities_Hub rdf:type owl:Class ;
+                  owl:equivalentClass hub:Utilities_NGDA ;
+                  rdfs:subClassOf hub:Livable_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Utilities_NGDA
+hub:Utilities_NGDA rdf:type owl:Class ;
+                   rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Utility
+hub:Utility rdf:type owl:Class ;
+            rdfs:comment "How content will be used"^^xsd:string ;
+            rdfs:label "Utility"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Utility_Communication_DC
+hub:Utility_Communication_DC rdf:type owl:Class ;
+                             rdfs:subClassOf hub:OpenDataDC .
+
+
+###  http://www.esri-hub.com/vocab/Utility_and_governmental_services_INSPIRE
+hub:Utility_and_governmental_services_INSPIRE rdf:type owl:Class ;
+                                              rdfs:subClassOf hub:INSPIRE .
+
+
+###  http://www.esri-hub.com/vocab/Vector_Tile_Service
+hub:Vector_Tile_Service rdf:type owl:Class ;
+                        rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Viewer
+hub:Viewer rdf:type owl:Class ;
+           rdfs:subClassOf hub:UserType ;
+           rdfs:comment "View items such as maps, apps, demographics, and elevation analysis layers that have been shared with the member. Join groups owned by the organization. Use network analysis and geocoding." ;
+           rdfs:label "Viewer" .
+
+
+###  http://www.esri-hub.com/vocab/Visio_Document
+hub:Visio_Document rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/Visitor
+hub:Visitor rdf:type owl:Class ;
+            rdfs:subClassOf hub:Civic .
+
+
+###  http://www.esri-hub.com/vocab/WFS
+hub:WFS rdf:type owl:Class ;
+        rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/WMS
+hub:WMS rdf:type owl:Class ;
+        rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/WMTS
+hub:WMTS rdf:type owl:Class ;
+         rdfs:subClassOf hub:Layer .
+
+
+###  http://www.esri-hub.com/vocab/Water
+hub:Water rdf:type owl:Class ;
+          rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/WaterInland_NGDA
+hub:WaterInland_NGDA rdf:type owl:Class ;
+                     rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA
+hub:WaterOceansCoasts_NGDA rdf:type owl:Class ;
+                           rdfs:subClassOf hub:NGDA .
+
+
+###  http://www.esri-hub.com/vocab/Water_Hub
+hub:Water_Hub rdf:type owl:Class ;
+              rdfs:subClassOf hub:Environment_Hub ,
+                              hub:Healthy_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Water_Sanitation_LivingAtlas
+hub:Water_Sanitation_LivingAtlas rdf:type owl:Class ;
+                                 rdfs:subClassOf hub:LivingAtlasEsri .
+
+
+###  http://www.esri-hub.com/vocab/Weather_Hub
+hub:Weather_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Air_Hub .
+
+
+###  http://www.esri-hub.com/vocab/Web_Map
+hub:Web_Map rdf:type owl:Class ;
+            rdfs:subClassOf hub:Map ;
+            rdfs:comment "Web map authored using the arcgis.com Javascript Web Map viewer. Usable by web, mobile, and desktop clients. Collector refers to a web map that is Collector ready and will be available in Collector. The Map contains at least one editable layer that supports versioning. Offline refers to the web map being capable of working offline. The map contains only layers that are offline capable."^^xsd:string ;
+            rdfs:label "Web Map"^^xsd:string ;
+            <http://www.w3.org/2004/02/skos/core#related> "Web Map, Explorer Web Map, Map, Online Map, ArcGIS Online, Collector, Offline"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Web_Mapping_Application
+hub:Web_Mapping_Application rdf:type owl:Class ;
+                            rdfs:subClassOf hub:Application ;
+                            rdfs:comment "A web mapping application built using: ArcGIS API for JavaScript, ArcGIS API for Flex, ArcGIS API for Silverlight, Java Web Application Developer Framework, .NET Web Application Developer Framework; Client must supply the appropriate technology and purpose keywords (Ready To Use, Configurable, Code Sample) when adding this item. The URL to the service is stored in the url property of the item."^^xsd:string ;
+                            rdfs:label "Web Mapping Application"^^xsd:string ;
+                            <http://www.w3.org/2004/02/skos/core#related> "Web Map, Map, Online Map, Mapping Site"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Web_Scene
+hub:Web_Scene rdf:type owl:Class ;
+              rdfs:subClassOf hub:Map .
+
+
+###  http://www.esri-hub.com/vocab/Weekly
+hub:Weekly rdf:type owl:Class ;
+           rdfs:subClassOf hub:Temporality .
+
+
+###  http://www.esri-hub.com/vocab/Wellrun_Hub
+hub:Wellrun_Hub rdf:type owl:Class ;
+                rdfs:subClassOf hub:Theme ;
+                rdfs:label "Well-run"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/Work_OE
+hub:Work_OE rdf:type owl:Class ;
+            rdfs:subClassOf hub:OpenEligibilityHumanServices .
+
+
+###  http://www.esri-hub.com/vocab/Workflow_Manager_Service
+hub:Workflow_Manager_Service rdf:type owl:Class ;
+                             rdfs:subClassOf hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/Workflows
+hub:Workflows rdf:type owl:Class ;
+              rdfs:subClassOf hub:Department .
+
+
+###  http://www.esri-hub.com/vocab/Workforce_Project
+hub:Workforce_Project rdf:type owl:Class ;
+                      rdfs:subClassOf hub:Application .
+
+
+###  http://www.esri-hub.com/vocab/Zero_Hunger_SDG
+hub:Zero_Hunger_SDG rdf:type owl:Class ;
+                    rdfs:subClassOf hub:SDG .
+
+
+###  http://www.esri-hub.com/vocab/iWork_Keynote
+hub:iWork_Keynote rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/iWork_Numbers
+hub:iWork_Numbers rdf:type owl:Class ;
+                  rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/iWork_Pages
+hub:iWork_Pages rdf:type owl:Class ;
+                rdfs:subClassOf hub:Datafile .
+
+
+###  http://www.esri-hub.com/vocab/360_VR_Experience
+hub:_VR_Experience rdf:type owl:Class ;
+                   rdfs:subClassOf hub:Map .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.esri-hub.com/vocab/AccessToCleanDrinkingWater
+hub:AccessToCleanDrinkingWater rdf:type owl:NamedIndividual ,
+                                        hub:Indicator .
+
+
+###  http://www.esri-hub.com/vocab/AddressLayer
+hub:AddressLayer rdf:type owl:NamedIndividual ,
+                          hub:Feature_Service .
+
+
+###  http://www.esri-hub.com/vocab/Agriculture
+hub:Agriculture rdf:type owl:NamedIndividual ,
+                         hub:Category .
+
+
+###  http://www.esri-hub.com/vocab/AppreciatesHistory
+hub:AppreciatesHistory rdf:type owl:NamedIndividual ,
+                                hub:Interest .
+
+
+###  http://www.esri-hub.com/vocab/BikeAdvocacy
+hub:BikeAdvocacy rdf:type owl:NamedIndividual ,
+                          hub:Group .
+
+
+###  http://www.esri-hub.com/vocab/BikeLanes
+hub:BikeLanes rdf:type owl:NamedIndividual ,
+                       hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/BuildingAssessments
+hub:BuildingAssessments rdf:type owl:NamedIndividual ,
+                                 hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/CPR
+hub:CPR rdf:type owl:NamedIndividual ,
+                 hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/Collisions
+hub:Collisions rdf:type owl:NamedIndividual ,
+                        hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/CommutesBy
+hub:CommutesBy rdf:type owl:NamedIndividual ,
+                        hub:Interest .
+
+
+###  http://www.esri-hub.com/vocab/CouncilDistrict
+hub:CouncilDistrict rdf:type owl:NamedIndividual ,
+                             hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Datathon
+hub:Datathon rdf:type owl:NamedIndividual ,
+                      hub:Events .
+
+
+###  http://www.esri-hub.com/vocab/DeptOfTransportation
+hub:DeptOfTransportation rdf:type owl:NamedIndividual ,
+                                  hub:Group .
+
+
+###  http://www.esri-hub.com/vocab/Design
+hub:Design rdf:type owl:NamedIndividual ,
+                    hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/Drugs
+hub:Drugs rdf:type owl:NamedIndividual ,
+                   hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/EndPoverty
+hub:EndPoverty rdf:type owl:NamedIndividual ,
+                        hub:Initiatives .
+
+
+###  http://www.esri-hub.com/vocab/Enforcement
+hub:Enforcement rdf:type owl:NamedIndividual ,
+                         hub:Category .
+
+
+###  http://www.esri-hub.com/vocab/Feedback
+hub:Feedback rdf:type owl:NamedIndividual ,
+                      hub:Events .
+
+
+###  http://www.esri-hub.com/vocab/French
+hub:French rdf:type owl:NamedIndividual ,
+                    hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/Hackathon
+hub:Hackathon rdf:type owl:NamedIndividual ,
+                       hub:Events .
+
+
+###  http://www.esri-hub.com/vocab/HasTwoKids
+hub:HasTwoKids rdf:type owl:NamedIndividual ,
+                        hub:Interest .
+
+
+###  http://www.esri-hub.com/vocab/Healthy_Hub
+hub:Healthy_Hub rdf:type owl:NamedIndividual ,
+                         hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/Housing
+hub:Housing rdf:type owl:NamedIndividual ,
+                     hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/HowToPlantATree
+hub:HowToPlantATree rdf:type owl:NamedIndividual ,
+                             hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/Indoors
+hub:Indoors rdf:type owl:NamedIndividual ,
+                     hub:Events .
+
+
+###  http://www.esri-hub.com/vocab/Javascript
+hub:Javascript rdf:type owl:NamedIndividual ,
+                        hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/LandManagement
+hub:LandManagement rdf:type owl:NamedIndividual ,
+                            hub:Industry .
+
+
+###  http://www.esri-hub.com/vocab/Livable_Hub
+hub:Livable_Hub rdf:type owl:NamedIndividual ,
+                         hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/LivesInWardSix
+hub:LivesInWardSix rdf:type owl:NamedIndividual ,
+                            hub:Interest .
+
+
+###  http://www.esri-hub.com/vocab/MoistureIndex
+hub:MoistureIndex rdf:type owl:NamedIndividual ,
+                           hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/MoreAffordableHousing
+hub:MoreAffordableHousing rdf:type owl:NamedIndividual ,
+                                   hub:Initiatives .
+
+
+###  http://www.esri-hub.com/vocab/Outdoors
+hub:Outdoors rdf:type owl:NamedIndividual ,
+                      hub:Events .
+
+
+###  http://www.esri-hub.com/vocab/Parks
+hub:Parks rdf:type owl:NamedIndividual ,
+                   hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/PovertyIndex
+hub:PovertyIndex rdf:type owl:NamedIndividual ,
+                          hub:Indicator .
+
+
+###  http://www.esri-hub.com/vocab/PreventZika
+hub:PreventZika rdf:type owl:NamedIndividual ,
+                         hub:Initiatives .
+
+
+###  http://www.esri-hub.com/vocab/PublicWorks
+hub:PublicWorks rdf:type owl:NamedIndividual ,
+                         hub:Industry .
+
+
+###  http://www.esri-hub.com/vocab/ReportBlightedProperties
+hub:ReportBlightedProperties rdf:type owl:NamedIndividual ,
+                                      hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/Safe_Hub
+hub:Safe_Hub rdf:type owl:NamedIndividual ,
+                      hub:Theme .
+
+
+###  http://www.esri-hub.com/vocab/SafetyLensExplorer
+hub:SafetyLensExplorer rdf:type owl:NamedIndividual ,
+                                hub:Tool .
+
+
+###  http://www.esri-hub.com/vocab/SchoolAttendance
+hub:SchoolAttendance rdf:type owl:NamedIndividual ,
+                              hub:Indicator .
+
+
+###  http://www.esri-hub.com/vocab/Schools
+hub:Schools rdf:type owl:NamedIndividual ,
+                     hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/SignLanguage
+hub:SignLanguage rdf:type owl:NamedIndividual ,
+                          hub:Skill .
+
+
+###  http://www.esri-hub.com/vocab/SixthWard
+hub:SixthWard rdf:type owl:NamedIndividual ,
+                       hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Streets
+hub:Streets rdf:type owl:NamedIndividual ,
+                     hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/TrafficAccidents
+hub:TrafficAccidents rdf:type owl:NamedIndividual ,
+                              hub:Indicator .
+
+
+###  http://www.esri-hub.com/vocab/Transportation
+hub:Transportation rdf:type owl:NamedIndividual ,
+                            hub:Category .
+
+
+###  http://www.esri-hub.com/vocab/Trees
+hub:Trees rdf:type owl:NamedIndividual ,
+                   hub:Topic .
+
+
+###  http://www.esri-hub.com/vocab/VisionZero
+hub:VisionZero rdf:type owl:NamedIndividual ,
+                        hub:Initiatives .
+
+
+###  http://www.esri-hub.com/vocab/VisionZeroCoreTeam
+hub:VisionZeroCoreTeam rdf:type owl:NamedIndividual ,
+                                hub:Group .
+
+
+###  http://www.esri-hub.com/vocab/VisionZeroStrategyDoc
+hub:VisionZeroStrategyDoc rdf:type owl:NamedIndividual ,
+                                   hub:Item .
+
+
+###  http://www.esri-hub.com/vocab/WashingtonDC
+hub:WashingtonDC rdf:type owl:NamedIndividual ,
+                          hub:Locality .
+
+
+###  http://www.esri-hub.com/vocab/Zoning
+hub:Zoning rdf:type owl:NamedIndividual ,
+                    hub:Industry .
+
+
+###  http://www.esri-hub.com/vocab/2017
+hub: rdf:type owl:NamedIndividual ,
+              hub:Temporality .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+hub:Healthy_Hub rdfs:label "Healthy"^^xsd:string .
+
+
+hub:Livable_Hub rdfs:label "Livable"^^xsd:string .
+
+
+hub:Safe_Hub rdfs:label "Safe"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

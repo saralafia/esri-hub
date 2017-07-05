@@ -23,49 +23,49 @@
     "@list" : [ {
       "@id" : "http://www.esri-hub.com/vocab/Group"
     }, {
+      "@id" : "http://www.esri-hub.com/vocab/User"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Group"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/User"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Group"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/User"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Group"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/User"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Indicator"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Initiatives"
+    }, {
       "@id" : "http://www.esri-hub.com/vocab/Item"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/User"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Group"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/User"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Group"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/User"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Group"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/User"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Group"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/User"
     } ]
   } ]
 }, {
@@ -90,24 +90,12 @@
       "@id" : "http://www.esri-hub.com/vocab/Initiatives"
     }, {
       "@id" : "http://www.esri-hub.com/vocab/Item"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Indicator"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Initiatives"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Item"
     }, {
       "@id" : "http://www.esri-hub.com/vocab/Tool"
     } ]
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -117,7 +105,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -127,13 +115,25 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.esri-hub.com/vocab/Address"
     }, {
       "@id" : "http://www.esri-hub.com/vocab/RoadSchema"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Group"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Item"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/User"
     } ]
   } ]
 }, {
@@ -3123,7 +3123,7 @@
     "@value" : "Capture method for address point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid36"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -3235,7 +3235,7 @@
     "@value" : "Address information combined into one text field. In your community, this may include the following fields: PREADDRNUM, ADDRNUM, ADDRNUMSUF, FULLNAME, UNITTYPE, UNITID, ALTUNITTYPE, and ALTUNITID."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid39"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3259,7 +3259,7 @@
     "@value" : "The full name of the road including any prefix and/or suffix"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid46"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3278,15 +3278,12 @@
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/hasIdentifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid45"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/isIdentifierOf"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/hasIdentifierScheme",
@@ -3316,7 +3313,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasIndustry",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid11"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Industry"
@@ -3328,7 +3325,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasInitiative",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Initiatives"
@@ -3340,7 +3337,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid17"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Interest"
@@ -3352,13 +3349,22 @@
   "@id" : "http://www.esri-hub.com/vocab/hasItem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid20"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Item"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/isItemOf"
+  } ]
+}, {
+  "@id" : "http://www.esri-hub.com/vocab/hasItemDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/hasKnowledge",
@@ -3632,16 +3638,25 @@
   "@id" : "http://www.esri-hub.com/vocab/hasTheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid23"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Theme"
   } ]
 }, {
+  "@id" : "http://www.esri-hub.com/vocab/hasTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://www.esri-hub.com/vocab/hasTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Topic"
@@ -3677,7 +3692,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasUtility",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Utility"
@@ -3714,9 +3729,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/isGroupOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/isIdentifierOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/isIdentifierSchemeOf",

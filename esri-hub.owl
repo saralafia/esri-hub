@@ -222,6 +222,11 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Esri-Hub Ontology"
   } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core"
+  } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://www.esri-hub.com/vocab/1.0/hub"
   } ],

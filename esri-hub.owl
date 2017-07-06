@@ -66,18 +66,18 @@
       "@id" : "http://www.esri-hub.com/vocab/Initiatives"
     }, {
       "@id" : "http://www.esri-hub.com/vocab/Item"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Tool"
     } ]
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Indicator"
+      "@id" : "http://www.esri-hub.com/vocab/Address"
     }, {
-      "@id" : "http://www.esri-hub.com/vocab/Initiatives"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Item"
+      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
     } ]
   } ]
 }, {
@@ -85,37 +85,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Indicator"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Initiatives"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Item"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/Tool"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
       "@id" : "http://www.esri-hub.com/vocab/Address"
     }, {
       "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
     } ]
   } ]
 }, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Address"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -125,7 +101,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -137,37 +113,186 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Address"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/RoadSchema"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Address"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/RoadSchema"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.esri-hub.com/vocab/Address"
     }, {
-      "@id" : "http://www.esri-hub.com/vocab/RoadSchema"
-    }, {
       "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
     } ]
   } ]
 }, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Climate_Hub"
+  } ]
+}, {
   "@id" : "_:genid53",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Address"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/RoadSchema"
-    }, {
-      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/isThemeOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Boundaries_ISO"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Boundaries_Hub"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Climate_Hub"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.esri-hub.com/vocab/Address"
+      "@id" : "http://www.esri-hub.com/vocab/Education_Hub"
     }, {
-      "@id" : "http://www.esri-hub.com/vocab/SchoolSchema"
+      "@id" : "http://www.esri-hub.com/vocab/Financial_Hub"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid61"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Climate_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Planning_Land_Use_Hub"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Agriculture_Hub"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid66"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Disease_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Health-Care_Hub"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Climate_Hub"
+  } ]
+}, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Planning_Land_Use_Hub"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid72"
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Crime_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Demographics_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Disaster_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Education_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Emergency_Response_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
     } ]
   } ]
 }, {
@@ -179,6 +304,43 @@
     }, {
       "@id" : "http://www.esri-hub.com/vocab/User"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Infrastructure_Hub"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid82"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.esri-hub.com/vocab/Energy_Hub"
+    }, {
+      "@id" : "http://www.esri-hub.com/vocab/Transportation_Hub"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/hasTheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Infrastructure_Hub"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
@@ -275,12 +437,6 @@
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Administration_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Administration_LivingAtlas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -334,33 +490,24 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Agriculture_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Industry_Hub"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Agriculture"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Farming_ISO"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85002415"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/101106311-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Agriculture_LivingAtlas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Air_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Environment_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Airway_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Analyst",
@@ -402,12 +549,6 @@
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Arts_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Atmospheric_conditions_INSPIRE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -421,18 +562,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Audience"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Automobile_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Bathymetry_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Water_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/BikeAdvocacy",
@@ -449,17 +578,22 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Biota_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "flora and/or fauna in natural environment Examples: wildlife, vegetation, biological sciences, ecology, wilderness, sealife, wetlands, habitat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biota"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid52"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Biota_NGDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Ecology_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Block",
@@ -468,16 +602,36 @@
     "@id" : "http://www.esri-hub.com/vocab/Local"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Border_Hub",
+  "@id" : "http://www.esri-hub.com/vocab/Boundaries_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boundaries"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Security_Hub"
+    "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
+  }, {
+    "@id" : "_:genid53"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85016091"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/113926085-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Boundaries_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "legal land descriptions Examples: political and administrative boundaries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boundaries"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid54"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA"
@@ -492,22 +646,10 @@
   "@id" : "http://www.esri-hub.com/vocab/BuildingAssessments",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.esri-hub.com/vocab/Item" ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Buildings_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Infrastructure_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Buildings_INSPIRE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Bus_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Business",
@@ -554,25 +696,10 @@
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Cadastre_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Administration_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Cadastre_NGDA"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Cadastre_NGDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Care_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Care_OE",
@@ -647,8 +774,6 @@
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Climate_Hub"
-  }, {
     "@id" : "http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO"
   } ]
 }, {
@@ -660,14 +785,32 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Climate_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Climate"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Sustainable_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/sh85027036"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/114542968-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/ClimatologyMeteorologyAtmosphere_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "processes and phenomena of the atmosphere. Examples: cloud cover, weather, climate, atmospheric conditions, climate change, precipitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ClimatologyMeteorologyAtmosphere"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Code_Attachment",
@@ -689,21 +832,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Datafile"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Commercial_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Communications_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/CommutesBy",
@@ -732,17 +860,24 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Crime_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Crime"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Justice_Hub"
+    "@id" : "http://www.esri-hub.com/vocab/Safe_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85033993"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/100767761-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/CulturalResources_NGDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Cultural_Society_DC",
@@ -759,20 +894,18 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Culture_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Culture"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Livable_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Cyber_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Security_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Cycle_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85034755"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/105993821-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Cyclist",
@@ -820,19 +953,26 @@
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
   } ]
 }, {
+  "@id" : "http://www.esri-hub.com/vocab/Demographics_Hub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demographics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh00006969.html"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/106031425-n"
+  } ]
+}, {
   "@id" : "http://www.esri-hub.com/vocab/Demographics_LivingAtlas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Demography_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Demography_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Department",
@@ -862,16 +1002,36 @@
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/DisastersHazards_Hub",
+  "@id" : "http://www.esri-hub.com/vocab/Disaster_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disaster"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Safe_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh91000441.html"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/107329438-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Disease_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disease"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85038411"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/114093842-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Document_Link",
@@ -889,31 +1049,24 @@
   "@id" : "http://www.esri-hub.com/vocab/Drugs",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.esri-hub.com/vocab/Topic" ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Ecology_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Sustainable_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Ecology_LivingAtlas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Economy_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Economy_ISO"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Economy_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "economic activities, conditions and employment. Examples: production, labour, revenue, commerce, industry, tourism and ecotourism, forestry, fisheries, commercial or subsistence hunting, exploration and exploitation of resources such as minerals, oil and gas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Economy"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Education",
@@ -930,8 +1083,24 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Education_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Education"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85040850.html"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85040989"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/100884975-n"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/108383680-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Education_LivingAtlas",
@@ -946,15 +1115,6 @@
     "@id" : "http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Elevation_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Elevation_NGDA"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Elevation_INSPIRE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -963,6 +1123,12 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Elevation_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "height above or below sea level Examples: altitude, bathymetry, digital elevation models, slope, derived products"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Elevation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
   } ],
@@ -976,16 +1142,26 @@
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Emergency_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Care_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Emergency_OE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"
+  } ]
+}, {
+  "@id" : "http://www.esri-hub.com/vocab/Emergency_Response_Hub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Emergency Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Safe_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh91000441.html"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/114056081-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/EndPoverty",
@@ -993,8 +1169,18 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Energy_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Sustainable_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85105992"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/111472496-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Energy_LivingAtlas",
@@ -1018,23 +1204,18 @@
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Environment_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Sustainable_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Environment_ISO"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/Environment_LivingAtlas"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Environment_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "environmental resources, protection and conservation Examples: environmental pollution, waste storage and treatment, environmental impact assessment, monitoring environmental risk, nature reserves, landscape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Environment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Environment_LivingAtlas",
@@ -1072,14 +1253,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Farming_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "rearing of animals and/or cultivation of plants Examples: agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Farming"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Fauna_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Ecology_Hub"
+  }, {
+    "@id" : "_:genid64"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Feature_Collection",
@@ -1118,10 +1301,20 @@
     "@id" : "http://www.esri-hub.com/vocab/Datafile"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Finances_Hub",
+  "@id" : "http://www.esri-hub.com/vocab/Financial_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Financial"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85048256"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/101100603-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Financials_Procurement_DC",
@@ -1130,34 +1323,10 @@
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Fishery_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Water_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Flora_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Ecology_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Food_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Food_OE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/OpenEligibilityHumanServices"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Forest_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Form",
@@ -1200,15 +1369,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Geodetic_Control_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Geodetic_Control_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Planning_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Geographical_grid_systems_INSPIRE",
@@ -1221,15 +1381,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Geology_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Geology_NGDA"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Geology_INSPIRE",
@@ -1258,6 +1409,12 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/GeoscientificInformation_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "information pertaining to earth sciences Examples: geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth’s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Geoscientific"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
   } ]
@@ -1284,15 +1441,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Audience"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Government_Units_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Administration_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/GovernmentalUnitsAdministrativeStatisticalBoundaries_NGDA",
@@ -1326,6 +1474,22 @@
   "@id" : "http://www.esri-hub.com/vocab/HasTwoKids",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.esri-hub.com/vocab/Interest" ]
 }, {
+  "@id" : "http://www.esri-hub.com/vocab/Health-Care_Hub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Healthcare"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh00005607"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/101061824-n"
+  } ]
+}, {
   "@id" : "http://www.esri-hub.com/vocab/Health_Human_Services_DC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1334,11 +1498,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Health_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "health, health services, human ecology, and safety Examples: disease and illness, factors affecting health, hygiene, substance abuse, mental and physical health, health services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Health"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
+  }, {
+    "@id" : "_:genid65"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Health_OE",
@@ -1356,16 +1525,20 @@
     "@id" : "http://www.esri-hub.com/vocab/Theme"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/History_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Housing_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Housing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Livable_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85062603.html"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/103551520-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Housing_OE",
@@ -1399,12 +1572,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Hurricane_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/DisastersHazards_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Hydrography_INSPIRE",
@@ -1463,17 +1630,14 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/ImageryBaseMapsEarthCover_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "base maps Examples: land cover, topographic maps, imagery, unclassified images, annotations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ImageryBaseMapsEarthCover"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Imagery_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Planning_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Imagery_NGDA"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Imagery_NGDA",
@@ -1509,12 +1673,6 @@
     "@value" : "Industry"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Industry_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Prosperous_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Industry_Innovation_and_Infrastructure_SDG",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1529,13 +1687,18 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Infrastructure_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Infrastructure"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Sustainable_Hub"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas"
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85066333"
   }, {
-    "@id" : "http://www.esri-hub.com/vocab/Structure_ISO"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/103575144-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Infrastructure_LivingAtlas",
@@ -1562,15 +1725,6 @@
     "@id" : "http://www.esri-hub.com/vocab/WaterInland_NGDA"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Inland_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Water_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/WaterInland_NGDA"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Insights_Model",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1591,11 +1745,14 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/IntelligenceMilitary_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "military bases, structures, activities Examples: barracks, training grounds, military transportation, information collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IntelligenceMilitary"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Security_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Interest",
@@ -1628,12 +1785,6 @@
   "@id" : "http://www.esri-hub.com/vocab/Javascript",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.esri-hub.com/vocab/Skill" ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Justice_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Safe_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/KML",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1658,12 +1809,6 @@
     "@id" : "http://www.esri-hub.com/vocab/Skill"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Knowledge_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Industry_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/LandManagement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.esri-hub.com/vocab/Industry" ]
 }, {
@@ -1671,15 +1816,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Land_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Environment_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Land_Use_LivingAtlas",
@@ -1728,9 +1864,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Recreation_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Life_Below_Water_SDG",
@@ -1795,6 +1928,12 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Location_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "positional information and services Examples: addresses, geodetic networks, control points, postal zones and services, place names"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
   } ]
@@ -1809,18 +1948,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Business"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Manmade_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/DisastersHazards_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Manufacturing_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Industry_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Map",
@@ -1919,12 +2046,6 @@
     "@id" : "http://www.esri-hub.com/vocab/Temporality"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Music_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/NGDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1950,12 +2071,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Application"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Natural_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/DisastersHazards_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Natural_Resources_LivingAtlas",
@@ -1994,17 +2109,6 @@
     "@value" : "ORCID"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Ocean_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Water_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Oceans_ISO"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Oceanographic_geographical_features_INSPIRE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2013,8 +2117,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Oceans_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "features and characteristics of salt water bodies (excluding inland waters) Examples: tides, tidal waves, coastal information, reefs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Oceans"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid69"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://www.esri-hub.com/vocab/WaterOceansCoasts_NGDA"
@@ -2133,22 +2245,10 @@
     "@id" : "http://www.esri-hub.com/vocab/Mobility"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Pedestrian_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Performance_Metrics_DC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Pharmaceutical_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Care_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Place",
@@ -2165,37 +2265,43 @@
     "@value" : "http://schema.org/Place"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Plain_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/PlanningCadastre_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "information used for appropriate actions for future use of the land Examples: land use maps, zoning maps, cadastral surveys, land ownership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PlanningCadastre"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Planning_Hub"
+  }, {
+    "@id" : "_:genid70"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Planning_Hub",
+  "@id" : "http://www.esri-hub.com/vocab/Planning_Land_Use_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Planning Land Use"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85074345"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85074348"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/100930186-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Planning_Landuse_Zoning_DC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Policy_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Wellrun_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Population_distribution_and_demography_INSPIRE",
@@ -2288,37 +2394,16 @@
     "@id" : "http://www.esri-hub.com/vocab/SDG"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Rail_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Housing_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/RealProperty_NGDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Real_Property_Hub"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Real_Property_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Administration_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Recreation_DC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/OpenDataDC"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Recreation_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Reduced_Inequalities_SDG",
@@ -2369,12 +2454,6 @@
     "@id" : "http://www.esri-hub.com/vocab/Civic"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Residential_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Responsible_Consumption_and_Production_SDG",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2398,12 +2477,6 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
     "@value" : "Streets"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Roads_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Infrastructure_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Role",
@@ -2486,12 +2559,6 @@
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Security_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Safe_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Service_Definition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2539,17 +2606,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Society_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "characteristics of society and cultures Examples: settlements, anthropology, archaeology, education, traditional beliefs, manners and customs, demographic data, recreational areas and activities, social impact assessments, crime and justice, census information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Society"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Soil_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Soils_NGDA"
+  }, {
+    "@id" : "_:genid71"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Soil_INSPIRE",
@@ -2574,12 +2640,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/INSPIRE"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Sports_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Culture_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Staff",
@@ -2610,8 +2670,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Structure_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "man-made construction Examples: buildings, museums, churches, factories, housing, monuments, shops, towers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Structure"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid80"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Student",
@@ -2671,16 +2739,10 @@
     "@value" : "Temporality"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Terrain_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Land_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Theme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "High-level concepts (how people feel)"
+    "@value" : "From https://hub.arcgis.com/pages/open-data browse by categories"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Theme"
@@ -2742,19 +2804,31 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Transportation_Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transportation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Livable_Hub"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Transportation_ISO"
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@value" : "http://id.loc.gov/authorities/subjects/sh85137027"
   }, {
-    "@id" : "http://www.esri-hub.com/vocab/Transportation_NGDA"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://wordnet-rdf.princeton.edu/wn31/104480667-n"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Transportation_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "means and aids for conveying persons and/or goods Examples: roads, airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel location, aeronautical charts, railways"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transportation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
+  }, {
+    "@id" : "_:genid81"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Transportation_NGDA"
@@ -2790,17 +2864,16 @@
 }, {
   "@id" : "http://www.esri-hub.com/vocab/UtilitiesCommunication_ISO",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "energy, water and waste systems and communications infrastructure and services Examples: hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "UtilitiesCommunication"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/ISO19115"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Utilities_NGDA"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Utilities_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Livable_Hub"
+  }, {
+    "@id" : "_:genid85"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Utilities_NGDA"
@@ -2890,24 +2963,10 @@
     "@id" : "http://www.esri-hub.com/vocab/NGDA"
   } ]
 }, {
-  "@id" : "http://www.esri-hub.com/vocab/Water_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Environment_Hub"
-  }, {
-    "@id" : "http://www.esri-hub.com/vocab/Healthy_Hub"
-  } ]
-}, {
   "@id" : "http://www.esri-hub.com/vocab/Water_Sanitation_LivingAtlas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.esri-hub.com/vocab/LivingAtlasEsri"
-  } ]
-}, {
-  "@id" : "http://www.esri-hub.com/vocab/Weather_Hub",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.esri-hub.com/vocab/Air_Hub"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Web_Map",
@@ -3128,7 +3187,7 @@
     "@value" : "Capture method for address point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid28"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -3240,7 +3299,7 @@
     "@value" : "Address information combined into one text field. In your community, this may include the following fields: PREADDRNUM, ADDRNUM, ADDRNUMSUF, FULLNAME, UNITTYPE, UNITID, ALTUNITTYPE, and ALTUNITID."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3264,7 +3323,7 @@
     "@value" : "The full name of the road including any prefix and/or suffix"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid42"
+    "@id" : "_:genid34"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3285,7 +3344,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid45"
+    "@id" : "_:genid37"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3390,7 +3449,7 @@
     "@value" : "The user who performed the last update"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid41"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3402,7 +3461,7 @@
     "@value" : "The date the feature was last updated in the maintenance database"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid45"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -3462,7 +3521,7 @@
     "@value" : "The name of the physical municipality the site address resides in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid57"
+    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3643,10 +3702,13 @@
   "@id" : "http://www.esri-hub.com/vocab/hasTheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid23"
+    "@id" : "http://www.esri-hub.com/vocab/Category"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Theme"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.esri-hub.com/vocab/isThemeOf"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/hasTitle",
@@ -3661,7 +3723,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid27"
+    "@id" : "http://www.esri-hub.com/vocab/Theme"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Topic"
@@ -3697,7 +3759,7 @@
   "@id" : "http://www.esri-hub.com/vocab/hasUtility",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid23"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.esri-hub.com/vocab/Utility"
@@ -3770,6 +3832,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/isTemporalityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.esri-hub.com/vocab/isThemeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/isTopicOf",

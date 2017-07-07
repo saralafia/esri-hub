@@ -1,0 +1,80 @@
+#Sample queries
+
+PREFIX hub: <http://www.esri-hub.com/vocab/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+esri-hub.ttl
+Triples = 1344
+
+sample-data.ttl
+Triples = 545
+
+#COUNT of all triples
+SELECT (count(*) as ?count) WHERE {
+   ?s ?p ?o .
+}
+
+#SUMMARY of all triples
+SELECT ?s ?o ?p
+WHERE {
+    ?s ?o ?p
+}
+
+#SUMMARY of all RDF label annotations
+SELECT ?entities
+WHERE {  ?entities rdfs:label ?label .
+}
+
+#SUMMARY of all imported classes
+SELECT DISTINCT ?type
+WHERE {
+  ?s a ?type.
+}
+
+#SUMMARY of all of the most used predicates
+SELECT ?predicate (COUNT(*)AS ?frequency)
+WHERE {?subject ?predicate ?obDEject}
+GROUP BY ?predicate
+ORDER BY DESC(?frequency)
+
+#SUMMARY of all Hub classes
+SELECT DISTINCT ?type
+WHERE {
+  ?subject a ?type.
+  FILTER( STRSTARTS(STR(?type),str(hub:)) )
+}
+
+#SUMMARY of all OWL class equivalencies
+SELECT *
+WHERE {
+?item hub:hasTitle ?title .
+?item hub:hasCategory ?category1 .
+?category1 owl:equivalentClass ?category2 .
+}
+
+#Audience and Theme
+SELECT *
+{
+  ?item hub:hasTitle ?title .
+  ?item hub:hasAudience ?audience .
+}
+
+#Item titles that have a Civic Audience
+SELECT ?title
+{
+  ?item hub:hasTitle ?title .
+  ?item hub:hasAudience hub:Civic.
+}
+
+#Item titles with a Transportation category and any audience
+SELECT ?title ?audience
+WHERE {
+?item hub:hasCategory hub:Transportation_ISO .
+?item hub:hasAudience ?audience .
+?item hub:hasTitle ?title .
+}

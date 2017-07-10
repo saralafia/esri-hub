@@ -1,18 +1,21 @@
 #Sample queries
 
-PREFIX hub: <http://www.esri-hub.com/vocab/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+#esri-hub.ttl
+#triples = 1344
+
+#sample-data.ttl
+#triples = 545
+
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-
-esri-hub.ttl
-Triples = 1344
-
-sample-data.ttl
-Triples = 545
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql>
+PREFIX hub: <http://www.esri-hub.com/vocab/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 #COUNT of all triples
 SELECT (count(*) as ?count) WHERE {

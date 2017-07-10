@@ -1735,9 +1735,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Item"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Javascript",
@@ -1865,6 +1862,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Locality"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
   "@id" : "http://www.esri-hub.com/vocab/Location_ISO",

@@ -1,52 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geo: <www.opengis.net/ont/geosparql> .
+@prefix geo: <www.opengis.net/ont/geosparql#> .
 @prefix hub: <http://www.esri-hub.com/vocab/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://hub.arcgis.com/datasets/DCGIS::address-points> a hub:Item .
-<https://hub.arcgis.com/datasets/592958e401a844c786d35e198baa565e_0> a hub:Item .
-<https://hub.arcgis.com/datasets/ArlGIS::address-point> a hub:Item .
-<https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points> a hub:Item .
-<https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service> a hub:Item .
-<https://hub.arcgis.com/datasets/DCGIS::public-schools> a hub:Item .
-<https://hub.arcgis.com/datasets/DCGIS::charter-schools> a hub:Item .
-<https://hub.arcgis.com/datasets/ArlGIS::schools> a hub:Item .
-<https://hub.arcgis.com/datasets/mcgov-gis::schools> a hub:Item .
-<https://hub.arcgis.com/datasets/DHS-GII::private-schools> a hub:Item .
-<https://hub.arcgis.com/datasets/DCGIS::street-centerlines> a hub:Item .
-<https://hub.arcgis.com/datasets/ArlGIS::roads> a hub:Item .
-<https://hub.arcgis.com/datasets/AlexGIS::roads> a hub:Item .
-<https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads> a hub:Item .
-<https://hub.arcgis.com/datasets/usdot::highways> a hub:Item .
-<https://ucsb.maps.arcgis.com/home/group.html?id=72c19e0ed89641ac83045a4597a6c9dc#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=5253bb46487345f4b132b91b79481fc1#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=25e2bdb4059d40da9011f6a39ffd62f1#overview> a hub:Group .
-<https://ucsb.maps.arcgis.com/home/group.html?id=a58ca510518b4440b155194286424758#overview> a hub:Group .
-<https://ucsb.maps.arcgis.com/home/group.html?id=0254d13a696c4567ae9bbafd5ea48646#overview> a hub:Group .
-<https://ucsb.maps.arcgis.com/home/group.html?id=62be2f179f674941b393f1c9bc8ca73e#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=2f4bed95d62e48c987616f690b416884#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=1b542a2d4fda47aea7e52cbc4fe9fd65#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=6664e0b92948483ab633b3080d466122#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=cd81557a119441339bc7f410786089e4#overview> a hub:Group .
-<http://ucsb.maps.arcgis.com/home/group.html?id=6d746a1d39944292b0c3334c856dbffd#overview> a hub:Group .
-<https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=arlgis> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=VGIN> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog> a hub:User .
-<https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS> a hub:User .
-
 #ITEM - ADDRESSES
-<https://hub.arcgis.com/datasets/DCGIS::address-points>
-hub:Item [ dc:title "Address Points" ;
+<https://hub.arcgis.com/datasets/DCGIS::address-points> a hub:Item ;
+dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
 hub:hasCategory hub:Location_ISO ;
 hub:hasIndicator hub:PovertyIndex ;
@@ -60,10 +25,18 @@ hub:hasTopic hub:Housing ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Location_WebMercator/MapServer/0> ] .
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Location_WebMercator/MapServer/0> ;
+geo:hasGeometry hub:DCGIS::address-points_Poly ;
+skos:related <http://id.loc.gov/authorities/sh85127299#concept> ;
+skos:related <http://wordnet-rdf.princeton.edu/wn31/106800007-n> ;
+skos:related <http://dbpedia.org/resource/Washington,_D.C.> ;
+skos:related <http://sws.geonames.org/4138106/> .
 
-<https://hub.arcgis.com/datasets/592958e401a844c786d35e198baa565e_0>
-hub:Item [ dc:title "Address Points" ;
+hub:DCGIS::address-points_Poly a sf:Polygon;
+geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
+
+<https://hub.arcgis.com/datasets/592958e401a844c786d35e198baa565e_0> a hub:Item ;
+dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
 hub:hasCategory hub:Addresses_INSPIRE ;
 hub:hasIndicator hub:PovertyIndex ;
@@ -77,10 +50,11 @@ hub:hasTopic hub:Housing ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/AddressPoints/FeatureServer/0> ] .
+foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/AddressPoints/FeatureServer/0> ;
+geo:hasGeometry hub:592958e401a844c786d35e198baa565_Poly .
 
-<https://hub.arcgis.com/datasets/ArlGIS::address-point>
-hub:Item [ dc:title "Address Point" ;
+<https://hub.arcgis.com/datasets/ArlGIS::address-point> a hub:Item ;
+dc:title "Address Point" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Addresses_INSPIRE ;
@@ -95,10 +69,10 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Transit/MapServer/0> ] .
+foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Transit/MapServer/0> .
 
-<https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points>
-hub:Item [ dc:title "Address Points" ;
+<https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points> a hub:Item ;
+dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Addresses_INSPIRE ;
@@ -114,10 +88,10 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/OpenData_A2/FeatureServer/0> ] .
+foaf:homepage <https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/OpenData_A2/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service>
-hub:Item [ dc:title "Virginia Address Points Map Service" ;
+<https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service> a hub:Item ;
+dc:title "Virginia Address Points Map Service" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Addresses_INSPIRE ;
@@ -132,13 +106,13 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Build ;
-foaf:homepage <http://gismaps.vita.virginia.gov/arcgis/rest/services/VA_Base_layers/VA_Address_Points/MapServer/0> ] .
+foaf:homepage <http://gismaps.vita.virginia.gov/arcgis/rest/services/VA_Base_layers/VA_Address_Points/MapServer/0> .
 
 #ITEM - SCHOOLS
-<https://hub.arcgis.com/datasets/DCGIS::public-schools>
-hub:Item [ dc:title "Public Schools" ;
+<https://hub.arcgis.com/datasets/DCGIS::public-schools> a hub:Item ;
+dc:title "Public Schools" ;
 hub:hasAudience hub:Education ;
-hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasCategory hub:Society_ISO ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "DCGIS::public-schools" ;
 hub:hasTitle "Public Schools" ;
@@ -150,12 +124,20 @@ hub:hasTopic hub:Schools ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/5> ] .
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/5> ;
+geo:hasGeometry hub:DCGIS::public-schools_Poly ;
+skos:related <http://id.loc.gov/authorities/sh85118328#concept> ;
+skos:related <http://wordnet-rdf.princeton.edu/wn31/104153115-n> ;
+skos:related <http://dbpedia.org/resource/Washington,_D.C.> ;
+skos:related <http://sws.geonames.org/4138106/> .
 
-<https://hub.arcgis.com/datasets/DCGIS::charter-schools>
-hub:Item [ dc:title "Charter Schools" ;
+hub:DCGIS::public-schools_Poly a sf:Polygon;
+geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
+
+<https://hub.arcgis.com/datasets/DCGIS::charter-schools> a hub:Item ;
+dc:title "Charter Schools" ;
 hub:hasAudience hub:Education ;
-hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasCategory hub:Society_ISO ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "DCGIS::charter-schools" ;
 hub:hasTitle "Charter Schools" ;
@@ -167,10 +149,18 @@ hub:hasTopic hub:Schools ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/1> ] .
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/1> ;
+geo:hasGeometry hub:DCGIS::DCGIS::charter-schools_Poly ;
+skos:related <http://id.loc.gov/authorities/sh85118328#concept> ;
+skos:related <http://wordnet-rdf.princeton.edu/wn31/104153115-n> ;
+skos:related <http://dbpedia.org/resource/Washington,_D.C.> ;
+skos:related <http://sws.geonames.org/4138106/> .
 
-<https://hub.arcgis.com/datasets/ArlGIS::schools>
-hub:Item [ dc:title "Schools" ;
+hub:DCGIS::DCGIS::charter-schools_Poly a sf:Polygon;
+geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
+
+<https://hub.arcgis.com/datasets/ArlGIS::schools> a hub:Item ;
+dc:title "Schools" ;
 hub:hasAudience hub:Education ;
 hub:hasAudience hub:Civic ;
 hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
@@ -185,10 +175,10 @@ hub:hasTopic hub:Schools ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Bndrys_Facility/MapServer/8> ] .
+foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Bndrys_Facility/MapServer/8> .
 
-<https://hub.arcgis.com/datasets/mcgov-gis::schools>
-hub:Item [ dc:title "Schools" ;
+<https://hub.arcgis.com/datasets/mcgov-gis::schools> a hub:Item ;
+dc:title "Schools" ;
 hub:hasAudience hub:Education ;
 hub:hasAudience hub:Civic ;
 hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
@@ -203,10 +193,10 @@ hub:hasTopic hub:Schools ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://services.arcgis.com/hdlG36cOubTzNDBb/arcgis/rest/services/Schools/FeatureServer/0> ] .
+foaf:homepage <https://services.arcgis.com/hdlG36cOubTzNDBb/arcgis/rest/services/Schools/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/DHS-GII::private-schools>
-hub:Item [ dc:title "Private Schools" ;
+<https://hub.arcgis.com/datasets/DHS-GII::private-schools> a hub:Item ;
+dc:title "Private Schools" ;
 hub:hasAudience hub:Civic ;
 hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
 hub:hasIdentifier "DHS-GII::private-schools" ;
@@ -219,11 +209,19 @@ hub:hasTopic hub:Schools ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Analyze ;
-foaf:homepage <https://services2.arcgis.com/1cdV1mIckpAyI7Wo/arcgis/rest/services/Private_Schools/FeatureServer/0> ] .
+foaf:homepage <https://services2.arcgis.com/1cdV1mIckpAyI7Wo/arcgis/rest/services/Private_Schools/FeatureServer/0> ;
+geo:hasGeometry hub:DHS-GII::private-schools_Poly ;
+skos:related <http://id.loc.gov/authorities/sh85118328#concept> ;
+skos:related <http://wordnet-rdf.princeton.edu/wn31/104153115-n> ;
+skos:related <http://dbpedia.org/resource/United_States> ;
+skos:related <http://sws.geonames.org/6252001> .
+
+hub:DHS-GII::private-schools a sf:Polygon;
+geo:asWKT "POLYGON((-66.9024 -19.4908,-66.9024 67.3887,162.584 67.3887,162.584 -19.4908,-66.9024 -19.4908))"^^geo:wktLiteral.
 
 #ITEM - ROADS
-<https://hub.arcgis.com/datasets/DCGIS::street-centerlines>
-hub:Item [ dc:title "Street Centerlines" ;
+<https://hub.arcgis.com/datasets/DCGIS::street-centerlines> a hub:Item ;
+dc:title "Street Centerlines" ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
@@ -237,10 +235,18 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> ] .
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> ;
+geo:hasGeometry hub:DCGIS::street-centerlines_Poly ;
+skos:related <http://id.loc.gov/authorities/sh85137027#concept> ;
+skos:related <http://wordnet-rdf.princeton.edu/wn31/100316812-n> ;
+skos:related <http://dbpedia.org/resource/Washington,_D.C.> ;
+skos:related <http://sws.geonames.org/4138106/> .
 
-<https://hub.arcgis.com/datasets/ArlGIS::roads>
-hub:Item [ dc:title "Roads" ;
+hub:DCGIS::street-centerlines_Poly a sf:Polygon;
+geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
+
+<https://hub.arcgis.com/datasets/ArlGIS::roads> a hub:Item ;
+dc:title "Roads" ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
@@ -254,10 +260,10 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> ] .
+foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> .
 
-<https://hub.arcgis.com/datasets/AlexGIS::roads>
-hub:Item [ dc:title "Roads" ;
+<https://hub.arcgis.com/datasets/AlexGIS::roads> a hub:Item ;
+dc:title "Roads" ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
@@ -271,10 +277,10 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/Roads/FeatureServer/0> ] .
+foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/Roads/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads>
-hub:Item [ dc:title "Maryland Road Centerlines - Local and Other Roads" ;
+<https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads> a hub:Item ;
+dc:title "Maryland Road Centerlines - Local and Other Roads" ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
@@ -288,10 +294,10 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
-foaf:homepage <http://geodata.md.gov/imap/rest/services/Transportation/MD_RoadCenterlines/MapServer/3> ] .
+foaf:homepage <http://geodata.md.gov/imap/rest/services/Transportation/MD_RoadCenterlines/MapServer/3> .
 
-<https://hub.arcgis.com/datasets/usdot::highways>
-hub:Item [ dc:title "Highways" ;
+<https://hub.arcgis.com/datasets/usdot::highways> a hub:Item ;
+dc:title "Highways" ;
 hub:hasAudience hub:Mobility ;
 hub:hasCategory hub:Transport_networks_INSPIRE ;
 hub:hasIndicator hub:TrafficAccidents ;
@@ -305,11 +311,11 @@ hub:hasTopic hub:Streets ;
 hub:hasItem hub:Feature_Service;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Analyze ;
-foaf:homepage <https://maps.bts.dot.gov/services/rest/services/appServices/InterimNMFN/MapServer/5> ] .
+foaf:homepage <https://maps.bts.dot.gov/services/rest/services/appServices/InterimNMFN/MapServer/5> .
 
 #GROUP
-<https://ucsb.maps.arcgis.com/home/group.html?id=72c19e0ed89641ac83045a4597a6c9dc#overview>
-hub:Group [ dc:title "DCGIS Open Data: Location" ;
+<https://ucsb.maps.arcgis.com/home/group.html?id=72c19e0ed89641ac83045a4597a6c9dc#overview> a hub:Group ;
+dc:title "DCGIS Open Data: Location" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:LandRecords ;
@@ -320,10 +326,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:LandManagement ;
 hub:hasInitative hub:MoreAffordableHousing ;
 hub:hasItem <https://hub.arcgis.com/datasets/DCGIS::address-points> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=5253bb46487345f4b132b91b79481fc1#overview>
-hub:Group [ dc:title "Open Data Group" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=5253bb46487345f4b132b91b79481fc1#overview> a hub:Group ;
+dc:title "Open Data Group" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=arlgis> ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
@@ -334,10 +340,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:Zoning ;
 hub:hasInitative hub:VisionZero ;
 hub:hasItem <https://hub.arcgis.com/datasets/ArlGIS::address-point> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=arlgis> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=arlgis> .
 
-<https://ucsb.maps.arcgis.com/home/group.html?id=a58ca510518b4440b155194286424758#overview>
-hub:Group [ dc:title "Fairfax County Open Data" ;
+<https://ucsb.maps.arcgis.com/home/group.html?id=a58ca510518b4440b155194286424758#overview> a hub:Group ;
+dc:title "Fairfax County Open Data" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty> ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
@@ -348,10 +354,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:Zoning ;
 hub:hasInitative hub:VisionZero ;
 hub:hasItem <https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty> .
 
-<https://ucsb.maps.arcgis.com/home/group.html?id=62be2f179f674941b393f1c9bc8ca73e#overview>
-hub:Group [ dc:title "DCGIS Open Data: Education" ;
+<https://ucsb.maps.arcgis.com/home/group.html?id=62be2f179f674941b393f1c9bc8ca73e#overview> a hub:Group ;
+dc:title "DCGIS Open Data: Education" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ;
 hub:hasAudience hub:Education ;
 hub:hasDepartment hub:Facilities ;
@@ -361,10 +367,10 @@ hub:hasGroupName "DCGIS Open Data: Education" ;
 hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:LandManagement ;
 hub:hasItem <https://hub.arcgis.com/datasets/DCGIS::address-points> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> .
 
-<https://ucsb.maps.arcgis.com/home/group.html?id=6664e0b92948483ab633b3080d466122#overview>
-hub:Group [ dc:title "DCGIS Open Data: Transportation" ;
+<https://ucsb.maps.arcgis.com/home/group.html?id=6664e0b92948483ab633b3080d466122#overview> a hub:Group ;
+dc:title "DCGIS Open Data: Transportation" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ;
 hub:hasAudience hub:Mobility ;
 hub:hasDepartment hub:Transportation ;
@@ -374,10 +380,10 @@ hub:hasGroupName "DCGIS Open Data: Transportation" ;
 hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:PublicWorks ;
 hub:hasItem <https://hub.arcgis.com/datasets/DCGIS::street-centerlines> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=25e2bdb4059d40da9011f6a39ffd62f1#overview>
-hub:Group [ dc:title "Open Data Group for the City of Alexandria, Virginia" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=25e2bdb4059d40da9011f6a39ffd62f1#overview> a hub:Group ;
+dc:title "Open Data Group for the City of Alexandria, Virginia" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS> ;
 hub:hasAudience hub:Mobility ;
 hub:hasDepartment hub:Transportation ;
@@ -388,10 +394,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:PublicWorks ;
 hub:hasInitative hub:VisionZero ;
 hub:hasItem <https://hub.arcgis.com/datasets/AlexGIS::roads> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS> .
 
-<https://ucsb.maps.arcgis.com/home/group.html?id=0254d13a696c4567ae9bbafd5ea48646#overview>
-hub:Group [ dc:title "Open Data" ;
+<https://ucsb.maps.arcgis.com/home/group.html?id=0254d13a696c4567ae9bbafd5ea48646#overview> a hub:Group ;
+dc:title "Open Data" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=VGIN> ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:LandRecords ;
@@ -402,10 +408,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:Zoning ;
 hub:hasInitative hub:MoreAffordableHousing ;
 hub:hasItem <https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=VGIN> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=VGIN> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=2f4bed95d62e48c987616f690b416884#overview>
-hub:Group [ dc:title "Point Of Interests" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=2f4bed95d62e48c987616f690b416884#overview> a hub:Group ;
+dc:title "Point Of Interests" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis> ;
 hub:hasAudience hub:Business ;
 hub:hasDepartment hub:EconomicDevelopment ;
@@ -415,10 +421,10 @@ hub:hasGroupName "Point Of Interests" ;
 hub:hasGroupType hub:Businesses ;
 hub:hasIndustry hub:LandManagement ;
 hub:hasItem <https://hub.arcgis.com/datasets/mcgov-gis::schools> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=1b542a2d4fda47aea7e52cbc4fe9fd65#overview>
-hub:Group [ dc:title "HIFLD Open - Education" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=1b542a2d4fda47aea7e52cbc4fe9fd65#overview> a hub:Group ;
+dc:title "HIFLD Open - Education" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin> ;
 hub:hasAudience hub:Education ;
 hub:hasDepartment hub:Policy ;
@@ -427,10 +433,10 @@ hub:hasGroupIdentifier "1b542a2d4fda47aea7e52cbc4fe9fd65" ;
 hub:hasGroupName "HIFLD Open - Education" ;
 hub:hasGroupType hub:Government ;
 hub:hasItem <https://hub.arcgis.com/datasets/DHS-GII::private-schools> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=cd81557a119441339bc7f410786089e4#overview>
-hub:Group [ dc:title "Maryland GIS Data Catalog: Transportation" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=cd81557a119441339bc7f410786089e4#overview> a hub:Group ;
+dc:title "Maryland GIS Data Catalog: Transportation" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog> ;
 hub:hasAudience hub:Mobility ;
 hub:hasDepartment hub:Transportation ;
@@ -441,10 +447,10 @@ hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:PublicWorks ;
 hub:hasInitative hub:VisionZero ;
 hub:hasItem <https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog> .
 
-<http://ucsb.maps.arcgis.com/home/group.html?id=6d746a1d39944292b0c3334c856dbffd#overview>
-hub:Group [ dc:title "National Multimodal Freight Network" ;
+<http://ucsb.maps.arcgis.com/home/group.html?id=6d746a1d39944292b0c3334c856dbffd#overview> a hub:Group ;
+dc:title "National Multimodal Freight Network" ;
 hub:hasAdministrator <https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS> ;
 hub:hasAudience hub:Mobility ;
 hub:hasDepartment hub:Transportation ;
@@ -454,11 +460,11 @@ hub:hasGroupName "National Multimodal Freight Network" ;
 hub:hasGroupType hub:Government ;
 hub:hasIndustry hub:PublicWorks ;
 hub:hasItem <https://hub.arcgis.com/datasets/usdot::highways> ;
-hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS> ] .
+hub:hasUser <https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS> .
 
 #USER
-<https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata>
-hub:User [ dc:title "DCGISopendata" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> a hub:User ;
+dc:title "DCGISopendata" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
 hub:hasIndustry hub:LandManagement ;
@@ -474,10 +480,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "DCGISopendata" ;
 hub:hasUserName "DCGISopendata" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=arlgis>
-hub:User [ dc:title "arlgis" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=arlgis> a hub:User ;
+dc:title "arlgis" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
 hub:hasIndustry hub:LandManagement ;
@@ -491,10 +497,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "arlgis" ;
 hub:hasUserName "arlgis" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty>
-hub:User [ dc:title "FairfaxCounty" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=FairfaxCounty> a hub:User ;
+dc:title "FairfaxCounty" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
 hub:hasIndustry hub:LandManagement ;
@@ -505,10 +511,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "FairfaxCounty" ;
 hub:hasUserName "FairfaxCounty" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS>
-hub:User [ dc:title "AlexGIS_AlexGIS" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=AlexGIS_AlexGIS> a hub:User ;
+dc:title "AlexGIS_AlexGIS" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
 hub:hasIndustry hub:LandManagement ;
@@ -520,10 +526,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "AlexGIS_AlexGIS" ;
 hub:hasUserName "AlexGIS_AlexGIS" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=VGIN>
-hub:User [ dc:title "VGIN" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=VGIN> a hub:User ;
+dc:title "VGIN" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Planning ;
 hub:hasIndustry hub:LandManagement ;
@@ -534,10 +540,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "VGIN" ;
 hub:hasUserName "VGIN" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis>
-hub:User [ dc:title "alex.tsai_mcgov_gis" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=alex.tsai_mcgov_gis> a hub:User ;
+dc:title "alex.tsai_mcgov_gis" ;
 hub:hasAudience hub:Business ;
 hub:hasDepartment hub:Redevelopment ;
 hub:hasIndustry hub:LandManagement ;
@@ -548,10 +554,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill hub:Javascript ;
 hub:hasUserIdentifier "alex.tsai_mcgov_gis" ;
 hub:hasUserName "alex.tsai_mcgov_gis" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin>
-hub:User [ dc:title "HIFLD_Admin" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=HIFLD_Admin> a hub:User ;
+dc:title "HIFLD_Admin" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Redevelopment ;
 hub:hasIndustry hub:LandRecords ;
@@ -563,10 +569,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "HIFLD_Admin" ;
 hub:hasUserName "HIFLD_Admin" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog>
-hub:User [ dc:title "mdimapdatacatalog" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=mdimapdatacatalog> a hub:User ;
+dc:title "mdimapdatacatalog" ;
 hub:hasAudience hub:Civic ;
 hub:hasDepartment hub:Redevelopment ;
 hub:hasIndustry hub:LandRecords ;
@@ -578,10 +584,10 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "mdimapdatacatalog" ;
 hub:hasUserName "mdimapdatacatalog" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .
 
-<https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS>
-hub:User [ dc:title "USDOT_BTS" ;
+<https://ucsb.maps.arcgis.com/home/user.html?user=USDOT_BTS> a hub:User ;
+dc:title "USDOT_BTS" ;
 hub:hasAudience hub:Mobility ;
 hub:hasDepartment hub:Transportation ;
 hub:hasIndustry hub:LandRecords ;
@@ -592,4 +598,4 @@ hub:hasKnowledge _:_ ;
 hub:hasSkill _:_ ;
 hub:hasUserIdentifier "USDOT_BTS" ;
 hub:hasUserName "USDOT_BTS" ;
-hub:hasUserType hub:Administrator ] .
+hub:hasUserType hub:Administrator .

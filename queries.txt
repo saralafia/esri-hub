@@ -17,6 +17,45 @@ PREFIX sf: <http://www.opengis.net/ont/sf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+#SUMMARY of all OWL class equivalencies
+SELECT *
+WHERE {
+?item hub:hasTitle ?title .
+?item hub:hasCategory ?category1 .
+?category1 owl:equivalentClass ?category2 .
+}
+
+#SUMMARY of all SKOS related URIs
+SELECT *
+WHERE {
+?item skos:related ?related
+}
+
+#SUBSET of SKOS related to DBPedia places
+SELECT *
+WHERE {
+  ?item a hub:Item ;
+  hub:hasLocality ?locality ;
+  skos:related ?related .
+  FILTER regex(str(?related), "dbpedia") .
+}
+ORDER BY ?locality
+
+#SUMMARY of all RDFS superclasses
+SELECT distinct ?super ?sub
+WHERE {
+?sub rdfs:subClassOf ?super .
+}
+ORDER BY ?super
+
+#SUMMARY of all class domains, ranges
+SELECT ?class ?domain ?range
+WHERE {
+  ?class rdfs:range ?range .
+  ?class rdfs:domain ?domain .
+}
+ORDER BY ?class
+
 #COUNT of all triples
 SELECT (count(*) as ?count) WHERE {
    ?s ?p ?o .
@@ -41,7 +80,7 @@ WHERE {
 
 #SUMMARY of all of the most used predicates
 SELECT ?predicate (COUNT(*)AS ?frequency)
-WHERE {?subject ?predicate ?obDEject}
+WHERE {?subject ?predicate ?object}
 GROUP BY ?predicate
 ORDER BY DESC(?frequency)
 
@@ -50,14 +89,6 @@ SELECT DISTINCT ?type
 WHERE {
   ?subject a ?type.
   FILTER( STRSTARTS(STR(?type),str(hub:)) )
-}
-
-#SUMMARY of all OWL class equivalencies
-SELECT *
-WHERE {
-?item hub:hasTitle ?title .
-?item hub:hasCategory ?category1 .
-?category1 owl:equivalentClass ?category2 .
 }
 
 #Audience and Theme

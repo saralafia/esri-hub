@@ -9,7 +9,6 @@
 <http://www.esri-hub.com/vocab/> rdf:type owl:Ontology ;
                                   owl:versionIRI <http://www.esri-hub.com/vocab/1.0/hub> ;
                                   owl:imports <http://www.opengis.net/ont/geosparql> ,
-                                              <file:/Users/sara9153/Documents/GitHub/esri-hub/mmucc.rdf> ,
                                               <http://www.w3.org/2006/time#2016> ,
                                               <http://www.w3.org/2004/02/skos/core> ;
                                   rdfs:isDefinedBy "https://github.com/ArcGIS/Hub/blob/master/categories.md"^^xsd:anyURI ;
@@ -3137,6 +3136,169 @@ This document suggests a framework for Content and Aspects which can be organize
 #    Data properties
 #################################################################
 
+###  http://www.esri-hub.com/vocab/EPDO
+:EPDO rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Collisions ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Fatal crashes are assigned a weight of 10. injury crashes a weight of 5 and property damage only a weight of 1" ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "EPDO" ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "equivalent property damage only" .
+
+
+###  http://www.esri-hub.com/vocab/MMUCC_crash_elements
+:MMUCC_crash_elements rdf:type owl:DatatypeProperty .
+
+
+###  http://www.esri-hub.com/vocab/MMUCC_person_elements
+:MMUCC_person_elements rdf:type owl:DatatypeProperty .
+
+
+###  http://www.esri-hub.com/vocab/MMUCC_roadway_elements
+:MMUCC_roadway_elements rdf:type owl:DatatypeProperty .
+
+
+###  http://www.esri-hub.com/vocab/MMUCC_vehicle_elements
+:MMUCC_vehicle_elements rdf:type owl:DatatypeProperty .
+
+
+###  http://www.esri-hub.com/vocab/automobile_count
+:automobile_count rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Collisions ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Total Amount of Automobiles Involved in crash" ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "automobile_count" ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "automobile count" .
+
+
+###  http://www.esri-hub.com/vocab/case_identifier
+:case_identifier rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :MMUCC_crash_elements ;
+                 rdfs:domain :Collisions ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:unionOf ( xsd:double
+                                            xsd:string
+                                          )
+                            ] ;
+                 rdfs:comment "The unique identifier within a given year that identifies a given crash within a State." ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "CASE_ID" ,
+                                                                "CRN" ,
+                                                                "ID" ,
+                                                                "groupcode" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "case identifier" .
+
+
+###  http://www.esri-hub.com/vocab/crash_city_place
+:crash_city_place rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :MMUCC_crash_elements ;
+                  rdfs:domain :Collisions ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The city/place (political jurisdiction) in which the crash occurred. Name of the Political Jurisdiction Record the name identifying the city/place in which the crash occurred. If codes are used instead of names, use the GSA Geographic Locator Codes (GLC) that can be found at www.gsa.gov. See Appendix D. If State-assigned codes are used, they should be convertible to the GSA/FIPS format." ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "crash_city_place" ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "crash city place" .
+
+
+###  http://www.esri-hub.com/vocab/crash_classification
+:crash_classification rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :MMUCC_crash_elements ;
+                      rdfs:domain :Collisions ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Subfield 1 of this element is used to identify ownership of the land where the crash occurred. Subfield 2 of this element is used to identify the characteristics of the crash with respect to its location on or off a trafficway. Refer to Appendix E Diagram of the Trafficway." ,
+                                   """Subfield 1: Public Property, Private Property
+
+Public Property: is used for any crash that occurs and is entirely contained within a location that is owned by the public. Also use this attribute for crashes that originate on a location that is owned by the public where a harmful event occurs on private property. For example, a vehicle that departs the roadway and impacts a tree in a citizen’s front yard should be classified as “public property.” 
+
+Private Property: is used for a crash that occurs and is entirely contained within a location that is not owned by the public. Do not use this selection for crashes that originate on private property where a harmful event occurs on public property. That circumstance should be classified as “public property.” For example, a crash where a driver loses control of their vehicle backing from their private driveway and impacts a vehicle on the roadway should be classified as “public property.”""" ,
+                                   """Subfield 2: Trafficway, On Road; Trafficway, Not on Road; Non-Trafficway
+
+Trafficway, On Road: is used for motor vehicle traffic crashes where the unstabilized situation originates on the roadway or shoulder or at least one harmful event occurs on the roadway or shoulder. Example 1: A motor vehicle driving on a roadway runs off the road and crashes into a tree. Example 2: A motor vehicle driving on a roadway crosses the centerline and crashes into another motor vehicle. Example 3: A motor vehicle backs out of a private driveway, into the trafficway, and crashes into another motor vehicle on the roadway. 
+
+Trafficway, Not on Road: is used for motor vehicle traffic crashes where the unstabilized situation does not originate on the roadway or shoulder and no harmful events occur on the roadway or shoulder. Example 1: A motor vehicle is purposely driving entirely on the roadside (within the trafficway), runs off the roadside and crashes into a tree. Example 2: A motor vehicle is purposely driving entirely in the median and crashes into a traffic sign.
+
+Non-trafficway: is used for motor vehicle crashes where both of these conditions apply: (1) the unstabilized situation originates outside the boundaries of the trafficway and (2) no harmful event occurs within the boundaries of the trafficway. Example 1: A motor vehicle is driving in a parking aisle (outside the trafficway) and crashes into a parked motor vehicle. Example 2: A motor vehicle is driving on a dirt 3 trail (not a recognized trafficway), and overturns.""" ;
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "crash_classification" ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "crash classification" .
+
+
+###  http://www.esri-hub.com/vocab/crash_county
+:crash_county rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :MMUCC_crash_elements ;
+              rdfs:domain :Collisions ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The county or equivalent entity in which the crash physically occurred. Name of the County Record the county or equivalent entity in which the crash occurred. If codes are used instead of name, use the GSA Geographic Locator Codes (GLC) that can be found at: www.gsa.gov. See Appendix D. If State-assigned codes are used, they should be convertible to the GSA/ FIPS format." ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "county" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "crash_county" .
+
+
+###  http://www.esri-hub.com/vocab/crash_date_and_time
+:crash_date_and_time rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :MMUCC_crash_elements ;
+                     rdfs:domain :Collisions ;
+                     rdfs:range xsd:date ;
+                     rdfs:comment """The date (year, month, and day) and time (00:00-23:59) at which the crash occurred 
+
+Date and Time (YYYYMMDDHHMM)
+
+Absence of year should result in an edit check. In rare situations MMDDHHMM can be unknown. Midnight is designated as 00:00 and is considered the start of a new day.""" ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "col_date" ,
+                                                                    "date" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "crash date and time" .
+
+
+###  http://www.esri-hub.com/vocab/crash_location
+:crash_location rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :MMUCC_crash_elements ;
+                rdfs:domain :Collisions ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The exact location on the roadway to document where the first harmful event of the crash occurred. Latitude/Longitude Coordinates The optimum definition of Crash Location is a route name and GPS (global positioning system)/GIS (geographic information system), if a highway agency has a linear referencing system that can relate geographic coordinates to specific locations in road inventory, traffic, driver, and other files. The location information in a crash file must have the capability to be linked to location information in these other important files required to study site-specific safety issues. GPS/GIS provide the latitude/longitude coordinates indicating where the crash occurred. • Linear Referencing System (LRS) An LRS can create complex overlays of multiple events or occurrences along a route to support corridor planning, pavement rehabilitation, or other complex analysis. An LRS permits users to share information maintained by different data providers across different data layers. An LRS is not created by the geographic information system (GIS), but is actually replicated to model what is in the field. All linear data (traffic volumes, pavement types, speed limit zones, etc.) and point data (crashes, signs, etc.) collection efforts need only specify the location or endpoint locations in terms of the LRS components. • Link Node System (not recommended) Note: States with no system or a link node system should plan to develop or upgrade to a linear referencing system or one that documents latitude/longitude coordinates." ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "crash_location" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "crash location" .
+
+
+###  http://www.esri-hub.com/vocab/crashcount
+:crashcount rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Collisions ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Count of crashes within the cluster" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "crashcount" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "crash count" .
+
+
+###  http://www.esri-hub.com/vocab/day_of_week
+:day_of_week rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Collisions ;
+             rdfs:range xsd:string ;
+             rdfs:comment """Day of the Week code when crash occurred-
+1 - Sunday
+2 - Monday
+3 - Tuesday
+4 - Wednesday
+5 - Thursday
+6 - Friday
+7 - Saturday""" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "day_of_week" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "day of week" .
+
+
+###  http://www.esri-hub.com/vocab/est_cost
+:est_cost rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Collisions ;
+          rdfs:range xsd:double ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "est_cost" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "estimated cost" .
+
+
+###  http://www.esri-hub.com/vocab/first_harmful_event
+:first_harmful_event rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :MMUCC_crash_elements ;
+                     rdfs:domain :Collisions ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The first injury or damage-producing event that characterizes the crash type. Non-Collision: • Overturn/Rollover • Fire/Explosion • Immersion, Full or Partial • Jackknife • Cargo/Equipment Loss or Shift • Fell/Jumped From Motor Vehicle • Thrown or Falling Object • Other Non-Collision  Collision With Person, Motor Vehicle, or Non-Fixed Object: • Pedestrian • Pedalcycle • Other Non-motorist • Railway Vehicle (train, engine) • Animal (live) • Motor Vehicle in Transport • Parked Motor Vehicle • Struck by Falling, Shifting Cargo or Anything Set in Motion by Motor Vehicle • Work Zone / Maintenance Equipment • Other Non-Fixed Object Collision With Fixed Object: • Impact Attenuator/Crash Cushion • Bridge Overhead Structure • Bridge Pier or Support • Bridge Rail • Cable Barrier • Culvert • Curb • Ditch 6 • Embankment • Guardrail Face • Guardrail End • Concrete Traffic Barrier • Other Traffic Barrier • Tree (standing) • Utility Pole/Light Support • Traffic Sign Support • Traffic Signal Support • Fence • Mailbox • Other Post, Pole or Support • Other Fixed Object (wall, building, tunnel, etc.) • Unknown" ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "collision type" ,
+                                                                    "collision_type" ,
+                                                                    "first_harmful_event" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "first harmful event" .
+
+
 ###  http://www.esri-hub.com/vocab/hasAddressClass
 :hasAddressClass rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Address ;
@@ -3440,6 +3602,264 @@ This document suggests a framework for Content and Aspects which can be organize
                         rdfs:domain :Address ;
                         rdfs:range xsd:string ;
                         rdfs:comment "The USNG coordinate value"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/hour_of_day
+:hour_of_day rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Collisions ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The hour of the day when the crash occurred - 00 to 23" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "hour_of_day" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "hour of day" .
+
+
+###  http://www.esri-hub.com/vocab/illumination
+:illumination rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Collisions ;
+              rdfs:range xsd:string ;
+              rdfs:comment """Code that defines lighting at crash scene -
+1 – Daylight
+2 – Dark – no street lights
+3 – Dark – street lights
+4 – Dusk
+5 – Dawn
+6 – Dark – unknown roadway lighting
+8 – Other
+9 – Unknown (expired)""" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "illumination" .
+
+
+###  http://www.esri-hub.com/vocab/intersect_type
+:intersect_type rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Collisions ;
+                rdfs:range xsd:string ;
+                rdfs:comment """Code that defines the Intersection Type -
+00 – Mid-block
+01 – Four way intersection
+02 – “T” intersection
+03 – “Y” intersection
+04 – Traffic circle or Round About
+05 – Multi-leg intersection
+06 – On ramp
+07 – Off ramp
+08 – Crossover
+09 – Railroad crossing
+10 – Other
+99 – Unknown (expired)""" ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "intersect_type" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "intersect type" .
+
+
+###  http://www.esri-hub.com/vocab/location_of_first_harmful_event_relative_to_the_trafficway
+:location_of_first_harmful_event_relative_to_the_trafficway rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf :MMUCC_crash_elements ;
+                                                            rdfs:domain :Collisions ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment """The location of the first harmful event as it relates to its position within or outside the trafficway. See Appendix E for a diagram of the trafficway. Code for the crash’s relativity to the road -
+1 – On roadway
+2 – Shoulder
+3 – Median
+4 – Roadside (off trafficway; on vehicle area)
+5 – Outside trafficway (in area not meant for vehicles)
+6 – In parking lane
+7 – Gore (intersection of ramp and highway)
+9 – Unknown""" ;
+                                                            <http://www.w3.org/2004/02/skos/core#altLabel> "relation to road" ,
+                                                                                                           "relation_to_road" ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "location of first harmful event relative to the trafficway" .
+
+
+###  http://www.esri-hub.com/vocab/location_type
+:location_type rdf:type owl:DatatypeProperty ;
+               rdfs:comment """Code that defines the crash location-
+0 – Not applicable
+1 – Underpass
+2 – Ramp
+3 – Bridge
+4 – Tunnel
+5 – Toll Booth
+6 – Cross over related
+7 – Driveway or Parking Lot
+8 – Ramp and bridge
+9 – Unknown""" ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "location_type" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "location type" .
+
+
+###  http://www.esri-hub.com/vocab/manner_of_crash_impact
+:manner_of_crash_impact rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :MMUCC_crash_elements ;
+                        rdfs:domain :Collisions ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment """The identification of the manner in which two motor vehicles in transport initially came together without regard to the direction of force. This data element refers only to crashes where the first harmful event involves a collision between two motor vehicles in transport. See Appendix F for a diagram of the manner of collision. 
+
+Front to Rear • Front to Front • Angle • Sideswipe, Same Direction • Sideswipe, Opposite Direction • Rear to Side • Rear to Rear • Other • Unknown""" ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "manner_of_crash_impact" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "manner of crash impact" .
+
+
+###  http://www.esri-hub.com/vocab/month
+:month rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Collisions ;
+       rdfs:range xsd:string ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "crash_month" ,
+                                                      "mnth" ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "month" .
+
+
+###  http://www.esri-hub.com/vocab/num_fatal
+:num_fatal rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Collisions ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:unionOf ( xsd:double
+                                      xsd:integer
+                                    )
+                      ] ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "NUM_FATAL" ,
+                                                          "num_fatal" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "fatalities" .
+
+
+###  http://www.esri-hub.com/vocab/num_injrs
+:num_injrs rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Collisions ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:unionOf ( xsd:double
+                                      xsd:integer
+                                    )
+                      ] ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "NUM_INJURY" ,
+                                                          "num_injrs" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "injuries" .
+
+
+###  http://www.esri-hub.com/vocab/num_noninj
+:num_noninj rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Collisions ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Number of property damage only crashes within the cluster" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "NUM_NONINJ" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "number noninjured" .
+
+
+###  http://www.esri-hub.com/vocab/person_count
+:person_count rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Collisions ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Total amount of people involved in crash" ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "person_count" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "person count" .
+
+
+###  http://www.esri-hub.com/vocab/road_condition
+:road_condition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Collisions ;
+                rdfs:range xsd:string ;
+                rdfs:comment """Roadway surface condition code -
+0 – Dry
+1 – Wet
+2 – Sand/ mud/ dirt/ oil/ or gravel
+3 – Snow covered
+4 – Slush
+5 – Ice
+6 – Ice Patches
+7 – Water – standing or moving
+8 – Other
+9 – Unknown (expired)""" ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "road_condition" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "road condition" .
+
+
+###  http://www.esri-hub.com/vocab/route
+:route rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Collisions ;
+       rdfs:range xsd:string ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "L1STREET" ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "route" .
+
+
+###  http://www.esri-hub.com/vocab/sch_bus_ind
+:sch_bus_ind rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Collisions ;
+             rdfs:range xsd:string ;
+             rdfs:comment """Did the crash involve a School Bus? 
+Y = Yes
+N = No
+U = Unknown""" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "sch_bus_ind" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "sch bus ind" .
+
+
+###  http://www.esri-hub.com/vocab/sch_zone_ind
+:sch_zone_ind rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Collisions ;
+              rdfs:range xsd:string ;
+              rdfs:comment """Did the crash occur in a School Zone? 
+Y = Yes
+N = No
+U = Unknown""" ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "sch_zone_ind" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "sch zone ind" .
+
+
+###  http://www.esri-hub.com/vocab/source_of_information
+:source_of_information rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :MMUCC_crash_elements ;
+                       rdfs:domain :Collisions ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Affiliation of the person completing the crash report. Source of Information: Law Enforcement Agency Identifier, Motorist" ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "source_of_information" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "source of information" .
+
+
+###  http://www.esri-hub.com/vocab/tcd_type
+:tcd_type rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Collisions ;
+          rdfs:range xsd:string ;
+          rdfs:comment """Code that defines the Traffic Control Device -
+0 – Not applicable
+1 – Flashing traffic signal
+2 – Traffic signal
+3 – Stop sign
+4 – Yield sign
+5 – Active RR crossing controls
+6 – Passive RR crossing controls
+7 – Police officer or flagman
+8 – Other Type TCD
+9 – Unknown""" ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "tcd_type" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "tcd type" .
+
+
+###  http://www.esri-hub.com/vocab/time_of_day
+:time_of_day rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Collisions ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The time of day when the crash occurred" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "time_of_day" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "time of day" .
+
+
+###  http://www.esri-hub.com/vocab/vehicle_count
+:vehicle_count rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Collisions ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Total amount of all vehicles involved in crash" ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "vehicle_count" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "vehicle count" .
+
+
+###  http://www.esri-hub.com/vocab/year
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Collisions ;
+      rdfs:range [ rdf:type rdfs:Datatype ;
+                   owl:unionOf ( xsd:double
+                                 xsd:string
+                               )
+                 ] ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "crash_year" ,
+                                                     "yr" ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "year" .
 
 
 #################################################################
@@ -4411,6 +4831,11 @@ This document suggests a framework for Content and Aspects which can be organize
               rdfs:subClassOf :Role .
 
 
+###  http://www.esri-hub.com/vocab/Collisions
+:Collisions rdf:type owl:Class ;
+            rdfs:subClassOf :Feature_Service .
+
+
 ###  http://www.esri-hub.com/vocab/Color_Set
 :Color_Set rdf:type owl:Class ;
            rdfs:subClassOf :Datafile .
@@ -5082,7 +5507,6 @@ http://purl.org/spar/datacite/doi for DOI."""^^xsd:string ;
 
 ###  http://www.esri-hub.com/vocab/Locality
 :Locality rdf:type owl:Class ;
-          owl:equivalentClass <http://www.opengis.net/ont/geosparql#Feature> ;
           rdfs:comment "The local areas to which the tag applies"^^xsd:string ;
           rdfs:label "Locality"^^xsd:string .
 
@@ -15201,11 +15625,6 @@ http://purl.org/spar/datacite/doi for DOI."""^^xsd:string ;
                                                     owl:sameAs <http://www.w3.org/2006/03/wn/wn20/instances/synset-sustainable-adjective-1> .
 
 
-###  http://www.esri-hub.com/vocab/AddressLayer
-:AddressLayer rdf:type owl:NamedIndividual ,
-                       :Feature_Service .
-
-
 ###  http://www.esri-hub.com/vocab/BuildingAssessments
 :BuildingAssessments rdf:type owl:NamedIndividual .
 
@@ -15361,6 +15780,60 @@ http://purl.org/spar/datacite/doi for DOI."""^^xsd:string ;
 ###  http://www.esri-hub.com/vocab/genericDOI
 :genericDOI rdf:type owl:NamedIndividual ;
             rdfs:label "genericDOI"^^xsd:string .
+
+
+###  http://www.esri-hub.com/vocab/MassDOT::hsip-crash-clusters
+:hsip-crash-clusters rdf:type owl:NamedIndividual ,
+                              :Collisions ;
+                     :EPDO "" ;
+                     :case_identifier "" ;
+                     :crash_date_and_time "" ;
+                     :crashcount "" ;
+                     :num_fatal "" ;
+                     :num_injrs "" ;
+                     :num_noninj "" ;
+                     :route "" ;
+                     rdfs:comment "2005-2014 Highway Safety Improvement Program Vehicle Crash Cluster Locations. The top locations where reported collisions occurred have been identified. The crash cluster analysis methodology for the crashes uses a fixed meter search distance of 25 meters (82 ft.) to merge crash clusters together. The analysis method finds nearby crashes and merges their areas together, thus creating clusters. If two distinct clusters are found to share a common crash, the two clusters are merged into a single cluster. This method of search-and-merge results in a set of many distinct clusters of different sizes and shapes  Furthermore, the methodology uses the Equivalent Property Damage Only (EPDO) weighting to rank the clusters.  Additionally, due to the large geographic area encompassed by the crash clusters, it was difficult to name them so they were left unnamed but can be viewed spatially." ;
+                     rdfs:isDefinedBy "https://hub.arcgis.com/datasets/MassDOT::hsip-crash-clusters"^^xsd:anyURI ;
+                     rdfs:label "HSIP Crash Clusters" ;
+                     rdfs:seeAlso "https://www.arcgis.com/sharing/rest/content/items/cc323741010d4b17b71ca664e2050457/info/metadata/metadata.xml"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/dchcmpo::bike-collision-locations
+:bike-collision-locations rdf:type owl:NamedIndividual ,
+                                   :Collisions ;
+                          :case_identifier "" ;
+                          :crash_county "" ;
+                          :crash_date_and_time "" ;
+                          :est_cost "" ;
+                          :month "" ;
+                          :num_fatal "" ;
+                          :num_injrs "" ;
+                          :route "" ;
+                          :year "" ;
+                          rdfs:comment "DCHC public safety data associated with pedestrian, bike and incidents occured between 2008 to 2012." ;
+                          rdfs:isDefinedBy "https://hub.arcgis.com/datasets/dchcmpo::bike-collision-locations"^^xsd:anyURI ;
+                          rdfs:label "Bike Collision Locations" ;
+                          rdfs:seeAlso "https://www.arcgis.com/home/item.html?id=f80a23e5dd664386aba98acf8f65400e"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/ladot::collisions-2009-2013-switrs
+:collisions-2009-2013-switrs rdf:type owl:NamedIndividual ,
+                                      :Collisions ;
+                             rdfs:comment """For more information on the attributes associated with collisions, please download the codebook.
+Collected SWITRS (Statewide Integrated Traffic Records System) Data from 2009 - 2013. Geocoded and prepared by RoadSafe GIS""" ;
+                             rdfs:isDefinedBy "https://hub.arcgis.com/datasets/ladot::collisions-2009-2013-switrs"^^xsd:anyURI ;
+                             rdfs:label "Collisions 2009-2013 (SWITRS)" ;
+                             rdfs:seeAlso "https://www.arcgis.com/home/item.html?id=bed43aa2945a47b18ae888246712ccb1"^^xsd:anyURI .
+
+
+###  http://www.esri-hub.com/vocab/phl::gis-health.collisions-crash-2011-2014pubv
+:gis-health.collisions-crash-2011-2014pubv rdf:type owl:NamedIndividual ,
+                                                    :Collisions ;
+                                           rdfs:comment "CLICK HERE to view metadata. For any questions or technical assistance please email maps@phila.gov." ;
+                                           rdfs:isDefinedBy "https://hub.arcgis.com/datasets/phl::gis-health.collisions-crash-2011-2014pubv"^^xsd:anyURI ;
+                                           rdfs:label "GIS HEALTH.Collisions crash 2011 2014PUBV" ;
+                                           rdfs:seeAlso "https://www.arcgis.com/sharing/rest/content/items/5ba1194f422e488e8549f8d96b788033/info/metadata/metadata.xml"^^xsd:anyURI .
 
 
 ###  http://www.w3.org/2006/03/wn/wn20/instances/synset-acculturation-noun-2

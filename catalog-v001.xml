@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2006/time#2016" uri="http://www.w3.org/2006/time#"/>
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="http://www.opengis.net/ont/geosparql"/>
     <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology"/>
     <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology#"/>

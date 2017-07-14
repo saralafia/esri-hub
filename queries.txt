@@ -1,7 +1,7 @@
 #Sample queries
 
 #esri-hub.ttl
-#triples = 1344
+#triples = 14569
 
 #sample-data.ttl
 #triples = 545
@@ -16,6 +16,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?x (STR(?lab) AS ?label) WHERE {
+	?x rdf:type owl:Class .
+	OPTIONAL {?x rdfs:label ?lab}
+}
+ORDER BY ?label
 
 #SUMMARY of all OWL class equivalencies
 SELECT *

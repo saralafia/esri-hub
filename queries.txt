@@ -1,4 +1,7 @@
-#Sample queries
+#####Sample queries
+##### GENERAL
+##### TERM EXPANSION
+##### CLASS EXPANSION
 
 #esri-hub.ttl
 #triples = 14569
@@ -16,51 +19,15 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mads: <http://www.loc.gov/mads/rdf/v1#>
+PREFIX word: <http://wordnet-rdf.princeton.edu/ontology#>
 
-SELECT ?x (STR(?lab) AS ?label) WHERE {
-	?x rdf:type owl:Class .
-	OPTIONAL {?x rdfs:label ?lab}
-}
-ORDER BY ?label
-
-#SUMMARY of all OWL class equivalencies
-SELECT *
-WHERE {
-?item hub:hasTitle ?title .
-?item hub:hasCategory ?category1 .
-?category1 owl:equivalentClass ?category2 .
-}
-
-#SUMMARY of all SKOS related URIs
-SELECT *
-WHERE {
-?item skos:related ?related
-}
-
-#SUBSET of SKOS related to DBPedia places
-SELECT *
-WHERE {
-  ?item a hub:Item ;
-  hub:hasLocality ?locality ;
-  skos:related ?related .
-  FILTER regex(str(?related), "dbpedia") .
-}
-ORDER BY ?locality
-
-#SUMMARY of all RDFS superclasses
-SELECT distinct ?super ?sub
-WHERE {
-?sub rdfs:subClassOf ?super .
-}
-ORDER BY ?super
-
-#SUMMARY of all class domains, ranges
-SELECT ?class ?domain ?range
-WHERE {
-  ?class rdfs:range ?range .
-  ?class rdfs:domain ?domain .
-}
-ORDER BY ?class
+##### GENERAL #####
+#SUMMARY of all of the most used predicates
+SELECT ?predicate (COUNT(*)AS ?frequency)
+WHERE {?subject ?predicate ?object}
+GROUP BY ?predicate
+ORDER BY DESC(?frequency)
 
 #COUNT of all triples
 SELECT (count(*) as ?count) WHERE {
@@ -84,18 +51,106 @@ WHERE {
   ?s a ?type.
 }
 
-#SUMMARY of all of the most used predicates
-SELECT ?predicate (COUNT(*)AS ?frequency)
-WHERE {?subject ?predicate ?object}
-GROUP BY ?predicate
-ORDER BY DESC(?frequency)
-
 #SUMMARY of all Hub classes
 SELECT DISTINCT ?type
 WHERE {
   ?subject a ?type.
   FILTER( STRSTARTS(STR(?type),str(hub:)) )
 }
+
+##### TERM EXPANSION - multilingualism, synonyms, broader/narrower concepts #####
+##### esri-hub.ttl #####
+#All related terms for equivalent categories from Library of Congress Subject Headings, WordNet
+SELECT *
+WHERE {
+?uri rdf:type owl:Class .
+?uri mads:authoritativeLabel ?label .
+?uri owl:equivalentClass ?equivalent .
+?equivalent rdfs:subClassOf ?theme .
+}
+ORDER BY ?theme
+
+#Related LCSH and WordNet concepts for all Hub categories
+SELECT *
+WHERE {
+?class rdfs:subClassOf skos:ConceptScheme .
+?class skos:related ?related .
+?class rdfs:label ?label .
+# _:hub owl:someValuesFrom ?class .
+}
+ORDER BY ?label
+
+#Related LCSH concepts (narrower, or broader) and synonyms for "Agriculture"
+SELECT *
+WHERE {
+?term rdf:type owl:Class .
+?term mads:authoritativeLabel "Agriculture"@en ;
+rdfs:subClassOf ?sub ;
+skos:related ?rel ;
+skos:altLabel ?lab ;
+mads:authoritativeLabel ?auth .
+OPTIONAL {
+?term skos:narrower ?narrow .
+?term skos:broader ?broader . }
+}
+
+#Related terms for "Sustainable" from Hub
+SELECT distinct *
+WHERE {
+?class rdf:type owl:Class;
+skos:altLabel ?alt ;
+skos:related ?related .
+OPTIONAL {
+?class skos:prefLabel ?pref ;
+skos:prefLabel ?pref;
+mads:authoritativeLabel ?auth . }
+#FILTER contains( lcase(?label), "sustain")
+}
+ORDER BY ?class ASC(?pref)
+
+#Alternative or preferred SKOS label matches to Hub Categories with "land"
+SELECT *
+WHERE {
+?class rdf:type owl:Class ;
+skos:prefLabel ?pref;
+skos:altLabel ?label .
+OPTIONAL {
+?class skos:altLabel ?alt .}
+FILTER contains( lcase(?label), "land")
+}
+ORDER BY ?alt
+
+#Translations, synonyms, and gloss for "Crime" from WordNet
+SELECT distinct *
+WHERE {
+?term rdf:type owl:Class .
+?term rdfs:label "crime"@eng ;
+word:translation ?translation ;
+word:synset_member ?member .
+}
+
+#SUMMARY of all SKOS related URIs
+SELECT *
+WHERE {
+?item skos:related ?related
+}
+
+##### CLASS EXPANSION - class hierarchy, subsumption, inference #####
+##### for sample-data.ttl #####
+#SUMMARY of all RDFS superclasses
+SELECT distinct ?super ?sub
+WHERE {
+?sub rdfs:subClassOf ?super .
+}
+ORDER BY ?super
+
+#SUMMARY of all class domains, ranges
+SELECT ?class ?domain ?range
+WHERE {
+  ?class rdfs:range ?range .
+  ?class rdfs:domain ?domain .
+}
+ORDER BY ?class
 
 #Audience and Theme
 SELECT *
@@ -118,3 +173,21 @@ WHERE {
 ?item hub:hasAudience ?audience .
 ?item hub:hasTitle ?title .
 }
+
+#SUMMARY of all OWL class equivalencies
+SELECT *
+WHERE {
+?item hub:hasTitle ?title .
+?item hub:hasCategory ?category1 .
+?category1 owl:equivalentClass ?category2 .
+}
+
+#SUBSET of SKOS related to DBPedia places
+SELECT *
+WHERE {
+  ?item a hub:Item ;
+  hub:hasLocality ?locality ;
+  skos:related ?related .
+  FILTER regex(str(?related), "dbpedia") .
+}
+ORDER BY ?locality

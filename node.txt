@@ -1,0 +1,27 @@
+@prefix :        <#> .
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb:     <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql> .
+@prefix hub: <http://www.esri-hub.com/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mads: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix word: <http://wordnet-rdf.princeton.edu/ontology#> .
+
+const { exec } = require('child_process')
+var query = "./s-query --service http://localhost:3030/ds/query 'SELECT ?class ?domain ?range WHERE { ?class <http://www.w3.org/2000/01/rdf-schema#range> ?range . ?class <http://www.w3.org/2000/01/rdf-schema#domain> ?domain . } ORDER BY ?class'"
+exec(query, function(err, stdout, stderr) {
+  console.log(stdout)
+})
+
+SELECT * WHERE { ?class <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2002/07/owl#Class> ; <http://www.w3.org/2004/02/skos/core#prefLabel> ?pref; <http://www.w3.org/2004/02/skos/core#altLabel> ?label . OPTIONAL { ?class <http://www.w3.org/2004/02/skos/core#altLabel> ?alt .} FILTER contains( lcase(?label), "land") } ORDER BY ?alt
+
+SELECT ?class ?domain ?range WHERE { ?class rdfs:range ?range . ?class rdfs:domain ?domain .} ORDER BY ?class
+
+SELECT ?class ?domain ?range WHERE { ?class <http://www.w3.org/2000/01/rdf-schema#range> ?range . ?class <http://www.w3.org/2000/01/rdf-schema#domain> ?domain . } ORDER BY ?class

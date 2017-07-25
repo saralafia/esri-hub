@@ -10,19 +10,33 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #ITEM - ADDRESSES
-<https://hub.arcgis.com/datasets/DCGIS::address-points> a hub:Item ;
+<https://hub.arcgis.com/datasets/DCGIS::address-points> a hub:Feature_Service ;
 dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
-hub:hasCategory hub:Location_ISO ;
+hub:hasTheme hub:Location_ISO ;
 hub:hasIndicator hub:PovertyIndex ;
 hub:hasIdentifier "DCGIS::address-points" ;
-hub:hasTitle "Address Points - MAR (AddressPt)" ;
+hub:hasItemTitle "Address Points - MAR (AddressPt)" ;
 hub:hasItemDescription "Address points in the District of Columbia which are typically placed on the buildings." ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Livable_Hub ;
-hub:hasTopic hub:Housing ;
-hub:hasItem hub:Feature_Service;
+hub:hasItemTag "Addresspts" ;
+hub:hasItemTag "Building Number" ;
+hub:hasItemTag "Street Address" ;
+hub:hasItemTag "Address" ;
+hub:hasItemTag "Street Number" ;
+hub:hasItemTag "Quadrant" ;
+hub:hasItemTag "Address Location" ;
+hub:hasItemTag "Address Point" ;
+hub:hasItemTag "location" ;
+hub:hasItemTag "Street Type" ;
+hub:hasItemTag "DCGIS" ;
+hub:hasItemTag "DC" ;
+hub:hasItemTag "DC GIS" ;
+hub:hasItemTag "Washington" ;
+hub:hasItemTag "D.C." ;
+hub:hasItemTag "District of Columbia" ;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Livable_Hub ;
 hub:isSharedBy <https://ucsb.maps.arcgis.com/home/user.html?user=DCGISopendata> ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Location_WebMercator/MapServer/0> ;
@@ -35,93 +49,93 @@ skos:related <http://sws.geonames.org/4138106/> .
 hub:DCGIS::address-points_Poly a sf:Polygon;
 geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
 
-<https://hub.arcgis.com/datasets/592958e401a844c786d35e198baa565e_0> a hub:Item ;
+<https://hub.arcgis.com/datasets/592958e401a844c786d35e198baa565e_0> a hub:Feature_Service ;
 dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
-hub:hasCategory hub:Addresses_INSPIRE ;
+hub:hasTheme hub:Addresses_INSPIRE ;
 hub:hasIndicator hub:PovertyIndex ;
 hub:hasIdentifier "592958e401a844c786d35e198baa565" ;
-hub:hasTitle "Address Points" ;
+hub:hasItemTitle "Address Points" ;
 hub:hasItemDescription "Address points for the City of Alexandria represent the front door addresses." ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Livable_Hub ;
-hub:hasTopic hub:Housing ;
-hub:hasItem hub:Feature_Service;
+hub:hasItemTag "Housing" ;
+hub:hasItemTag "Address" ;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Livable_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/AddressPoints/FeatureServer/0> ;
 geo:hasGeometry hub:592958e401a844c786d35e198baa565_Poly .
 
-<https://hub.arcgis.com/datasets/ArlGIS::address-point> a hub:Item ;
+<https://hub.arcgis.com/datasets/ArlGIS::address-point> a hub:Feature_Service ;
 dc:title "Address Point" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Addresses_INSPIRE ;
+hub:hasTheme hub:Addresses_INSPIRE ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "ArlGIS::address-point" ;
-hub:hasTitle "Address Point" ;
+hub:hasItemTitle "Address Point" ;
 hub:hasItemDescription "Transit related data layers for Arlington County Virginia." ;
-hub:hasLocality hub:County ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasItemTag "car share" ;
+hub:hasItemTag "bike" ;
+hub:hasItemTag "taxi" ;
+hub:hasItemTag "bus" ;
+hub:hasItemTag "Arlington County" ;
+hub:hasItemTag "ART Bus" ;
+hub:hasItemTag "Streets" ;
+hub:hasItemTag "traffic signals" ;
+hub:hasPlaceContext hub:County ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Transit/MapServer/0> .
 
-<https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points> a hub:Item ;
+<https://hub.arcgis.com/datasets/Fairfaxcountygis::address-points> a hub:Feature_Service ;
 dc:title "Address Points" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Addresses_INSPIRE ;
+hub:hasTheme hub:Addresses_INSPIRE ;
 hub:hasIndicator hub:PovertyIndex ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "Fairfaxcountygis::address-points" ;
-hub:hasTitle "Address Points" ;
+hub:hasItemTitle "Address Points" ;
 hub:hasItemDescription "Address points, with attributes that include full address and parcel ID number for Fairfax County." ;
-hub:hasLocality hub:County ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:County ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/OpenData_A2/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service> a hub:Item ;
+<https://hub.arcgis.com/datasets/VGIN::virginia-address-points-map-service> a hub:Feature_Service ;
 dc:title "Virginia Address Points Map Service" ;
 hub:hasAudience hub:Civic ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Addresses_INSPIRE ;
+hub:hasTheme hub:Addresses_INSPIRE ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "VGIN::virginia-address-points-map-service" ;
-hub:hasTitle "Virginia Address Points Map Service" ;
+hub:hasItemTitle "Virginia Address Points Map Service" ;
 hub:hasItemDescription "Address Points can be used as a quality control resource for localities and VGIN for checking RCL address range and street name accuracy" ;
-hub:hasLocality hub:State ;
-hub:hasTemporality hub:Monthly ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:State ;
+hub:hasTemporalContext hub:Monthly ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Build ;
 foaf:homepage <http://gismaps.vita.virginia.gov/arcgis/rest/services/VA_Base_layers/VA_Address_Points/MapServer/0> .
 
 #ITEM - SCHOOLS
-<https://hub.arcgis.com/datasets/DCGIS::public-schools> a hub:Item ;
+<https://hub.arcgis.com/datasets/DCGIS::public-schools> a hub:Feature_Service ;
 dc:title "Public Schools" ;
 hub:hasAudience hub:Education ;
-hub:hasCategory hub:Society_ISO ;
+hub:hasTheme hub:Society_ISO ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "DCGIS::public-schools" ;
-hub:hasTitle "Public Schools" ;
+hub:hasItemTitle "Public Schools" ;
 hub:hasItemDescription "School Ground locations." ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Wellrun_Hub ;
-hub:hasTopic hub:Schools ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Wellrun_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/5> ;
@@ -134,19 +148,17 @@ skos:related <http://sws.geonames.org/4138106/> .
 hub:DCGIS::public-schools_Poly a sf:Polygon;
 geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
 
-<https://hub.arcgis.com/datasets/DCGIS::charter-schools> a hub:Item ;
+<https://hub.arcgis.com/datasets/DCGIS::charter-schools> a hub:Feature_Service ;
 dc:title "Charter Schools" ;
 hub:hasAudience hub:Education ;
-hub:hasCategory hub:Society_ISO ;
+hub:hasTheme hub:Society_ISO ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "DCGIS::charter-schools" ;
-hub:hasTitle "Charter Schools" ;
+hub:hasItemTitle "Charter Schools" ;
 hub:hasItemDescription "This layer contains points representing locations for charter schools" ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Wellrun_Hub ;
-hub:hasTopic hub:Schools ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Wellrun_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Education_WebMercator/MapServer/1> ;
@@ -159,54 +171,48 @@ skos:related <http://sws.geonames.org/4138106/> .
 hub:DCGIS::DCGIS::charter-schools_Poly a sf:Polygon;
 geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
 
-<https://hub.arcgis.com/datasets/ArlGIS::schools> a hub:Item ;
+<https://hub.arcgis.com/datasets/ArlGIS::schools> a hub:Feature_Service ;
 dc:title "Schools" ;
 hub:hasAudience hub:Education ;
 hub:hasAudience hub:Civic ;
-hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasTheme hub:Utility_and_governmental_services_INSPIRE ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "ArlGIS::schools" ;
-hub:hasTitle "Schools" ;
+hub:hasItemTitle "Schools" ;
 hub:hasItemDescription "Boundaries and facilities for Arlington County, Virginia. " ;
-hub:hasLocality hub:County ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Wellrun_Hub ;
-hub:hasTopic hub:Schools ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:County ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Wellrun_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://gis.arlingtonva.us:6443/arcgis/rest/services/public_fs/Public_FS_Bndrys_Facility/MapServer/8> .
 
-<https://hub.arcgis.com/datasets/mcgov-gis::schools> a hub:Item ;
+<https://hub.arcgis.com/datasets/mcgov-gis::schools> a hub:Feature_Service ;
 dc:title "Schools" ;
 hub:hasAudience hub:Education ;
 hub:hasAudience hub:Civic ;
-hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasTheme hub:Utility_and_governmental_services_INSPIRE ;
 hub:hasIndicator hub:SchoolAttendance ;
 hub:hasIdentifier "mcgov-gis::schools" ;
-hub:hasTitle "Schools" ;
+hub:hasItemTitle "Schools" ;
 hub:hasItemDescription "Schools " ;
-hub:hasLocality hub:Metro_Area ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Wellrun_Hub ;
-hub:hasTopic hub:Schools ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:Metro_Area ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Wellrun_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://services.arcgis.com/hdlG36cOubTzNDBb/arcgis/rest/services/Schools/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/DHS-GII::private-schools> a hub:Item ;
+<https://hub.arcgis.com/datasets/DHS-GII::private-schools> a hub:Feature_Service ;
 dc:title "Private Schools" ;
 hub:hasAudience hub:Civic ;
-hub:hasCategory hub:Utility_and_governmental_services_INSPIRE ;
+hub:hasTheme hub:Utility_and_governmental_services_INSPIRE ;
 hub:hasIdentifier "DHS-GII::private-schools" ;
-hub:hasTitle "Private Schools" ;
+hub:hasItemTitle "Private Schools" ;
 hub:hasItemDescription "All private elementary and secondary education features in the United States" ;
-hub:hasLocality hub:National ;
-hub:hasTemporality hub:Monthly ;
-hub:hasTheme hub:Wellrun_Hub ;
-hub:hasTopic hub:Schools ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:National ;
+hub:hasTemporalContext hub:Monthly ;
+hub:hasThemeContext hub:Wellrun_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Analyze ;
 foaf:homepage <https://services2.arcgis.com/1cdV1mIckpAyI7Wo/arcgis/rest/services/Private_Schools/FeatureServer/0> ;
@@ -220,19 +226,17 @@ hub:DHS-GII::private-schools a sf:Polygon;
 geo:asWKT "POLYGON((-66.9024 -19.4908,-66.9024 67.3887,162.584 67.3887,162.584 -19.4908,-66.9024 -19.4908))"^^geo:wktLiteral.
 
 #ITEM - ROADS
-<https://hub.arcgis.com/datasets/DCGIS::street-centerlines> a hub:Item ;
+<https://hub.arcgis.com/datasets/DCGIS::street-centerlines> a hub:Feature_Service ;
 dc:title "Street Centerlines" ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Transportation_ISO ;
+hub:hasTheme hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "DCGIS::street-centerlines" ;
-hub:hasTitle "Street Centerlines" ;
+hub:hasItemTitle "Street Centerlines" ;
 hub:hasItemDescription "A single line, segmented at all intersections representing each street in the District." ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> ;
@@ -245,70 +249,62 @@ skos:related <http://sws.geonames.org/4138106/> .
 hub:DCGIS::street-centerlines_Poly a sf:Polygon;
 geo:asWKT "POLYGON((-77.1143 38.9955,-77.1143 38.8122,-76.9096 38.8122,-76.9096 38.9955,-77.1143 38.9955))"^^geo:wktLiteral.
 
-<https://hub.arcgis.com/datasets/ArlGIS::roads> a hub:Item ;
+<https://hub.arcgis.com/datasets/ArlGIS::roads> a hub:Feature_Service ;
 dc:title "Roads" ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Transportation_ISO ;
+hub:hasTheme hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "ArlGIS::roads" ;
-hub:hasTitle "Roads" ;
+hub:hasItemTitle "Roads" ;
 hub:hasItemDescription "Arlington County's planimetric feature classes. Includes Buildings, roads, sidewalks." ;
-hub:hasLocality hub:County ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:County ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Transportation_WebMercator/MapServer/41> .
 
-<https://hub.arcgis.com/datasets/AlexGIS::roads> a hub:Item ;
+<https://hub.arcgis.com/datasets/AlexGIS::roads> a hub:Feature_Service ;
 dc:title "Roads" ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Transportation_ISO ;
+hub:hasTheme hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "AlexGIS::roads" ;
-hub:hasTitle "Roads" ;
+hub:hasItemTitle "Roads" ;
 hub:hasItemDescription "Street centerlines for the City of Alexandria, Virginia" ;
-hub:hasLocality hub:City ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:City ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/Roads/FeatureServer/0> .
 
-<https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads> a hub:Item ;
+<https://hub.arcgis.com/datasets/maryland::maryland-road-centerlines-local-and-other-roads> a hub:Feature_Service ;
 dc:title "Maryland Road Centerlines - Local and Other Roads" ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Transportation_ISO ;
+hub:hasTheme hub:Transportation_ISO ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "maryland::maryland-road-centerlines-local-and-other-roads" ;
-hub:hasTitle "Maryland Road Centerlines - Local and Other Roads" ;
+hub:hasItemTitle "Maryland Road Centerlines - Local and Other Roads" ;
 hub:hasItemDescription "The centerline is a data sharing process between the State Highway Administration (SHA) and local governments. " ;
-hub:hasLocality hub:State ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:State ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Inform ;
 foaf:homepage <http://geodata.md.gov/imap/rest/services/Transportation/MD_RoadCenterlines/MapServer/3> .
 
-<https://hub.arcgis.com/datasets/usdot::highways> a hub:Item ;
+<https://hub.arcgis.com/datasets/usdot::highways> a hub:Feature_Service ;
 dc:title "Highways" ;
 hub:hasAudience hub:Mobility ;
-hub:hasCategory hub:Transport_networks_INSPIRE ;
+hub:hasTheme hub:Transport_networks_INSPIRE ;
 hub:hasIndicator hub:TrafficAccidents ;
 hub:hasIdentifier "usdot::highways" ;
-hub:hasTitle "Highways" ;
+hub:hasItemTitle "Highways" ;
 hub:hasItemDescription "There is no description available." ;
-hub:hasLocality hub:National ;
-hub:hasTemporality hub:Annually ;
-hub:hasTheme hub:Safe_Hub ;
-hub:hasTopic hub:Streets ;
-hub:hasItem hub:Feature_Service;
+hub:hasPlaceContext hub:National ;
+hub:hasTemporalContext hub:Annually ;
+hub:hasThemeContext hub:Safe_Hub ;
 hub:isSharedBy hub:Administrator ;
 hub:hasUtility hub:Analyze ;
 foaf:homepage <https://maps.bts.dot.gov/services/rest/services/appServices/InterimNMFN/MapServer/5> .

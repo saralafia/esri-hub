@@ -1,0 +1,24 @@
+Safe
+  Crime
+  Disaster
+  Emergency Response
+Prosperous
+  Demographics
+  Economy
+  Education
+  Sustainable
+Climate
+  Energy
+  Infrastructure
+Healthy
+  Agriculture
+  Disease
+  Health-Care
+Liveable
+  Culture
+  Housing
+  Transportation
+Well-Run
+  Boundaries
+  Financial
+  Planning & Land Use

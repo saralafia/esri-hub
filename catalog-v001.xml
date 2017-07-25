@@ -5,6 +5,7 @@
     <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology"/>
     <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology#"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1499799149164" name="http://www.esri-hub.com/vocab/" uri="7112017.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1501017715581" name="http://www.esri-hub.com/categories" uri="esri-hub-categories.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1501017715581" name="http://www.esri-hub.com/vocab/" uri="7112017.owl"/>
     </group>
 </catalog>

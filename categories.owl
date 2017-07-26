@@ -1,17 +1,66 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.esri-hub.com/categories#"
      xml:base="http://www.esri-hub.com/categories"
+     xmlns:schema="http://purl.org/vocab/changeset/schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:RecordInfo="http://id.loc.gov/ontologies/RecordInfo#"
+     xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos-xl="http://www.w3.org/2008/05/skos-xl#"
      xmlns:skos1="https://www.w3.org/2009/08/skos-reference/skos.html#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
+     xmlns:ontology="http://wordnet-rdf.princeton.edu/ontology#">
     <owl:Ontology rdf:about="http://www.esri-hub.com/categories">
-        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/108383680-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85105992"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/100884975-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85002415"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/111472496-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114056081-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114562074-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101061824-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101100603-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85038299"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85108685"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85074345"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/100767761-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85027044"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85040989"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/100930186-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh88000748"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101127115-n"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101106311-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/103575144-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85066333"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/302817084-a"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/113926085-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/105993821-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114093842-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85109445"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85059518"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh2009000375"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/106031425-n"/>
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85033993"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/302339849-s"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114542968-n"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85034755"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85036659"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85082871"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85062603"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/113946812-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/107329438-n"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/301426549-a"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85016091"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/subjects/sh85048256"/>
+        <owl:imports rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj96006075"/>
+        <owl:imports rdf:resource="http://wordnet-rdf.princeton.edu/wn31/103551520-n"/>
     </owl:Ontology>
     
 
@@ -92,6 +141,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Health</skos:prefLabel>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/disease"/>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/childrensSubjects/sj96006075 -->
+
+    <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/childrensSubjects/sj96006075">
+        <owl:sameAs rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114562074-n"/>
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/safe"/>
     </owl:NamedIndividual>
     
 
@@ -183,6 +242,15 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Public safety</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/emergency_response"/>
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj96006075"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh2009000375 -->
+
+    <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh2009000375">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/sustainable"/>
     </owl:NamedIndividual>
     
 
@@ -227,6 +295,15 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85002415 -->
+
+    <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85002415">
+        <owl:sameAs rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101106311-n"/>
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85008810 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85008810">
@@ -244,6 +321,15 @@
         <skos:prefLabel>Basic needs</skos:prefLabel>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/livable"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85016091 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85016091">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=003"/>
+    </rdf:Description>
     
 
 
@@ -277,6 +363,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85027044 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85027044">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/climate"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85028901 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85028901">
@@ -307,6 +401,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85033993 -->
+
+    <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85033993">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85034049 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85034049">
@@ -327,6 +429,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85034755 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034755">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/culture"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85036577 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85036577">
@@ -337,10 +447,27 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85036659 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85036659">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/demographics"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85038299 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85038299">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/disaster"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85038411 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85038411">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/disease"/>
         <skos:prefLabel>Diseases</skos:prefLabel>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
     </owl:NamedIndividual>
@@ -391,10 +518,19 @@
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85040850">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/economy"/>
         <skos:prefLabel>Economics</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/financial"/>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/planning_and_land_use"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85040989 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85040989">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
     
 
 
@@ -418,6 +554,23 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85048256 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85048256">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/financial"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85059518 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85059518">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=009"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85061482 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85061482">
@@ -425,6 +578,14 @@
         <skos:prefLabel>Holistic medicine</skos:prefLabel>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85062603 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85062603">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
     
 
 
@@ -480,12 +641,29 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85066333 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85066333">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/infrastructure"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85074345 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85074345">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/planning_and_land_use"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85074350 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85074350">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Land use, Rural</skos:prefLabel>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/planning_and_land_use"/>
     </owl:NamedIndividual>
     
 
@@ -538,6 +716,14 @@
         <skos:prefLabel>Management</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/emergency_response"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85082871 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85082871">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/health-care"/>
+    </rdf:Description>
     
 
 
@@ -601,6 +787,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85105992 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85105992">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85108637 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85108637">
@@ -621,6 +815,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh85108685 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85108685">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/well-run"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh85108858 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh85108858">
@@ -628,6 +830,14 @@
         <skos:prefLabel>Public works</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/infrastructure"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://id.loc.gov/authorities/subjects/sh85109445 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85109445">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/liveable"/>
+    </rdf:Description>
     
 
 
@@ -731,6 +941,14 @@
     
 
 
+    <!-- http://id.loc.gov/authorities/subjects/sh88000748 -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh88000748">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/prosperous"/>
+    </rdf:Description>
+    
+
+
     <!-- http://id.loc.gov/authorities/subjects/sh89002994 -->
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh89002994">
@@ -755,6 +973,7 @@
 
     <owl:NamedIndividual rdf:about="http://id.loc.gov/authorities/subjects/sh91000441">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/emergency_response"/>
         <skos:prefLabel>Emergency management</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/disaster"/>
     </owl:NamedIndividual>
@@ -768,6 +987,178 @@
         <skos:prefLabel>Social ecology</skos:prefLabel>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/sustainable"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/100767761-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/100767761-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/100884975-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/100884975-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/100930186-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/100930186-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/planning_and_land_use"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/101061824-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/101061824-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/health-care"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/101100603-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/101100603-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/financial"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/101106311-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/101106311-n"/>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/101127115-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/101127115-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/well-run"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/103551520-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/103551520-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/103575144-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/103575144-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/infrastructure"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/105993821-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/105993821-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/culture"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/106031425-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/106031425-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/demographics"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/108383680-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/108383680-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/economy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/111472496-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/111472496-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/113926085-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/113926085-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/113946812-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/113946812-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/114056081-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/114056081-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/emergency_response"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/114093842-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/114093842-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/disease"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/114542968-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/114542968-n">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/climate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/114562074-n -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/114562074-n"/>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/301426549-a -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/301426549-a">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/liveable"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/302339849-s -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/302339849-s">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/prosperous"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://wordnet-rdf.princeton.edu/wn31/302817084-a -->
+
+    <rdf:Description rdf:about="http://wordnet-rdf.princeton.edu/wn31/302817084-a">
+        <owl:sameAs rdf:resource="http://www.esri-hub.com/categories/sustainable"/>
+    </rdf:Description>
     
 
 
@@ -787,11 +1178,9 @@
         <skos1:broader rdf:resource="http://www.esri-hub.com/categories/healthy"/>
         <skos1:definition>Rearing of animals or cultivation of plants, for example agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</skos1:definition>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh00005841"/>
-        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85002415"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85074350"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/101106311-n"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=001"/>
-        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=24"/>
     </owl:NamedIndividual>
     
 
@@ -821,7 +1210,6 @@
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85016091"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85134110"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/113926085-n"/>
-        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=003"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=447"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=12"/>
     </owl:NamedIndividual>
@@ -853,7 +1241,9 @@
         <skos1:narrower rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=823"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85027044"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114542968-n"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=002"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=004"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=014"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=1072"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=67"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=68"/>
@@ -970,7 +1360,7 @@
         <skos1:narrower rdf:resource="https://www2.usgs.gov/science/combine.php?term=2-531&amp;with=2-30"/>
         <skos1:narrower rdf:resource="https://www2.usgs.gov/science/combine.php?term=2-531&amp;with=2-304"/>
         <skos1:narrower rdf:resource="https://www2.usgs.gov/science/combine.php?term=2-531&amp;with=2-816"/>
-        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85038299.html"/>
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85038299"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/107329438-n"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=012"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=1075"/>
@@ -1045,7 +1435,7 @@
         <skos:prefLabel>Economy</skos:prefLabel>
         <skos1:broader rdf:resource="http://www.esri-hub.com/categories/prosperous"/>
         <skos1:broader rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=1075"/>
-        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85040850.html"/>
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85040850"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/108383680-n"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=005"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=133"/>
@@ -1111,7 +1501,7 @@
         <skos1:broader rdf:resource="http://www.esri-hub.com/categories/safe"/>
         <skos1:narrower rdf:resource="http://id.loc.gov/authorities/subjects/sh85080336"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh2007008878"/>
-        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh91000441.html"/>
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh91000441"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114056081-n"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=530"/>
     </owl:NamedIndividual>
@@ -1140,6 +1530,7 @@
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85105992"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/111472496-n"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=017"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=019"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=799"/>
     </owl:NamedIndividual>
     
@@ -1207,6 +1598,7 @@
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85061482"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85063519"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/113946812-n"/>
+        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=009"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=533"/>
         <skos1:topConceptOf rdf:resource="http://www.esri-hub.com/categories/hub_categories"/>
     </owl:NamedIndividual>
@@ -1231,7 +1623,7 @@
         <skos:prefLabel>Housing</skos:prefLabel>
         <skos1:broader rdf:resource="http://id.loc.gov/authorities/subjects/sh85026282"/>
         <skos1:broader rdf:resource="http://id.loc.gov/authorities/subjects/sh85062894"/>
-        <skos1:broader rdf:resource="http://www.esri-hub.com/categories/livable"/>
+        <skos1:broader rdf:resource="http://www.esri-hub.com/categories/liveable"/>
         <skos1:narrower rdf:resource="http://id.loc.gov/authorities/subjects/sh85040215"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85040193"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh85062603"/>
@@ -1284,14 +1676,14 @@
     
 
 
-    <!-- http://www.esri-hub.com/categories/livable -->
+    <!-- http://www.esri-hub.com/categories/liveable -->
 
-    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/categories/livable">
+    <owl:NamedIndividual rdf:about="http://www.esri-hub.com/categories/liveable">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Quality of life</skos:altLabel>
         <skos:altLabel>habitable</skos:altLabel>
-        <skos:altLabel>liveable</skos:altLabel>
-        <skos:prefLabel>Livable</skos:prefLabel>
+        <skos:altLabel>livable</skos:altLabel>
+        <skos:prefLabel>Liveable</skos:prefLabel>
         <skos1:broader rdf:resource="http://id.loc.gov/authorities/subjects/sh85040817"/>
         <skos1:broader rdf:resource="http://id.loc.gov/authorities/subjects/sh85062856"/>
         <skos1:broader rdf:resource="http://id.loc.gov/authorities/subjects/sh85076807"/>
@@ -1375,12 +1767,10 @@
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/crime"/>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/disaster"/>
         <skos1:narrower rdf:resource="http://www.esri-hub.com/categories/emergency_response"/>
-        <skos1:related rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj96006075.html"/>
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj96006075"/>
         <skos1:related rdf:resource="http://id.loc.gov/authorities/subjects/sh2008002399"/>
         <skos1:related rdf:resource="http://wordnet-rdf.princeton.edu/wn31/114562074-n"/>
-        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=009"/>
         <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;code=1075"/>
-        <skos1:related rdf:resource="https://www2.usgs.gov/science/science.php?thcode=2&amp;term=546"/>
         <skos1:topConceptOf rdf:resource="http://www.esri-hub.com/categories/hub_categories"/>
     </owl:NamedIndividual>
     
@@ -1513,6 +1903,17 @@
     
 
 
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=001 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=001">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Farming</skos:prefLabel>
+        <skos1:definition>Rearing of animals or cultivation of plants, for example agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=002 -->
 
     <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=002">
@@ -1520,6 +1921,188 @@
         <skos:prefLabel>Biota</skos:prefLabel>
         <skos1:definition>Flora or fauna in natural environment, for example wildlife, vegetation, biological sciences, ecology, wilderness, sea life, wetlands, habitat, biological resources</skos1:definition>
         <skos1:related rdf:resource="http://www.esri-hub.com/categories/climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=003 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=003">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Boundaries</skos:prefLabel>
+        <skos1:definition>Legal land descriptions, for example political and administrative boundaries, governmental units, marine boundaries, voting districts, school districts, international boundaries</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=004 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=004">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>ClimatologyMeteorologyAtmosphere</skos:prefLabel>
+        <skos1:definition>Processes and phenomena of the atmosphere, for example cloud cover, weather, climate, atmospheric conditions, climate change, precipitation</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=005 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=005">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Economy</skos:prefLabel>
+        <skos1:definition>Economic activities, conditions, and employment, for example production, labor, revenue, business, commerce, industry, tourism and ecotourism, forestry, fisheries, commercial or subsistence hunting, exploration and exploitation of resources such as minerals, oil and gas</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/economy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=006 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=006">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Elevation</skos:prefLabel>
+        <skos1:definition>Height above or below sea level, for example altitude, bathymetry, digital elevation models, slope, derived products, DEMs, TINs</skos1:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=007 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=007">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Environment</skos:prefLabel>
+        <skos1:definition>Environmental resources, protection and conservation, for example environmental pollution, waste storage and treatment, environmental impact assessment, monitoring environmental risk, nature reserves, landscape, water quality, air quality, environmental modeling</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/sustainable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=008 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=008">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>GeoscientificInformation</skos:prefLabel>
+        <skos1:definition>Information pertaining to earth sciences, for example geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth&apos;s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, groundwater, erosion</skos1:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=009 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=009">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Health</skos:prefLabel>
+        <skos1:definition>Health, health services, human ecology, and safety, for example disease and illness, factors affecting health, hygiene, substance abuse, mental and physical health, health services, health care providers, public health</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=010 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=010">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>ImageryBaseMapsEarthCover</skos:prefLabel>
+        <skos1:definition>Base maps, for example land/earth cover, topographic maps, imagery, unclassified images, annotations, digital ortho imagery</skos1:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=011 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=011">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>IntelligenceMilitary</skos:prefLabel>
+        <skos1:definition>Military bases, structures, activities, for example barracks, training grounds, military transportation, information collection</skos1:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=012 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=012">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>InlandWaters</skos:prefLabel>
+        <skos1:definition>Inland water features, drainage systems and characteristics, for example rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods and flood hazards, water quality, hydrographic charts, watersheds, wetlands, hydrography</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/disaster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=013 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=013">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Location</skos:prefLabel>
+        <skos1:definition>Positional information and services, for example addresses, geodetic networks, geodetic control points, postal zones and services, place names, geographic names</skos1:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=014 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=014">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Oceans</skos:prefLabel>
+        <skos1:definition>Features and characteristics of salt water bodies (excluding inland waters), for example tides, tidal waves, coastal information, reefs, maritime, outer continental shelf submerged lands, shoreline</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=015 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=015">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>PlanningCadastre</skos:prefLabel>
+        <skos1:definition>Information used for appropriate actions for future use of the land, for example land use maps, zoning maps, cadastral surveys, land ownership, parcels, easements, tax maps, federal land ownership status, public land conveyance records</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/planning_and_land_use"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=016 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=016">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Society</skos:prefLabel>
+        <skos1:definition>Characteristics of society and culture, for example settlements, housing, anthropology, archaeology, education, traditional beliefs, manners and customs, demographic data, tourism, recreational areas and activities, parks, recreational trails, historical sites, cultural resources, social impact assessments, crime and justice, law enforcement, census information, immigration, ethnicity</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/culture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=017 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=017">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Structure</skos:prefLabel>
+        <skos1:definition>Man-made construction, for example buildings, museums, churches, factories, housing, monuments, shops, towers, building footprints, architectural and structural plans</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/infrastructure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=018 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=018">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Transportation</skos:prefLabel>
+        <skos1:definition>Means and aids for conveying persons or goods, for example roads, airports/airstrips, shipping routes, tunnels nautical charts, vehicle or vessel location, aeronautical charts, railways</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/transportation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www2.usgs.gov/science/science.php?thcode=15&amp;term=019 -->
+
+    <owl:NamedIndividual rdf:about="https://www2.usgs.gov/science/science.php?thcode=15&amp;term=019">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>UtilitiesCommunication</skos:prefLabel>
+        <skos1:definition>Energy, water and waste systems and communications infrastructure and services, for example hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks</skos1:definition>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
     </owl:NamedIndividual>
     
 
@@ -1798,6 +2381,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Administrative and political boundaries</skos:prefLabel>
         <skos1:broader rdf:resource="http://www.esri-hub.com/categories/culture"/>
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
     </owl:NamedIndividual>
     
 
@@ -2020,6 +2604,134 @@
         <skos:prefLabel>Oil resources</skos:prefLabel>
         <skos1:broader rdf:resource="http://www.esri-hub.com/categories/energy"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh2012002673">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85002482">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85027662">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034010">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034027">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034029">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034030">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041003">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041059">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041070">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041082">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041108">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85042742">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043124">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043129">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043130">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043133">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043134">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043136">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/energy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85059529">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85059537">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85059604">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85062616">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85062624">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85062635">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85094151">
+        <skos1:related rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj96006075"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85112882">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85115897">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85115915">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/healthy"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85120572">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85121130">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85141304">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85145168">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh87004216">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/sustainable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh88007007">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/housing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh90002645">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/crime"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh96009831">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/agriculture"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh97006013">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/boundaries"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lod.nal.usda.gov/nalt/4388">
+        <skos1:related rdf:resource="http://www.esri-hub.com/categories/education"/>
+    </rdf:Description>
 </rdf:RDF>
 
 

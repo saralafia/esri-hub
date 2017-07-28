@@ -1,0 +1,51 @@
+SELECT ?a ?b
+WHERE {
+?term skos:prefLabel ?a .
+?term skos:altLabel ?b .
+FILTER contains( lcase(?a), "agriculture")
+}
+ORDER BY ?b
+
+SELECT ?a ?b
+WHERE {
+?a skos:prefLabel ?label .
+?same owl:sameAs ?a;
+      ontology:translation ?b .
+FILTER contains( lcase(?label), "disease")
+}
+ORDER BY ?b
+
+SELECT ?a ?b
+WHERE {
+?term skos:prefLabel ?a .
+?same owl:sameAs ?term;
+      skos:broader ?skos .
+?skos skos:prefLabel ?b .
+FILTER contains( lcase(?a), "infrastructure")
+}
+ORDER BY ?a
+
+SELECT ?a ?b
+WHERE {
+?term skos:prefLabel ?a .
+?same owl:sameAs ?term;
+      skos:narrower ?skos .
+?skos skos:prefLabel ?b .
+FILTER contains( lcase(?a), "boundaries")
+}
+ORDER BY ?a
+
+SELECT ?a ?b
+WHERE {
+?term skos:prefLabel ?a .
+?same owl:sameAs ?term;
+      skos:related ?skos .
+?skos skos:prefLabel ?b .
+FILTER contains( lcase(?a), "crime")
+}
+ORDER BY ?a
+
+SELECT ?a ?b
+{ ?a skos:prefLabel ?b .
+  FILTER regex(str(?b), "fire", "i")
+}

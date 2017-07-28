@@ -1,0 +1,274 @@
+fire
+streets
+vehicles, operations
+fire
+OverwriteHostedFeatures
+Service Lookup, Service Area
+California, Clancy Energy
+fire
+Curbside, Pickup, My Government Services, Public Works
+streets
+floods
+Support,tile layer,hosted,snapping
+BRS,EBS,Transmitters,Broadband Radio Service,Educational Broadband Service,Broadband
+Service Lookup, Service Area
+philly
+Service
+Service Lookup, Service Area
+Service Lookup, Service Area
+Service Lookup, Service Area
+tags
+Addresspts , Building Number , Street Address , Address , Street Number , Quadrant , Address Location , Address Point , location , Street Type , DCGIS , DC , DC GIS , Washington , D.C. , District of Columbia ,
+Housing , Address ,
+car share , bike , taxi , bus , Arlington County , ART Bus , Streets , traffic signals ,
+FFX-PropertyLand, OpenData_A2, Address Points, Fairfax County, Virginia, VA
+Virginia, VBMP, Address Points, Address, VGIN, RCL, Mapping
+society Property education Ground School
+education society Schools Charter Schools
+Arlington County, parcel, zoning, facilities, parks, voter, Police District, zip code, Civic Associations, fire station, hospital, library, schools
+Schools, MCGGisOpenDataPointOfInterests
+education homeland security homeland defense private schools emergency response
+Street Centerline transportation
+planimetric, arlington county, Road, Buildings, Sidewalks, driveways, parking lots, pedestrian, trails
+Road, Streets, Transportation, Transit, Street Network, Car, Automobile, Pavement
+TRAN, Transportation, Centerlines, Roads, Streets, Interstates, Highways, SHA, State Highway Administration, Routes, Maryland, MD, Dynamic, Vector, WMS, WFS, KML, MD iMAP
+Highway, Interim, National, Multimodal, Freight, Network, INMFN, NMFM, MFN
+Vision Zero, Collisions, SWITRS, LADOT, Safety, Transportation
+City of Philadelphia, Mayor's Office of Transportation and Utilities, MOTU, crash, collision, traffic, safety, Authoritative, City Of Philadelphia, Philadelphia, PHLmaps
+DCHC MPO, Bike, Pedestrian, Safety, Bike and Pedestrian
+MassDOT Crash crash clusters accidents Vehicle crashes HSIP clusters 2011-2013
+water – inland, hydrography, surface water, drainage, boundary, WBD, HU, region, 2-digit, subregion, 4-digit, basin, 6-digit, subbasin, 8-digit, watershed, 10-digit, subwatershed, 12-digit, 14-digit, Watershed Boundary Dataset, Hydrologic Unit, drainage area, A16, A-16, NSDI, USNSDI, NGDA, National Spatial Data Infrastructure, USGS, Water - Inland, U.S. National Spatial Data Infrastructure, FGDC, Federal Geographic Data Committee, National Geospatial Data Asset, U.S. Geological Survey
+hydrography, NHD, surface water, drainage, ephemeral, intermittent, perennial, river, stream, canal, ditch, waterbody, lake, pond, reservoir, swamp, marsh, spring, well, dam, weir, gage, A16, A-16, NSDI, USNSDI, NGDA, National Spatial Data Infrastructure, USGS, U.S Geological Survey, Water - Inland, U.S. National Spatial Data Infrastructure, FGDC, Federal Geographic Data Committee, National Geospatial Data Asset
+geoplatform, invasive species, invasive, zebra mussel
+usnsdi, nsdi, zebra, mussel, invasive, aquatic
+北海道, 室蘭市, 防災, japan, hokkaido, muroran, Open Data, disaster
+top tags for category
+"A Safe City (81)
+La (81)
+Safety (63)
+County Of La (51)"
+"Crime (181)
+Police (124)
+Incident (56)
+Public Safety (48)
+Safety (47)"
+"Disaster (128)
+Fema (110)
+Declarations (69)
+Designated (69)
+Cusco (60)"
+"Boundaries (211)
+Emergency (208)
+Emergency Response (138)
+California (110)
+Blight Problems (104)"
+"Nws (155)
+Noaa (145)
+Landscape (95)
+Weather (93)
+Idp-Gis (80)"
+"Demographics (727)
+Population (396)
+Census (308)
+Boundaries (294)
+People (145)"
+"Economy (230)
+Economic Development (156)
+Economic (128)
+Planning (115)
+Society (111)"
+"Education (826)
+Schools (248)
+Population (150)
+Demographics (147)
+School (128)"
+"Noaa (183)
+Cyclones (182)
+Hurricanes (181)
+Tropical Storms. Tropical Depressions (181)
+Nws (126)"
+"Climate (214)
+Climate Change (166)
+Noaa (138)
+Landscape (85)
+Environment (83)"
+"Energy (171)
+Environment (92)
+Water (80)
+Landscape (78)
+Energie (65)"
+"Infrastructure (1,235)
+Water (410)
+Africa (252)
+Transportation (244)
+Osm (236)"
+"Health (1,129)
+Indiana (193)
+Sites (167)
+Facilities (164)
+Boundaries (145)"
+"Agriculture (421)
+Water (318)
+Usda (248)
+U.S. Department Of Agriculture (236)
+Geospatial (222)"
+"Health (91)
+Water (87)
+Health Datapalooza (58)
+California (53)
+Irwm (50)"
+"Healthcare (146)
+Health (111)
+A-16 (68)
+A16 (65)
+Health Datapalooza (58)"
+"A Livable City (79)
+La (79)
+Los Angeles (79)
+County Of La (50)
+Locations (39)"
+"Cultural (149)
+Society (129)
+Environment (102)
+Culture (98)
+Maryland (81)"
+"Housing (356)
+Noaa (257)
+Nws (221)
+Boundaries (148)
+Census (147)"
+"Transportation (4,156)
+Roads (594)
+Ohio (449)
+Open Data (426)
+Lbrs (403)"
+"Boundaries (632)
+Administrative Boundaries (559)
+Administrative (466)
+Wfs (274)
+Wms (259)"
+"Boundaries (3,784)
+Boundary (1,087)
+Noaa (1,013)
+Open Data (951)
+Enc (884)"
+"Finance (86)
+Kenya (59)
+Environment (56)
+Finance - Open Data (36)
+Idot (36)"
+"Water (113)
+Irwm (94)
+Sierra Water Workgroup (94)
+Workgroup (94)
+California (70)"
+top queries for string
+"safe	20
+ safe routes to school	7
+ safe routes	5
+ a safe city	5
+ Safe	4"
+"crime	3,520
+ Crime	393
+ *crime	221
+ crime incidents	121
+ crime incidents - 2016	85"
+"Disaster Management	172
+ disaster	41
+ natural disaster	6
+ national natural disaster inventory	5
+ Disaster	4
+ *disaster	"
+"emergency	344
+ Emergency	332
+ Emergency Response	205
+ Emergency Management	179
+ emergency response	31"
+-
+"Demographics	4,028
+ demographics	2,604
+ DEMOGRAPHICS	331
+ ncrpo demographics	25
+ *demographics	19"
+"Business and Economy	1,210
+ economy	1,066
+ Economy	367
+ business and economy	14
+ Business Economy	5"
+"education	3,955
+ Education	866
+ FFX-Education	161
+ education youth	72
+ arts and education	37"
+"Sustainable cities	27
+ sustainable	14
+ sustainable communities regional planning grantees	4
+ sustainable community	4
+ Sustainable Communities Regional Planning Grantees	4"
+"climate	449
+ atmosphere and climate	399
+ climate change	72
+ Climate Change	70
+ Climate	22"
+"energy	357
+ Energy	111
+ renewable energy	31
+ Clean Energy	30
+ Department of Energy	28"
+"infrastructure	3,377
+ Infrastructure	3,367
+ TxDOT Infrastructure	338
+ Public Works, Infrastructure, Stormwater	210
+ stormwater infrastructure	78"
+"healthy food	9
+ healthy	6
+ 828 healthy way	3
+ healthy corner stores	3
+ healthy corner	2"
+"agriculture	966
+ Agriculture	614
+ Department of Agriculture	28
+ urban agriculture	11
+ *agriculture	7"
+"disease	93
+ heart disease	20
+ disease statistics	10
+ Disease	9
+ lyme disease	5"
+"health	3,599
+ Public Health	1,608
+ Health	735
+ health and human resources	697
+ Health Lookups	412"
+"*Liveable landscapes	1"
+"Arts and Culture and Tourism	295
+ culture	293
+ arts culture and history	171
+ Libraries Arts Culture	123
+ Arts Culture Tourism	96"
+"housing	1,468
+ Public Housing Developments	803
+ Low Income Housing Tax Credit Properties	761
+ Housing Choice Vouchers by Tract	506
+ Public Housing Authorities	483"
+"transportation	14,357
+ Transportation	11,668
+ TRANSPORTATION	625
+ FFX-Transportation	368
+ vision zero safety (transportation)	257"
+"a well-run city	6"
+"Boundaries	24,581
+ boundaries	12,454
+ CTYUA Boundaries	1,316
+ planning boundaries	1,184
+ Administrative Boundaries	1,163"
+"Financial	94
+ financial	46
+ campaign financial contributions	19
+ Business and Financial	14
+ campaign financial expenditures	7"
+"Land Use Planning	6
+ land use planning	5
+ PLANNING land use	3
+ Planning Land Use By Parcel	3
+ land use planning areas	3"

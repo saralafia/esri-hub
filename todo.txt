@@ -1,0 +1,36 @@
+#TODO
+
+#run through categories and check/extend mappings (related)
+#resolve sameAs with esri-category terms
+#errors - SKOS import (.html, refactored skos1)
+#police, criminals, society
+#greenhouse effect, droughts, climate change
+
+#LCSH related
+SELECT ?label ?relatedLabel
+WHERE {
+?term skos:prefLabel ?label ;
+      skos:related ?related .
+?related skos:prefLabel ?relatedLabel .
+FILTER contains( lcase(?label), "crime")
+}
+
+#LCSH narrower
+SELECT ?label ?narrowerLabel
+WHERE {
+?term owl:sameAs ?same .
+?term skos:prefLabel ?label ;
+      skos:narrower ?narrower .
+?narrower skos:prefLabel ?narrowerLabel .
+FILTER contains( lcase(?label), "boundaries")
+}
+
+#LCSH broader
+SELECT ?label ?broaderLabel
+WHERE {
+?term owl:sameAs ?same .
+?same skos:prefLabel ?label ;
+      skos:broader ?broader .
+?broader skos:prefLabel ?broaderLabel .
+FILTER contains( lcase(?label), "infrastructure")
+}

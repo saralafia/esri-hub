@@ -17,8 +17,28 @@
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#hasTopConcept
 <http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
 
 
 ###  https://www.w3.org/2009/08/skos-reference/skos.html#topConceptOf
@@ -29,21 +49,34 @@
 #    Individuals
 #################################################################
 
+###  http://dbpedia.org/ontology/Country
+<http://dbpedia.org/ontology/Country> rdf:type owl:NamedIndividual ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Country" .
+
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:NamedIndividual ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Administrative Area" .
+
+
 ###  http://www.esri-hub.com/places/block
 <http://www.esri-hub.com/places/block> rdf:type owl:NamedIndividual ,
                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/local> ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Block" .
 
 
 ###  http://www.esri-hub.com/places/city
 <http://www.esri-hub.com/places/city> rdf:type owl:NamedIndividual ,
                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                      <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/regional> ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "City" .
 
 
 ###  http://www.esri-hub.com/places/county
 <http://www.esri-hub.com/places/county> rdf:type owl:NamedIndividual ,
                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/regional> ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "County" .
 
 
@@ -59,54 +92,69 @@
 ###  http://www.esri-hub.com/places/local
 <http://www.esri-hub.com/places/local> rdf:type owl:NamedIndividual ,
                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#narrower> <http://www.esri-hub.com/places/block> ,
+                                                                                      <http://www.esri-hub.com/places/neighborhood> ,
+                                                                                      <http://www.esri-hub.com/places/parcel> ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Local" .
 
 
 ###  http://www.esri-hub.com/places/metro_area
 <http://www.esri-hub.com/places/metro_area> rdf:type owl:NamedIndividual ,
                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                            <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/regional> ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Metro Area" .
 
 
 ###  http://www.esri-hub.com/places/monument
 <http://www.esri-hub.com/places/monument> rdf:type owl:NamedIndividual ,
                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                          <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/place> ;
                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Monument" .
 
 
 ###  http://www.esri-hub.com/places/neighborhood
 <http://www.esri-hub.com/places/neighborhood> rdf:type owl:NamedIndividual ,
                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/local> ;
                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Neighborhood" .
 
 
 ###  http://www.esri-hub.com/places/parcel
 <http://www.esri-hub.com/places/parcel> rdf:type owl:NamedIndividual ,
                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/local> ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Parcel" .
 
 
 ###  http://www.esri-hub.com/places/park
 <http://www.esri-hub.com/places/park> rdf:type owl:NamedIndividual ,
                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                      <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/place> ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Park" .
 
 
 ###  http://www.esri-hub.com/places/place
 <http://www.esri-hub.com/places/place> rdf:type owl:NamedIndividual ,
                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#narrower> <http://www.esri-hub.com/places/monument> ,
+                                                                                      <http://www.esri-hub.com/places/park> ,
+                                                                                      <http://www.esri-hub.com/places/school> ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Place" .
 
 
 ###  http://www.esri-hub.com/places/regional
 <http://www.esri-hub.com/places/regional> rdf:type owl:NamedIndividual ,
                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                          <http://www.w3.org/2004/02/skos/core#narrower> <http://www.esri-hub.com/places/city> ,
+                                                                                         <http://www.esri-hub.com/places/county> ,
+                                                                                         <http://www.esri-hub.com/places/metro_area> ;
                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Regional" .
 
 
 ###  http://www.esri-hub.com/places/school
 <http://www.esri-hub.com/places/school> rdf:type owl:NamedIndividual ,
                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.w3.org/2004/02/skos/core#broader> <http://www.esri-hub.com/places/place> ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "School" .
 
 

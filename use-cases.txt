@@ -1,0 +1,19 @@
+1) Scenario: semantically-enabled search by CATEGORY (transportation, education) | LANGUAGE (Spanish, Japanese) | GEOGRAPHY (City, Neighborhood)...
+Expanded Tags (Broader, Narrower, Related, Synonyms, Translation)
+    Tag [collision]
+      Broader []
+      Narrower []
+      Related []
+      Synonyms []
+      Translation []
+    Tag [street]
+    Tag [student]
+    Tag [school]
+    Tag [water]
+    Tag [invasive]
+...
+
+Federally maintained thesauri [LCSH, USGS, (MIL, EPA, etc.)]
+Other thesauri [WordNet, DBpedia, (Schema.org, GD ont, etc.)]
+
+Query

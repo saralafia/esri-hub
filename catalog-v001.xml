@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology#GeonamesFeature"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1501174684453" name="duplicate:http://www.esri-hub.com/categories" uri="trunk/categories.owl"/>
         <uri id="Automatically generated entry, Timestamp=1501174684453" name="duplicate:http://www.esri-hub.com/categories" uri="trunk/esri-hub-categories.owl"/>

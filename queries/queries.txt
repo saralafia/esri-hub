@@ -1,0 +1,268 @@
+#####Sample queries
+##### TERM EXPANSION
+##### INSTANCES
+##### CLASS EXPANSION
+##### GENERAL
+
+#esri-hub.ttl
+#triples = 14569
+
+#sample-data.ttl
+#triples = 545
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+#PREFIX dc: <http://purl.org/dc/elements/1.1/>
+#PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql>
+PREFIX hub: <http://www.esri-hub.com/vocab/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+#PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+#PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mads: <http://www.loc.gov/mads/rdf/v1#>
+PREFIX word: <http://wordnet-rdf.princeton.edu/ontology#>
+
+##### TERM EXPANSION - multilingualism, synonyms, broader/narrower concepts #####
+##### esri-hub.ttl #####
+#All related terms for equivalent categories from Library of Congress Subject Headings, WordNet
+SELECT *
+WHERE {
+?uri rdf:type owl:Class .
+?uri mads:authoritativeLabel ?label .
+?uri owl:equivalentClass ?equivalent .
+?equivalent rdfs:subClassOf ?theme .
+}
+ORDER BY ?theme
+
+#Related LCSH and WordNet concepts for all Hub themes
+SELECT *
+WHERE {
+?class rdfs:subClassOf hub:ThemeContext .
+?class skos:related ?related .
+?class rdfs:label ?label .
+# _:hub owl:someValuesFrom ?class .
+}
+ORDER BY ?label
+
+#Related LCSH concepts (narrower, or broader) and synonyms for "Agriculture"
+SELECT *
+WHERE {
+?term rdf:type owl:Class .
+?term mads:authoritativeLabel "Agriculture"@en ;
+rdfs:subClassOf ?sub ;
+skos:related ?rel ;
+skos:altLabel ?lab ;
+mads:authoritativeLabel ?auth .
+OPTIONAL {
+?term skos:narrower ?narrow .
+?term skos:broader ?broader . }
+}
+
+#Related terms for "Crime" from Hub
+SELECT distinct *
+WHERE {
+?class rdf:type owl:Class;
+skos:altLabel ?alt ;
+skos:related ?related .
+OPTIONAL {
+?class skos:prefLabel ?pref ;
+skos:prefLabel ?pref;
+mads:authoritativeLabel ?auth . }
+FILTER contains( lcase(?pref), "crime")
+}
+ORDER BY ?class ASC(?pref)
+
+#Alternative or preferred SKOS label matches to Hub Categories with "land"
+SELECT *
+WHERE {
+?class rdf:type owl:Class ;
+skos:prefLabel ?pref;
+skos:altLabel ?label .
+OPTIONAL {
+?class skos:altLabel ?alt .}
+FILTER contains( lcase(?label), "land")
+}
+ORDER BY ?alt
+
+#Translations, synonyms, and gloss for "Crime" from WordNet
+SELECT distinct *
+WHERE {
+?term rdf:type owl:Class .
+?term rdfs:label "crime"@eng ;
+word:translation ?translation ;
+# word:gloss ?gloss ;
+word:synset_member ?member .
+}
+ORDER BY ?translation
+
+##### INSTANCES - item schema matching against data properties #####
+##### esri-hub.ttl #####
+#Layer instance attribute values and data types
+SELECT *
+WHERE {
+   ?instance rdfs:subClassOf* hub:Layer .
+   ?layer a ?instance ;
+	 ?prop ?value .
+	 ?prop rdfs:domain ?domain ;
+	 rdfs:range ?range .
+}
+
+#Concept instances with narrower concepts from SKOS
+SELECT ?label ?concept ?narrower
+WHERE {
+  ?instance rdfs:subClassOf* skos:Concept .
+  ?concept a ?instance ;
+  skos:narrower ?narrower ;
+  skos:prefLabel ?label .
+  # mads:hasNarrowerAuthority ?auth .
+  #skos:exactMatch ?match .
+  #mads:hasNarrower ?mads .
+}
+ORDER BY ASC(?label)
+
+##### CLASS EXPANSION - class hierarchy, subsumption, inference #####
+##### for sample-data.ttl #####
+
+#SUMMARY of all class domains, ranges (inc. DBPedia)
+SELECT ?class ?domain ?range
+WHERE {
+  ?class rdfs:range ?range .
+  ?class rdfs:domain ?domain .
+}
+ORDER BY ?class
+
+#SUMMARY of all RDFS superclasses
+SELECT distinct ?super ?sub
+WHERE {
+?sub rdfs:subClassOf ?super .
+}
+ORDER BY ?super
+
+#Audience and Theme
+SELECT *
+{
+  ?item hub:hasTitle ?title .
+  ?item hub:hasAudience ?audience .
+}
+
+#Item titles that have a Civic Audience
+SELECT ?title
+{
+  ?item hub:hasTitle ?title .
+  ?item hub:hasAudience hub:Civic.
+}
+
+#Item titles with a Transportation category and any audience
+SELECT ?title ?audience
+WHERE {
+?item hub:hasCategory hub:Transportation_ISO .
+?item hub:hasAudience ?audience .
+?item hub:hasTitle ?title .
+}
+
+#SUMMARY of all OWL class equivalencies
+SELECT *
+WHERE {
+#?item hub:hasTitle ?title .
+#?item hub:hasTheme ?category1 .
+?category1 owl:equivalentClass ?category2 .
+}
+ORDER BY ?category1
+
+#SUBSET of SKOS related to DBPedia places
+SELECT *
+WHERE {
+  ?item a hub:Item ;
+  hub:hasLocality ?locality ;
+  skos:related ?related .
+  FILTER regex(str(?related), "dbpedia") .
+}
+ORDER BY ?locality
+
+##### GENERAL #####
+#SUMMARY of all of the most used predicates
+SELECT ?predicate (COUNT(*)AS ?frequency)
+WHERE {?subject ?predicate ?object}
+GROUP BY ?predicate
+ORDER BY DESC(?frequency)
+
+#COUNT of all triples
+SELECT (count(*) as ?count) WHERE {
+   ?s ?p ?o .
+}
+
+#SUMMARY of all triples
+SELECT ?s ?o ?p
+WHERE {
+    ?s ?o ?p
+}
+
+#SUMMARY of all RDF label annotations
+SELECT ?entities
+WHERE {  ?entities rdfs:label ?label .
+}
+
+#SUMMARY of all imported classes
+SELECT DISTINCT ?type
+WHERE {
+  ?s a ?type.
+}
+
+#SUMMARY of all Hub classes
+SELECT DISTINCT ?type
+WHERE {
+  ?subject a ?type.
+  FILTER( STRSTARTS(STR(?type),str(hub:)) )
+}
+
+#Subclasses of a class (i.e. Feature_Service)
+SELECT ?cls ?clsLabel
+WHERE {
+ ?cls rdfs:subClassOf hub:Feature_Service ;
+      rdfs:label ?clsLabel
+}
+
+#Equivalent classes
+SELECT ?cls ?eq
+WHERE {
+ ?cls owl:equivalentClass ?eq ;
+      rdfs:label ?clsLabel
+}
+
+#Same as annotations
+SELECT *
+WHERE {
+ ?cls owl:sameAs ?eq .
+}
+
+#Object properties, domains and ranges of all classes
+SELECT ?prop ?r ?d
+WHERE {
+  ?prop rdfs:range ?r ;
+	rdfs:domain ?d .
+}
+ORDER BY ?prop
+
+#Data properties, data domains and ranges of subclass of a given class (i.e. Feature_Services)
+SELECT ?domain ?prop ?range
+WHERE {
+  ?prop rdfs:domain ?domain ;
+	rdfs:range ?range .
+	?domain rdfs:subClassOf* hub:Feature_Service .
+#	hub:Feature_Service rdfs:subClassOf* ?domain .
+}
+ORDER BY ?domain
+
+#Named Individual annotations
+SELECT *
+WHERE {
+	?uri rdf:type owl:NamedIndividual ;
+	rdfs:label ?lab ;
+	OPTIONAL {
+	?uri rdfs:isDefinedBy ?def  ;
+	rdfs:seeAlso ?see .
+	#rdfs:comment ?comment .
+	}
+}

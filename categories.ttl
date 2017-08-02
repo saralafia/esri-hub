@@ -15,8 +15,54 @@
 @base <http://www.esri-hub.com/categories> .
 
 <http://www.esri-hub.com/categories> rdf:type owl:Ontology ;
-                                      owl:imports <http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
-                                                  <http://www.w3.org/2004/02/skos/core> ;
+                                      owl:imports <http://id.loc.gov/authorities/subjects/sh99005534> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/302059737-a> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/106125308-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh2003007697> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/109434308-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/108664477-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85114250> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/110713754-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/105138548-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85048449> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/113502051-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/106129336-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/302057872-a> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh99005329> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/102961779-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/100803899-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/100950022-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/101096649-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/108009551-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85005249> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/113802016-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85136255> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/107434199-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85074407> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/105050025-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85021832> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85018260> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/113470623-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/113353024-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85054037> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/302065233-a> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/100427931-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/100654631-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85145600> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/303149226-a> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85114195> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85135010> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85102839> ,
+                                                  <http://www.w3.org/2004/02/skos/core> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/100298987-n> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85111945> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/108692477-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/303029625-a> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85124389> ,
+                                                  <http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
+                                                  <http://id.loc.gov/authorities/subjects/sh85136074> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/108240723-n> ,
+                                                  <http://wordnet-rdf.princeton.edu/wn31/106746225-n> ;
                                       ontology:domain_member_category <http://wordnet-rdf.princeton.edu/wn31/100261724-n> ;
                                       ontology:translation "perancangan"@zsm ;
                                       ontology:domain_member_category <http://wordnet-rdf.princeton.edu/wn31/301536879-s> ;
@@ -135,40 +181,8 @@ ontology:translation "perancangan"@ind .
 RecordInfo:languageOfCataloging rdf:type owl:AnnotationProperty .
 
 
-###  http://id.loc.gov/ontologies/RecordInfo#recordChangeDate
-RecordInfo:recordChangeDate rdf:type owl:AnnotationProperty .
-
-
-###  http://id.loc.gov/ontologies/RecordInfo#recordContentSource
-RecordInfo:recordContentSource rdf:type owl:AnnotationProperty .
-
-
-###  http://id.loc.gov/ontologies/RecordInfo#recordStatus
-RecordInfo:recordStatus rdf:type owl:AnnotationProperty .
-
-
-###  http://id.loc.gov/vocabulary/identifiers/lccn
-identifiers:lccn rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/title
 terms:title rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/changeset/schema#changeReason
-schema:changeReason rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/changeset/schema#createdDate
-schema:createdDate rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/changeset/schema#creatorName
-schema:creatorName rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/changeset/schema#subjectOfChange
-schema:subjectOfChange rdf:type owl:AnnotationProperty .
 
 
 ###  http://wordnet-rdf.princeton.edu/ontology#action
@@ -255,88 +269,16 @@ ontology:synset_member rdf:type owl:AnnotationProperty .
 ontology:translation rdf:type owl:AnnotationProperty .
 
 
-###  http://www.loc.gov/mads/rdf/v1#adminMetadata
-v1:adminMetadata rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#authoritativeLabel
-v1:authoritativeLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#citation-note
-v1:citation-note rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#citation-source
-v1:citation-source rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#citation-status
-v1:citation-status rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#classification
-v1:classification rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.loc.gov/mads/rdf/v1#componentList
 v1:componentList rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#editorialNote
-v1:editorialNote rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#elementList
-v1:elementList rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#elementValue
-v1:elementValue rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.loc.gov/mads/rdf/v1#exampleNote
 v1:exampleNote rdf:type owl:AnnotationProperty .
 
 
-###  http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority
-v1:hasBroaderAuthority rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority
-v1:hasCloseExternalAuthority rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm
 v1:hasEarlierEstablishedForm rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority
-v1:hasExactExternalAuthority rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority
-v1:hasNarrowerAuthority rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority
-v1:hasReciprocalAuthority rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasSource
-v1:hasSource rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#hasVariant
-v1:hasVariant rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection
-v1:isMemberOfMADSCollection rdf:type owl:AnnotationProperty .
-
-
-###  http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme
-v1:isMemberOfMADSScheme rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.loc.gov/mads/rdf/v1#note
@@ -347,20 +289,12 @@ v1:note rdf:type owl:AnnotationProperty .
 v1:useFor rdf:type owl:AnnotationProperty .
 
 
-###  http://www.loc.gov/mads/rdf/v1#variantLabel
-v1:variantLabel rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2004/02/skos/core#broader
 skos:broader rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#editorial
-skos:editorial rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#hasTopConcept
@@ -383,32 +317,12 @@ skos:related rdf:type owl:AnnotationProperty .
 skos:topConceptOf rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2008/05/skos-xl#altLabel
-skos-xl:altLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2008/05/skos-xl#literalForm
-skos-xl:literalForm rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Classes
 #################################################################
 
-###  http://id.loc.gov/ontologies/RecordInfo#RecordInfo
-RecordInfo:RecordInfo rdf:type owl:Class .
-
-
-###  http://purl.org/vocab/changeset/schema#ChangeSet
-schema:ChangeSet rdf:type owl:Class .
-
-
 ###  http://wordnet-rdf.princeton.edu/ontology#Synset
 ontology:Synset rdf:type owl:Class .
-
-
-###  http://www.loc.gov/mads/rdf/v1#Authority
-v1:Authority rdf:type owl:Class .
 
 
 ###  http://www.loc.gov/mads/rdf/v1#ComplexSubject
@@ -425,26 +339,6 @@ v1:Geographic rdf:type owl:Class .
 
 ###  http://www.loc.gov/mads/rdf/v1#GeographicElement
 v1:GeographicElement rdf:type owl:Class .
-
-
-###  http://www.loc.gov/mads/rdf/v1#Source
-v1:Source rdf:type owl:Class .
-
-
-###  http://www.loc.gov/mads/rdf/v1#Topic
-v1:Topic rdf:type owl:Class .
-
-
-###  http://www.loc.gov/mads/rdf/v1#TopicElement
-v1:TopicElement rdf:type owl:Class .
-
-
-###  http://www.loc.gov/mads/rdf/v1#Variant
-v1:Variant rdf:type owl:Class .
-
-
-###  http://www.w3.org/2008/05/skos-xl#Label
-skos-xl:Label rdf:type owl:Class .
 
 
 #################################################################
@@ -1954,6 +1848,7 @@ skos:prefLabel "Drugs"@en .
 ###  http://id.loc.gov/authorities/childrensSubjects/sj96005653
 <http://id.loc.gov/authorities/childrensSubjects/sj96005653> rdf:type owl:NamedIndividual ,
                                                                       skos:Concept ;
+                                                             owl:sameAs <http://www.esri-hub.com/categories/healthy> ;
                                                              skos:prefLabel "Health" ;
                                                              skos:related <http://www.esri-hub.com/categories/disease> ,
                                                                           <http://www.esri-hub.com/categories/healthy> .
@@ -1966,6 +1861,7 @@ skos:prefLabel "Drugs"@en .
                                                                       skos:Concept ;
                                                              owl:sameAs <http://id.loc.gov/authorities/sj96006075#concept> ,
                                                                         <http://wordnet-rdf.princeton.edu/wn31/114562074-n> ,
+                                                                        <http://wordnet-rdf.princeton.edu/wn31/302065233-a> ,
                                                                         <http://www.esri-hub.com/categories/safe> ,
                                                                         <info:lc/authorities/sj96006075> ;
                                                              skos:inScheme <http://id.loc.gov/authorities/childrensSubjects> ,
@@ -3076,16 +2972,14 @@ skos:prefLabel "Transportation"@en .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh2002000158
-<http://id.loc.gov/authorities/subjects/sh2002000158> rdf:type owl:NamedIndividual ,
-                                                               v1:Authority ,
+<http://id.loc.gov/authorities/subjects/sh2002000158> rdf:type v1:Authority ,
                                                                skos:Concept ;
                                                       v1:authoritativeLabel "Introduced animals"@en ;
                                                       skos:prefLabel "Introduced animals"@en .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh2002000268
-<http://id.loc.gov/authorities/subjects/sh2002000268> rdf:type owl:NamedIndividual ,
-                                                               v1:Authority ,
+<http://id.loc.gov/authorities/subjects/sh2002000268> rdf:type v1:Authority ,
                                                                v1:Topic ,
                                                                skos:Concept ;
                                                       owl:sameAs <http://www.esri-hub.com/categories/introduced_organisms> ,
@@ -3618,10 +3512,10 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
 
 
 ###  http://id.loc.gov/authorities/subjects/sh2003007697
-<http://id.loc.gov/authorities/subjects/sh2003007697> rdf:type owl:NamedIndividual ,
-                                                               v1:Authority ,
+<http://id.loc.gov/authorities/subjects/sh2003007697> rdf:type v1:Authority ,
                                                                v1:Topic ,
                                                                skos:Concept ;
+                                                      owl:sameAs <http://www.esri-hub.com/categories/biota> ;
                                                       v1:authoritativeLabel "Organisms"@en ;
                                                       v1:elementList [ ] ;
 skos:prefLabel "Organisms"@en .
@@ -4631,6 +4525,7 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                                v1:Authority ,
                                                                v1:Topic ,
                                                                skos:Concept ;
+                                                      owl:sameAs <http://www.esri-hub.com/categories/public_safety> ;
                                                       v1:authoritativeLabel "Public safety"@en ;
                                                       v1:elementList [ ] ,
 [ ] ;
@@ -5225,6 +5120,7 @@ skos:related <http://www.esri-hub.com/categories/food> .
                                                                v1:Authority ,
                                                                v1:Topic ,
                                                                skos:Concept ;
+                                                      owl:sameAs <http://www.esri-hub.com/categories/land_cover> ;
                                                       v1:authoritativeLabel "Land cover"@en ;
                                                       v1:elementList [ ] ;
 skos:prefLabel "Land cover" ,
@@ -6589,6 +6485,10 @@ skos:prefLabel "Air"@en .
                                                     skos:prefLabel "Food of animal origin"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85005249
+<http://id.loc.gov/authorities/subjects/sh85005249> owl:sameAs <http://www.esri-hub.com/categories/fauna> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85005254
 <http://id.loc.gov/authorities/subjects/sh85005254> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -7661,6 +7561,11 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                  ] .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85018260
+<http://id.loc.gov/authorities/subjects/sh85018260> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/101096649-n> ,
+                                                               <http://www.esri-hub.com/categories/business> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85018279
 <http://id.loc.gov/authorities/subjects/sh85018279> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -7788,6 +7693,11 @@ skos:related <http://www.esri-hub.com/categories/economy> ,
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Cemeteries--Multiple use"@en ;
                                                     skos:prefLabel "Cemeteries--Multiple use"@en .
+
+
+###  http://id.loc.gov/authorities/subjects/sh85021832
+<http://id.loc.gov/authorities/subjects/sh85021832> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100654631-n> ,
+                                                               <http://www.esri-hub.com/categories/census> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85021898
@@ -8372,6 +8282,8 @@ skos:related <http://www.esri-hub.com/categories/culture> .
 <http://id.loc.gov/authorities/subjects/sh85027037> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/113470623-n> ,
+                                                               <http://www.esri-hub.com/categories/climate_change> ;
                                                     v1:authoritativeLabel "Climatic changes"@en ;
                                                     skos:prefLabel "Climatic changes"@en ;
                                                     skos:related <http://www.esri-hub.com/categories/climate> .
@@ -8708,6 +8620,7 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                              v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://www.esri-hub.com/categories/commercial> ;
                                                     v1:authoritativeLabel "Commerce"@en ;
                                                     v1:elementList [ ] ;
 skos:prefLabel "Commerce" ,
@@ -12382,6 +12295,11 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                     skos:prefLabel "Finance, Personal"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85048449
+<http://id.loc.gov/authorities/subjects/sh85048449> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/113502051-n> ,
+                                                               <http://www.esri-hub.com/categories/fire> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85048479
 <http://id.loc.gov/authorities/subjects/sh85048479> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -12405,6 +12323,10 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Firearms owners"@en ;
                                                     skos:prefLabel "Firearms owners"@en .
+
+
+###  http://id.loc.gov/authorities/subjects/sh85048572
+<http://id.loc.gov/authorities/subjects/sh85048572> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/113502051-n> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85048640
@@ -13116,6 +13038,11 @@ skos:prefLabel "Gastronomy"@en .
                                                     skos:prefLabel "Genocide"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85054037
+<http://id.loc.gov/authorities/subjects/sh85054037> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/106125308-n> ,
+                                                               <http://www.esri-hub.com/categories/geology> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85054271
 <http://id.loc.gov/authorities/subjects/sh85054271> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -13225,7 +13152,8 @@ skos:prefLabel "Gastronomy"@en .
                                                              v1:Authority ,
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Habitat (Ecology)"@en ;
-                                                    skos:prefLabel "Habitat (Ecology)"@en .
+                                                    skos:prefLabel "Habitat (Ecology)"@en ;
+                                                    skos:related <http://www.esri-hub.com/categories/ecology> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85058663
@@ -14117,6 +14045,8 @@ skos:prefLabel "Human settlements" ,
                                                              v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/106129336-n> ,
+                                                               <http://www.esri-hub.com/categories/hydrology> ;
                                                     v1:authoritativeLabel "Hydrology"@en ;
                                                     v1:elementList [ ] ;
 skos:prefLabel "Hydrology"@en .
@@ -14982,6 +14912,8 @@ skos:related <http://www.esri-hub.com/categories/agriculture> ,
                                                              v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/108664477-n> ,
+                                                               <http://www.esri-hub.com/categories/landscape> ;
                                                     v1:authoritativeLabel "Landscape assessment"@en ;
                                                     v1:elementList [ ] ;
 skos:prefLabel "Landscape assessment" ,
@@ -16443,6 +16375,8 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                              v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/113353024-n> ,
+                                                               <http://www.esri-hub.com/categories/natural_resources> ;
                                                     v1:authoritativeLabel "Natural resources"@en ;
                                                     v1:elementList [ ] ;
 skos:narrower <http://www.esri-hub.com/categories/energy> ;
@@ -17407,6 +17341,10 @@ skos:prefLabel "Planning"@en .
                                                     skos:prefLabel "Planting (Plant culture)"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85102839
+<http://id.loc.gov/authorities/subjects/sh85102839> owl:sameAs <http://www.esri-hub.com/categories/flora> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85102884
 <http://id.loc.gov/authorities/subjects/sh85102884> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -17860,6 +17798,8 @@ skos:prefLabel "Political science"@en .
                                                              v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/113802016-n> ,
+                                                               <http://www.esri-hub.com/categories/population> ;
                                                     v1:authoritativeLabel "Population"@en ;
                                                     v1:elementList [ ] ;
 skos:prefLabel "Population" ,
@@ -19080,6 +19020,11 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                     skos:prefLabel "Reclamation of land"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85111945
+<http://id.loc.gov/authorities/subjects/sh85111945> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100427931-n> ,
+                                                               <http://www.esri-hub.com/categories/recreation> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85111955
 <http://id.loc.gov/authorities/subjects/sh85111955> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -19355,6 +19300,16 @@ skos:prefLabel "Regional planning"@en .
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Right of property"@en ;
                                                     skos:prefLabel "Right of property"@en .
+
+
+###  http://id.loc.gov/authorities/subjects/sh85114195
+<http://id.loc.gov/authorities/subjects/sh85114195> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100803899-n> ,
+                                                               <http://www.esri-hub.com/categories/risk> .
+
+
+###  http://id.loc.gov/authorities/subjects/sh85114250
+<http://id.loc.gov/authorities/subjects/sh85114250> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/109434308-n> ,
+                                                               <http://www.esri-hub.com/categories/rivers> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85114453
@@ -19786,7 +19741,9 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                              v1:Authority ,
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "School choice"@en ;
-                                                    skos:prefLabel "School choice"@en .
+                                                    skos:prefLabel "School choice"@en ;
+                                                    skos:related <http://id.loc.gov/authorities/subjects/sh85118451> ,
+                                                                 <http://www.esri-hub.com/categories/students> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85118305
@@ -19811,6 +19768,7 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
                                                              v1:Topic ,
                                                              skos:Concept ;
                                                     owl:sameAs <http://www.esri-hub.com/categories/school> ,
+                                                               <http://www.esri-hub.com/places/school> ,
                                                                <info:lc/authorities/sh85118451> ;
                                                     skos:closeMatch <http://data.bnf.fr/ark:/12148/cb11948031w> ,
                                                                     <http://purl.org/bncf/tid/5071> ;
@@ -20462,6 +20420,10 @@ skos:prefLabel "Sociology"@en .
                                                     skos:prefLabel "Soil science"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85124389
+<http://id.loc.gov/authorities/subjects/sh85124389> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/109358146-n> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85124466
 <http://id.loc.gov/authorities/subjects/sh85124466> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -20968,6 +20930,8 @@ skos:prefLabel "Table"@en .
 <http://id.loc.gov/authorities/subjects/sh85132964> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/110713754-n> ,
+                                                               <http://www.esri-hub.com/categories/teachers> ;
                                                     v1:authoritativeLabel "Teachers"@en ;
                                                     skos:prefLabel "Teachers"@en .
 
@@ -21078,6 +21042,11 @@ skos:related <http://www.esri-hub.com/categories/boundaries> .
 skos:prefLabel "Things (Law)"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85135010
+<http://id.loc.gov/authorities/subjects/sh85135010> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/106746225-n> ,
+                                                               <http://www.esri-hub.com/categories/threat> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85135275
 <http://id.loc.gov/authorities/subjects/sh85135275> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -21134,6 +21103,11 @@ skos:prefLabel "Things (Law)"@en .
                                                     skos:prefLabel "Topoclimatology"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85136074
+<http://id.loc.gov/authorities/subjects/sh85136074> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/303029625-a> ,
+                                                               <http://www.esri-hub.com/categories/topographic> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85136122
 <http://id.loc.gov/authorities/subjects/sh85136122> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -21148,6 +21122,11 @@ skos:prefLabel "Things (Law)"@en .
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Tort liability of parks"@en ;
                                                     skos:prefLabel "Tort liability of parks"@en .
+
+
+###  http://id.loc.gov/authorities/subjects/sh85136255
+<http://id.loc.gov/authorities/subjects/sh85136255> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100298987-n> ,
+                                                               <http://www.esri-hub.com/categories/tourism> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh85136509
@@ -21551,6 +21530,7 @@ skos-xl:altLabel [ rdf:type skos-xl:Label ;
 <http://id.loc.gov/authorities/subjects/sh85136805> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
                                                              skos:Concept ;
+                                                    owl:sameAs <http://www.esri-hub.com/categories/trails> ;
                                                     v1:authoritativeLabel "Trails"@en ;
                                                     skos:prefLabel "Trails"@en .
 
@@ -22377,6 +22357,11 @@ skos:related <http://id.loc.gov/authorities/subjects/sh85063458> .
                                                     skos:prefLabel "Water-power"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh85145600
+<http://id.loc.gov/authorities/subjects/sh85145600> owl:sameAs <http://lod.nal.usda.gov/nalt/26766> ,
+                                                               <http://www.esri-hub.com/categories/water_quality> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh85145756
 <http://id.loc.gov/authorities/subjects/sh85145756> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -22957,7 +22942,9 @@ skos:prefLabel "Weather"@en .
                                                              v1:Authority ,
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Victims"@en ;
-                                                    skos:prefLabel "Victims"@en .
+                                                    skos:prefLabel "Victims"@en ;
+                                                    skos:related <http://www.esri-hub.com/categories/crime> ,
+                                                                 <http://www.esri-hub.com/categories/safe> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh87002489
@@ -24045,8 +24032,7 @@ skos:related <http://www.esri-hub.com/categories/emergency_response> .
 
 
 ###  http://id.loc.gov/authorities/subjects/sh92003672
-<http://id.loc.gov/authorities/subjects/sh92003672> rdf:type owl:NamedIndividual ,
-                                                             v1:Authority ,
+<http://id.loc.gov/authorities/subjects/sh92003672> rdf:type v1:Authority ,
                                                              v1:Topic ,
                                                              skos:Concept ;
                                                     v1:authoritativeLabel "Alien plants"@en ;
@@ -25583,6 +25569,16 @@ skos:prefLabel "Communications"@en .
                                                     skos:prefLabel "Freemasons in education"@en .
 
 
+###  http://id.loc.gov/authorities/subjects/sh99005329
+<http://id.loc.gov/authorities/subjects/sh99005329> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/107434199-n> ,
+                                                               <http://www.esri-hub.com/categories/conservation> .
+
+
+###  http://id.loc.gov/authorities/subjects/sh99005534
+<http://id.loc.gov/authorities/subjects/sh99005534> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100950022-n> ,
+                                                               <http://www.esri-hub.com/categories/development> .
+
+
 ###  http://id.loc.gov/authorities/subjects/sh99005632
 <http://id.loc.gov/authorities/subjects/sh99005632> rdf:type owl:NamedIndividual ,
                                                              v1:Authority ,
@@ -26044,6 +26040,14 @@ skos:prefLabel "Communications"@en .
                                      skos:prefLabel "bicycling"@en .
 
 
+###  http://lod.nal.usda.gov/nalt/17012
+<http://lod.nal.usda.gov/nalt/17012> owl:sameAs <http://www.esri-hub.com/categories/recreation> .
+
+
+###  http://lod.nal.usda.gov/nalt/21953
+<http://lod.nal.usda.gov/nalt/21953> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/109434308-n> .
+
+
 ###  http://lod.nal.usda.gov/nalt/22701
 <http://lod.nal.usda.gov/nalt/22701> rdf:type owl:NamedIndividual ,
                                               v1:Authority ,
@@ -26067,6 +26071,8 @@ skos:prefLabel "Communications"@en .
                                      v1:authoritativeLabel "urban planning"@en ;
                                      skos:prefLabel "urban planning"@en .
 
+
+###  http://lod.nal.usda.gov/nalt/26766
 
 ###  http://lod.nal.usda.gov/nalt/26877
 <http://lod.nal.usda.gov/nalt/26877> rdf:type owl:NamedIndividual ,
@@ -26131,7 +26137,8 @@ skos:prefLabel "Communications"@en .
 <http://lod.nal.usda.gov/nalt/35899> rdf:type owl:NamedIndividual ,
                                               v1:Authority ,
                                               skos:Concept ;
-                                     owl:sameAs <http://www.esri-hub.com/categories/school> ;
+                                     owl:sameAs <http://www.esri-hub.com/categories/school> ,
+                                                <http://www.esri-hub.com/places/school> ;
                                      v1:authoritativeLabel "schools"@en ;
                                      skos:prefLabel "schools"@en .
 
@@ -26232,6 +26239,11 @@ skos:prefLabel "Communications"@en .
                                      skos:prefLabel "police"@en .
 
 
+###  http://lod.nal.usda.gov/nalt/5258
+<http://lod.nal.usda.gov/nalt/5258> owl:sameAs <http://wordnet-rdf.princeton.edu/wn31/100298987-n> ,
+                                               <http://www.esri-hub.com/categories/tourism> .
+
+
 ###  http://lod.nal.usda.gov/nalt/5260
 <http://lod.nal.usda.gov/nalt/5260> rdf:type owl:NamedIndividual ,
                                              v1:Authority ,
@@ -26308,6 +26320,10 @@ skos:prefLabel "Communications"@en .
                                             skos:Concept ;
                                    v1:authoritativeLabel "dropouts"@en ;
                                    skos:prefLabel "dropouts"@en .
+
+
+###  http://lod.nal.usda.gov/nalt/9588
+<http://lod.nal.usda.gov/nalt/9588> owl:sameAs <http://www.esri-hub.com/categories/fauna> .
 
 
 ###  http://purl.org/bncf/tid/10760
@@ -26649,6 +26665,10 @@ skos:prefLabel "Communications"@en .
                                                                "location"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/100298987-n
+<http://wordnet-rdf.princeton.edu/wn31/100298987-n> owl:sameAs <http://www.esri-hub.com/categories/tourism> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/100308281-n
 <http://wordnet-rdf.princeton.edu/wn31/100308281-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -26670,6 +26690,14 @@ skos:prefLabel "Communications"@en .
                                                                          "การไปทำงาน"@tha ,
                                                                          "通勤"@jpn ;
                                                     rdfs:label "commute"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/100427931-n
+<http://wordnet-rdf.princeton.edu/wn31/100427931-n> owl:sameAs <http://www.esri-hub.com/categories/recreation> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/100654631-n
+<http://wordnet-rdf.princeton.edu/wn31/100654631-n> owl:sameAs <http://www.esri-hub.com/categories/census> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/100656128-n
@@ -26912,6 +26940,10 @@ skos:prefLabel "Communications"@en .
                                                                "criminal offence"@eng ,
                                                                "criminal offense"@eng ,
                                                                "law-breaking"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/100803899-n
+<http://wordnet-rdf.princeton.edu/wn31/100803899-n> owl:sameAs <http://www.esri-hub.com/categories/risk> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/100884975-n
@@ -27245,6 +27277,10 @@ skos:prefLabel "Communications"@en .
                                                     rdfs:label "zoning"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/100950022-n
+<http://wordnet-rdf.princeton.edu/wn31/100950022-n> owl:sameAs <http://www.esri-hub.com/categories/development> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/101061824-n
 <http://wordnet-rdf.princeton.edu/wn31/101061824-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -27269,6 +27305,10 @@ skos:prefLabel "Communications"@en .
                                                                          "การรักษาสุขภาพ"@tha ;
                                                     rdfs:label "health care"@eng ,
                                                                "healthcare"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/101096649-n
+<http://wordnet-rdf.princeton.edu/wn31/101096649-n> owl:sameAs <http://www.esri-hub.com/categories/business> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/101100603-n
@@ -27715,6 +27755,10 @@ skos:prefLabel "Communications"@en .
                                                                "motorcoach"@eng ,
                                                                "omnibus"@eng ,
                                                                "passenger vehicle"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/102961779-n
+<http://wordnet-rdf.princeton.edu/wn31/102961779-n> owl:sameAs <http://www.esri-hub.com/categories/car> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/103551520-n
@@ -28201,6 +28245,7 @@ skos:prefLabel "Communications"@en .
 <http://wordnet-rdf.princeton.edu/wn31/104569944-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
                                                     owl:sameAs <http://www.esri-hub.com/categories/water> ,
+                                                               <http://www.esri-hub.com/categories/water_quality> ,
                                                                <http://www.w3.org/2006/03/wn/wn20/instances/synset-water_system-noun-2> ;
                                                     ontology:gloss "a facility that provides a source of water"@eng ;
                                                     ontology:hypernym <http://wordnet-rdf.princeton.edu/wn31/103319968-n> ;
@@ -28301,6 +28346,15 @@ skos:prefLabel "Communications"@en .
                                                                          "平等"@jpn ,
                                                                          "斉一"@jpn ;
                                                     rdfs:label "equality"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/105050025-n
+<http://wordnet-rdf.princeton.edu/wn31/105050025-n> owl:sameAs <http://www.esri-hub.com/categories/vulnerability> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/105138548-n
+<http://wordnet-rdf.princeton.edu/wn31/105138548-n> owl:sameAs <http://www.esri-hub.com/categories/elevation> ,
+                                                               <https://www2.usgs.gov/science/science.php?thcode=15&term=006> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/105993821-n
@@ -28436,6 +28490,14 @@ skos:prefLabel "Communications"@en .
                                                                "environmental science"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/106125308-n
+<http://wordnet-rdf.princeton.edu/wn31/106125308-n> owl:sameAs <http://www.esri-hub.com/categories/geology> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/106129336-n
+<http://wordnet-rdf.princeton.edu/wn31/106129336-n> owl:sameAs <http://www.esri-hub.com/categories/hydrology> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/106669153-n
 <http://wordnet-rdf.princeton.edu/wn31/106669153-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -28485,6 +28547,10 @@ skos:prefLabel "Communications"@en .
                                                                          "方針"@jpn ,
                                                                          "施策"@jpn ;
                                                     rdfs:label "policy"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/106746225-n
+<http://wordnet-rdf.princeton.edu/wn31/106746225-n> owl:sameAs <http://www.esri-hub.com/categories/threat> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/106800007-n
@@ -28778,6 +28844,15 @@ skos:prefLabel "Communications"@en .
                                                                "rising tide"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/107434199-n
+<http://wordnet-rdf.princeton.edu/wn31/107434199-n> owl:sameAs <http://www.esri-hub.com/categories/conservation> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/108009551-n
+<http://wordnet-rdf.princeton.edu/wn31/108009551-n> owl:sameAs <http://www.esri-hub.com/categories/biota> ,
+                                                               <https://www2.usgs.gov/science/science.php?thcode=15&term=002> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/108137885-n
 <http://wordnet-rdf.princeton.edu/wn31/108137885-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -28901,6 +28976,10 @@ skos:prefLabel "Communications"@en .
                                                                "law"@eng ,
                                                                "police"@eng ,
                                                                "police force"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/108240723-n
+<http://wordnet-rdf.princeton.edu/wn31/108240723-n> owl:sameAs <http://www.esri-hub.com/categories/community> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/108383680-n
@@ -29224,6 +29303,10 @@ skos:prefLabel "Communications"@en .
                                                                "park"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/108664477-n
+<http://wordnet-rdf.princeton.edu/wn31/108664477-n> owl:sameAs <http://www.esri-hub.com/categories/landscape> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/108691133-n
 <http://wordnet-rdf.princeton.edu/wn31/108691133-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -29316,11 +29399,16 @@ skos:prefLabel "Communications"@en .
                                                                "tract"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/108692477-n
+<http://wordnet-rdf.princeton.edu/wn31/108692477-n> owl:sameAs <http://www.esri-hub.com/categories/plot> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/109358146-n
 <http://wordnet-rdf.princeton.edu/wn31/109358146-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
                                                     owl:sameAs <http://www.esri-hub.com/categories/land> ,
                                                                <http://www.esri-hub.com/categories/land_use> ,
+                                                               <http://www.esri-hub.com/categories/soil> ,
                                                                <http://www.w3.org/2006/03/wn/wn20/instances/synset-land-noun-2> ;
                                                     ontology:gloss "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"@eng ;
                                                     ontology:hypernym <http://wordnet-rdf.princeton.edu/wn31/100002684-n> ;
@@ -29421,6 +29509,10 @@ skos:prefLabel "Communications"@en .
                                                                "pothole"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/109434308-n
+<http://wordnet-rdf.princeton.edu/wn31/109434308-n> owl:sameAs <http://www.esri-hub.com/categories/rivers> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/110685137-n
 <http://wordnet-rdf.princeton.edu/wn31/110685137-n> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -29509,6 +29601,10 @@ skos:prefLabel "Communications"@en .
                                                     rdfs:label "educatee"@eng ,
                                                                "pupil"@eng ,
                                                                "student"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/110713754-n
+<http://wordnet-rdf.princeton.edu/wn31/110713754-n> owl:sameAs <http://www.esri-hub.com/categories/teachers> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/111472496-n
@@ -29862,6 +29958,24 @@ skos:prefLabel "Communications"@en .
                                                                "remuneration"@eng ,
                                                                "salary"@eng ,
                                                                "wage"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/113353024-n
+<http://wordnet-rdf.princeton.edu/wn31/113353024-n> owl:sameAs <http://www.esri-hub.com/categories/natural_resources> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/113470623-n
+<http://wordnet-rdf.princeton.edu/wn31/113470623-n> owl:sameAs <http://www.esri-hub.com/categories/climate_change> ,
+                                                               <https://www2.usgs.gov/science/science.php?thcode=2&term=168> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/113502051-n
+<http://wordnet-rdf.princeton.edu/wn31/113502051-n> owl:sameAs <http://www.esri-hub.com/categories/fire> ,
+                                                               <https://www2.usgs.gov/science/science.php?thcode=2&code=384> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/113802016-n
+<http://wordnet-rdf.princeton.edu/wn31/113802016-n> owl:sameAs <http://www.esri-hub.com/categories/population> .
 
 
 ###  http://wordnet-rdf.princeton.edu/wn31/113926085-n
@@ -30346,6 +30460,18 @@ skos:prefLabel "Communications"@en .
                                                                "liveable"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/302057872-a
+<http://wordnet-rdf.princeton.edu/wn31/302057872-a> owl:sameAs <http://www.esri-hub.com/categories/rural> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/302059737-a
+<http://wordnet-rdf.princeton.edu/wn31/302059737-a> owl:sameAs <http://www.esri-hub.com/categories/urban> .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/302065233-a
+<http://wordnet-rdf.princeton.edu/wn31/302065233-a> owl:sameAs <http://www.esri-hub.com/categories/safe> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/302339849-s
 <http://wordnet-rdf.princeton.edu/wn31/302339849-s> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -30432,6 +30558,10 @@ skos:prefLabel "Communications"@en .
                                                     rdfs:label "sustainable"@eng .
 
 
+###  http://wordnet-rdf.princeton.edu/wn31/303029625-a
+<http://wordnet-rdf.princeton.edu/wn31/303029625-a> owl:sameAs <http://www.esri-hub.com/categories/topographic> .
+
+
 ###  http://wordnet-rdf.princeton.edu/wn31/303110260-a
 <http://wordnet-rdf.princeton.edu/wn31/303110260-a> rdf:type owl:NamedIndividual ,
                                                              ontology:Synset ;
@@ -30455,6 +30585,10 @@ skos:prefLabel "Communications"@en .
                                                                          "دارویی"@fas ;
                                                     rdfs:label "pharmaceutic"@eng ,
                                                                "pharmaceutical"@eng .
+
+
+###  http://wordnet-rdf.princeton.edu/wn31/303149226-a
+<http://wordnet-rdf.princeton.edu/wn31/303149226-a> owl:sameAs <http://www.esri-hub.com/categories/commercial> .
 
 
 ###  http://www.esri-hub.com/categories
@@ -30489,7 +30623,9 @@ skos:prefLabel "Communications"@en .
                                                                "factory farm" ;
                                                  skos:broader <http://id.loc.gov/authorities/subjects/sh85065826> ,
                                                               <http://id.loc.gov/authorities/subjects/sh85076841> ,
-                                                              <http://www.esri-hub.com/categories/healthy> ;
+                                                              <http://www.esri-hub.com/categories/healthy> ,
+                                                              <http://www.esri-hub.com/categories/land> ,
+                                                              <http://www.esri-hub.com/categories/land_use> ;
                                                  skos:definition "Rearing of animals or cultivation of plants, for example agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock" ;
                                                  skos:prefLabel "Agriculture" ;
                                                  skos:related <http://id.loc.gov/authorities/subjects/sh00005841> ,
@@ -30508,6 +30644,15 @@ skos:prefLabel "Communications"@en .
 <http://www.esri-hub.com/categories/bicycle> rdf:type owl:NamedIndividual ;
                                              skos:prefLabel "Bicycle" ;
                                              skos:related <http://www.esri-hub.com/categories/transportation> .
+
+
+###  http://www.esri-hub.com/categories/biota
+<http://www.esri-hub.com/categories/biota> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs <http://www.esri-hub.com/categories/ecology> ,
+                                                      <https://www2.usgs.gov/science/science.php?thcode=15&term=002> ;
+                                           skos:narrower <http://www.esri-hub.com/categories/fauna> ,
+                                                         <http://www.esri-hub.com/categories/flora> ;
+                                           skos:prefLabel "Biota" .
 
 
 ###  http://www.esri-hub.com/categories/border_security
@@ -30562,12 +30707,32 @@ skos:prefLabel "Communications"@en .
                                          skos:related <http://id.loc.gov/authorities/subjects/sh85018239> .
 
 
+###  http://www.esri-hub.com/categories/business
+<http://www.esri-hub.com/categories/business> rdf:type owl:NamedIndividual ;
+                                              skos:prefLabel "Business" .
+
+
+###  http://www.esri-hub.com/categories/car
+<http://www.esri-hub.com/categories/car> rdf:type owl:NamedIndividual ;
+                                         skos:altLabel "Automobile" ;
+                                         skos:prefLabel "Car" ;
+                                         skos:related <http://www.esri-hub.com/categories/collision> ,
+                                                      <http://www.esri-hub.com/categories/commute> ,
+                                                      <http://www.esri-hub.com/categories/traffic> ,
+                                                      <http://www.esri-hub.com/categories/transportation> .
+
+
 ###  http://www.esri-hub.com/categories/care
 <http://www.esri-hub.com/categories/care> rdf:type owl:NamedIndividual ;
                                           skos:broader <http://www.esri-hub.com/categories/healthy> ;
                                           skos:narrower <http://www.esri-hub.com/categories/emergency_response> ,
                                                         <http://www.esri-hub.com/categories/pharmaceutical> ;
                                           skos:prefLabel "Care" .
+
+
+###  http://www.esri-hub.com/categories/census
+<http://www.esri-hub.com/categories/census> rdf:type owl:NamedIndividual ;
+                                            skos:prefLabel "Census" .
 
 
 ###  http://www.esri-hub.com/categories/climate
@@ -30601,6 +30766,16 @@ skos:prefLabel "Communications"@en .
                                                           <https://www2.usgs.gov/science/science.php?thcode=2&code=67> ,
                                                           <https://www2.usgs.gov/science/science.php?thcode=2&code=68> ,
                                                           <https://www2.usgs.gov/science/science.php?thcode=2&term=63> .
+
+
+###  http://www.esri-hub.com/categories/climate_change
+<http://www.esri-hub.com/categories/climate_change> rdf:type owl:NamedIndividual ;
+                                                    owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=2&term=168> ;
+                                                    skos:related <http://id.loc.gov/authorities/subjects/sh2002004175> ,
+                                                                 <http://id.loc.gov/authorities/subjects/sh85027037> ,
+                                                                 <http://id.loc.gov/authorities/subjects/sh85027039> ,
+                                                                 <http://id.loc.gov/authorities/subjects/sh85027044> ,
+                                                                 <http://www.esri-hub.com/categories/climate> .
 
 
 ###  http://www.esri-hub.com/categories/collision
@@ -30647,10 +30822,20 @@ skos:prefLabel "Communications"@en .
                                                             <http://id.loc.gov/authorities/subjects/sh85136762> .
 
 
+###  http://www.esri-hub.com/categories/commercial
+<http://www.esri-hub.com/categories/commercial> rdf:type owl:NamedIndividual ;
+                                                skos:prefLabel "Commercial" .
+
+
 ###  http://www.esri-hub.com/categories/communications
 <http://www.esri-hub.com/categories/communications> rdf:type owl:NamedIndividual ;
                                                     skos:broader <http://www.esri-hub.com/categories/well-run> ;
                                                     skos:prefLabel "Communications" .
+
+
+###  http://www.esri-hub.com/categories/community
+<http://www.esri-hub.com/categories/community> rdf:type owl:NamedIndividual ;
+                                               skos:prefLabel "Community" .
 
 
 ###  http://www.esri-hub.com/categories/commute
@@ -30662,6 +30847,11 @@ skos:prefLabel "Communications"@en .
                                                           <http://www.esri-hub.com/categories/Rail> ,
                                                           <http://www.esri-hub.com/categories/bicycle> ,
                                                           <http://www.esri-hub.com/categories/bus> .
+
+
+###  http://www.esri-hub.com/categories/conservation
+<http://www.esri-hub.com/categories/conservation> rdf:type owl:NamedIndividual ;
+                                                  skos:prefLabel "Conservation" .
 
 
 ###  http://www.esri-hub.com/categories/crime
@@ -30744,6 +30934,11 @@ skos:prefLabel "Communications"@en .
                                                                <https://www2.usgs.gov/science/science.php?thcode=2&code=1075> ,
                                                                <https://www2.usgs.gov/science/science.php?thcode=2&code=447> ,
                                                                <https://www2.usgs.gov/science/science.php?thcode=2&term=223> .
+
+
+###  http://www.esri-hub.com/categories/development
+<http://www.esri-hub.com/categories/development> rdf:type owl:NamedIndividual ;
+                                                 skos:prefLabel "Development" .
 
 
 ###  http://www.esri-hub.com/categories/disaster
@@ -30882,6 +31077,14 @@ skos:prefLabel "Communications"@en .
                                                             <https://www2.usgs.gov/science/science.php?thcode=2&term=1779> .
 
 
+###  http://www.esri-hub.com/categories/elevation
+<http://www.esri-hub.com/categories/elevation> rdf:type owl:NamedIndividual ;
+                                               owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=15&term=006> ;
+                                               skos:broader <http://www.esri-hub.com/categories/land> ,
+                                                            <http://www.esri-hub.com/categories/land_use> ;
+                                               skos:prefLabel "Elevation" .
+
+
 ###  http://www.esri-hub.com/categories/emergency_response
 <http://www.esri-hub.com/categories/emergency_response> rdf:type owl:NamedIndividual ,
                                                                  skos:Concept ;
@@ -30938,6 +31141,7 @@ skos:prefLabel "Communications"@en .
 ###  http://www.esri-hub.com/categories/environment
 <http://www.esri-hub.com/categories/environment> rdf:type owl:NamedIndividual ;
                                                  owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=15&term=007> ;
+                                                 skos:altLabel "environmental" ;
                                                  skos:broader <http://www.esri-hub.com/categories/sustainable> ;
                                                  skos:narrower <http://www.esri-hub.com/categories/air> ,
                                                                <http://www.esri-hub.com/categories/land> ,
@@ -30949,6 +31153,12 @@ skos:prefLabel "Communications"@en .
 <http://www.esri-hub.com/categories/equality> rdf:type owl:NamedIndividual ;
                                               skos:broader <http://www.esri-hub.com/categories/well-run> ;
                                               skos:prefLabel "Equality" .
+
+
+###  http://www.esri-hub.com/categories/fauna
+<http://www.esri-hub.com/categories/fauna> rdf:type owl:NamedIndividual ;
+                                           skos:broader <http://www.esri-hub.com/categories/biota> ;
+                                           skos:prefLabel "Fauna" .
 
 
 ###  http://www.esri-hub.com/categories/financial
@@ -30966,16 +31176,35 @@ skos:prefLabel "Communications"@en .
                                                             <https://www2.usgs.gov/science/science.php?thcode=15&term=005> .
 
 
+###  http://www.esri-hub.com/categories/fire
+<http://www.esri-hub.com/categories/fire> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=2&code=384> ;
+                                          skos:prefLabel "Fire" .
+
+
 ###  http://www.esri-hub.com/categories/flood
 <http://www.esri-hub.com/categories/flood> rdf:type owl:NamedIndividual ;
                                            owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=2&code=398> ;
                                            skos:prefLabel "Flood" .
 
 
+###  http://www.esri-hub.com/categories/flora
+<http://www.esri-hub.com/categories/flora> rdf:type owl:NamedIndividual ;
+                                           skos:broader <http://www.esri-hub.com/categories/biota> ;
+                                           skos:prefLabel "Flora" .
+
+
 ###  http://www.esri-hub.com/categories/food
 <http://www.esri-hub.com/categories/food> rdf:type owl:NamedIndividual ;
                                           skos:broader <http://www.esri-hub.com/categories/healthy> ;
                                           skos:prefLabel "Food" .
+
+
+###  http://www.esri-hub.com/categories/geology
+<http://www.esri-hub.com/categories/geology> rdf:type owl:NamedIndividual ;
+                                             skos:broader <http://www.esri-hub.com/categories/land> ,
+                                                          <http://www.esri-hub.com/categories/land_use> ;
+                                             skos:prefLabel "Geology" .
 
 
 ###  http://www.esri-hub.com/categories/health-care
@@ -31003,6 +31232,7 @@ skos:prefLabel "Communications"@en .
 ###  http://www.esri-hub.com/categories/healthy
 <http://www.esri-hub.com/categories/healthy> rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
+                                             owl:sameAs <https://www2.usgs.gov/science/science.php?thcode=15&term=009> ;
                                              skos:altLabel "Personal health" ,
                                                            "Wellness" ,
                                                            "saludable" ;
@@ -31068,6 +31298,13 @@ skos:prefLabel "Communications"@en .
 <http://www.esri-hub.com/categories/hurricanes> rdf:type owl:NamedIndividual ;
                                                 skos:broader <http://www.esri-hub.com/categories/disaster> ;
                                                 skos:prefLabel "Hurricanes" .
+
+
+###  http://www.esri-hub.com/categories/hydrology
+<http://www.esri-hub.com/categories/hydrology> rdf:type owl:NamedIndividual ;
+                                               skos:prefLabel "Hydrology" ;
+                                               skos:related <http://www.esri-hub.com/categories/geology> ,
+                                                            <http://www.esri-hub.com/categories/water> .
 
 
 ###  http://www.esri-hub.com/categories/industry
@@ -31152,13 +31389,33 @@ skos:prefLabel "Communications"@en .
 
 ###  http://www.esri-hub.com/categories/land
 <http://www.esri-hub.com/categories/land> rdf:type owl:NamedIndividual ;
-                                          skos:broader <http://www.esri-hub.com/categories/environment> ;
-                                          skos:prefLabel "Land" .
+                                          skos:narrower <http://www.esri-hub.com/categories/agriculture> ,
+                                                        <http://www.esri-hub.com/categories/elevation> ,
+                                                        <http://www.esri-hub.com/categories/environment> ,
+                                                        <http://www.esri-hub.com/categories/geology> ,
+                                                        <http://www.esri-hub.com/categories/soil> ;
+                                          skos:prefLabel "Land" ;
+                                          skos:related <http://www.esri-hub.com/categories/soil> .
+
+
+###  http://www.esri-hub.com/categories/land_cover
+<http://www.esri-hub.com/categories/land_cover> rdf:type owl:NamedIndividual ;
+                                                skos:prefLabel "Land Cover" .
 
 
 ###  http://www.esri-hub.com/categories/land_use
 <http://www.esri-hub.com/categories/land_use> rdf:type owl:NamedIndividual ;
+                                              skos:broader <http://www.esri-hub.com/categories/environment> ;
+                                              skos:narrower <http://www.esri-hub.com/categories/agriculture> ,
+                                                            <http://www.esri-hub.com/categories/elevation> ,
+                                                            <http://www.esri-hub.com/categories/geology> ,
+                                                            <http://www.esri-hub.com/categories/soil> ;
                                               skos:prefLabel "Land Use" .
+
+
+###  http://www.esri-hub.com/categories/landscape
+<http://www.esri-hub.com/categories/landscape> rdf:type owl:NamedIndividual ;
+                                               skos:prefLabel "Landscape" .
 
 
 ###  http://www.esri-hub.com/categories/law_enforcement
@@ -31189,6 +31446,11 @@ skos:prefLabel "Communications"@en .
                                                            <http://wordnet-rdf.princeton.edu/wn31/301426549-a> ,
                                                            <https://www2.usgs.gov/science/science.php?thcode=15&term=016> ;
                                               skos:topConceptOf <http://www.esri-hub.com/categories/hub_categories> .
+
+
+###  http://www.esri-hub.com/categories/natural_resources
+<http://www.esri-hub.com/categories/natural_resources> rdf:type owl:NamedIndividual ;
+                                                       skos:prefLabel "Natural Resources" .
 
 
 ###  http://www.esri-hub.com/categories/parcels
@@ -31238,6 +31500,12 @@ skos:prefLabel "Communications"@en .
                                                                         <https://www2.usgs.gov/science/science.php?thcode=2&term=628> .
 
 
+###  http://www.esri-hub.com/categories/plot
+<http://www.esri-hub.com/categories/plot> rdf:type owl:NamedIndividual ;
+                                          skos:prefLabel "Plot" ;
+                                          skos:related <http://www.esri-hub.com/categories/land> .
+
+
 ###  http://www.esri-hub.com/categories/police
 <http://www.esri-hub.com/categories/police> rdf:type owl:NamedIndividual ;
                                             skos:prefLabel "Police" .
@@ -31247,6 +31515,12 @@ skos:prefLabel "Communications"@en .
 <http://www.esri-hub.com/categories/policy> rdf:type owl:NamedIndividual ;
                                             skos:broader <http://www.esri-hub.com/categories/well-run> ;
                                             skos:prefLabel "Policy" .
+
+
+###  http://www.esri-hub.com/categories/population
+<http://www.esri-hub.com/categories/population> rdf:type owl:NamedIndividual ;
+                                                skos:altLabel "población" ;
+                                                skos:prefLabel "Population" .
 
 
 ###  http://www.esri-hub.com/categories/pothole
@@ -31290,6 +31564,28 @@ skos:prefLabel "Communications"@en .
                                                 skos:topConceptOf <http://www.esri-hub.com/categories/hub_categories> .
 
 
+###  http://www.esri-hub.com/categories/public_safety
+<http://www.esri-hub.com/categories/public_safety> rdf:type owl:NamedIndividual ;
+                                                   skos:prefLabel "Public Safety" .
+
+
+###  http://www.esri-hub.com/categories/recreation
+<http://www.esri-hub.com/categories/recreation> rdf:type owl:NamedIndividual ;
+                                                skos:prefLabel "Recreation" ;
+                                                skos:related <http://id.loc.gov/authorities/subjects/sh85111955> ,
+                                                             <http://www.esri-hub.com/categories/healthy> .
+
+
+###  http://www.esri-hub.com/categories/risk
+<http://www.esri-hub.com/categories/risk> rdf:type owl:NamedIndividual ;
+                                          skos:prefLabel "Risk" .
+
+
+###  http://www.esri-hub.com/categories/rivers
+<http://www.esri-hub.com/categories/rivers> rdf:type owl:NamedIndividual ;
+                                            skos:prefLabel "Rivers" .
+
+
 ###  http://www.esri-hub.com/categories/roads
 <http://www.esri-hub.com/categories/roads> rdf:type owl:NamedIndividual ;
                                            skos:altLabel "routes" ,
@@ -31297,6 +31593,19 @@ skos:prefLabel "Communications"@en .
                                            skos:broader <http://www.esri-hub.com/categories/infrastructure> ;
                                            skos:prefLabel "Roads" ;
                                            skos:related <http://id.loc.gov/authorities/subjects/sh2007006139> .
+
+
+###  http://www.esri-hub.com/categories/rural
+<http://www.esri-hub.com/categories/rural> rdf:type owl:NamedIndividual ;
+                                           skos:prefLabel "Rural" ;
+                                           skos:related <http://id.loc.gov/authorities/subjects/sh85115897> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85115915> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85115918> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85115927> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85115928> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh87001253> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh88007046> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh91005962> .
 
 
 ###  http://www.esri-hub.com/categories/safe
@@ -31338,6 +31647,17 @@ skos:prefLabel "Communications"@en .
                                               skos:narrower <http://www.esri-hub.com/categories/border_security> ,
                                                             <http://www.esri-hub.com/categories/cyber_security> ;
                                               skos:prefLabel "Security" .
+
+
+###  http://www.esri-hub.com/categories/soil
+<http://www.esri-hub.com/categories/soil> rdf:type owl:NamedIndividual ;
+                                          skos:broader <http://www.esri-hub.com/categories/land> ,
+                                                       <http://www.esri-hub.com/categories/land_use> ;
+                                          skos:prefLabel "Soil" ;
+                                          skos:related <http://id.loc.gov/authorities/subjects/sh85124340> ,
+                                                       <http://id.loc.gov/authorities/subjects/sh85124376> ,
+                                                       <http://id.loc.gov/authorities/subjects/sh85124389> ,
+                                                       <http://id.loc.gov/authorities/subjects/sh85124466> .
 
 
 ###  http://www.esri-hub.com/categories/streets
@@ -31393,9 +31713,41 @@ skos:prefLabel "Communications"@en .
                                                  skos:topConceptOf <http://www.esri-hub.com/categories/hub_categories> .
 
 
+###  http://www.esri-hub.com/categories/teachers
+<http://www.esri-hub.com/categories/teachers> rdf:type owl:NamedIndividual ;
+                                              skos:prefLabel "Teachers" ;
+                                              skos:related <http://www.esri-hub.com/categories/education> ,
+                                                           <http://www.esri-hub.com/categories/school> ,
+                                                           <http://www.esri-hub.com/categories/students> .
+
+
+###  http://www.esri-hub.com/categories/threat
+<http://www.esri-hub.com/categories/threat> rdf:type owl:NamedIndividual ;
+                                            skos:prefLabel "Threat" .
+
+
+###  http://www.esri-hub.com/categories/topographic
+<http://www.esri-hub.com/categories/topographic> rdf:type owl:NamedIndividual ;
+                                                 skos:prefLabel "Topographic" .
+
+
+###  http://www.esri-hub.com/categories/tourism
+<http://www.esri-hub.com/categories/tourism> rdf:type owl:NamedIndividual ;
+                                             skos:prefLabel "Tourism" .
+
+
 ###  http://www.esri-hub.com/categories/traffic
 <http://www.esri-hub.com/categories/traffic> rdf:type owl:NamedIndividual ;
-                                             skos:prefLabel "Traffic" .
+                                             skos:prefLabel "Traffic" ;
+                                             skos:related <http://id.loc.gov/authorities/subjects/sh94001356> ,
+                                                          <http://www.esri-hub.com/categories/commute> ,
+                                                          <http://www.esri-hub.com/categories/transportation> .
+
+
+###  http://www.esri-hub.com/categories/trails
+<http://www.esri-hub.com/categories/trails> rdf:type owl:NamedIndividual ;
+                                            skos:prefLabel "Trails" ;
+                                            skos:related <http://www.esri-hub.com/categories/healthy> .
 
 
 ###  http://www.esri-hub.com/categories/transportation
@@ -31426,6 +31778,29 @@ skos:prefLabel "Communications"@en .
                                                                  <https://www2.usgs.gov/science/science.php?thcode=2&term=1689> .
 
 
+###  http://www.esri-hub.com/categories/urban
+<http://www.esri-hub.com/categories/urban> rdf:type owl:NamedIndividual ;
+                                           skos:prefLabel "Urban" ;
+                                           skos:related <http://id.loc.gov/authorities/subjects/sh85141304> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141306> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141307> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141309> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141322> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141324> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141329> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh85141331> ,
+                                                        <http://id.loc.gov/authorities/subjects/sh98001733> ,
+                                                        <http://lod.nal.usda.gov/nalt/26581> .
+
+
+###  http://www.esri-hub.com/categories/vulnerability
+<http://www.esri-hub.com/categories/vulnerability> rdf:type owl:NamedIndividual ;
+                                                   skos:altLabel "vulnerabilidad" ;
+                                                   skos:prefLabel "Vulnerability" ;
+                                                   skos:related <http://www.esri-hub.com/categories/disaster> ,
+                                                                <http://www.esri-hub.com/categories/healthy> .
+
+
 ###  http://www.esri-hub.com/categories/water
 <http://www.esri-hub.com/categories/water> rdf:type owl:NamedIndividual ;
                                            skos:broader <http://id.loc.gov/authorities/subjects/sh85040427> ,
@@ -31449,6 +31824,11 @@ skos:prefLabel "Communications"@en .
                                                          <http://id.loc.gov/authorities/subjects/sh85145514> ,
                                                          <http://id.loc.gov/authorities/subjects/sh86001876> ;
                                            skos:prefLabel "Water" .
+
+
+###  http://www.esri-hub.com/categories/water_quality
+<http://www.esri-hub.com/categories/water_quality> rdf:type owl:NamedIndividual ;
+                                                   skos:prefLabel "Water Quality" .
 
 
 ###  http://www.esri-hub.com/categories/weather
@@ -31497,6 +31877,10 @@ skos:prefLabel "Communications"@en .
                                                                           skos:Concept ;
                                                                  skos:broader <http://www.esri-hub.com/categories/climate> ;
                                                                  skos:prefLabel "Precipitation (atmospheric)" .
+
+
+###  http://www.esri-hub.com/places/school
+<http://www.esri-hub.com/places/school> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.w3.org/2006/03/wn/wn20/instances/synset-acculturation-noun-2
@@ -32141,8 +32525,7 @@ skos:prefLabel "Communications"@en .
 <https://www2.usgs.gov/science/science.php?thcode=2&term=168> rdf:type owl:NamedIndividual ,
                                                                        skos:Concept ;
                                                               skos:broader <http://www.esri-hub.com/categories/climate> ;
-                                                              skos:prefLabel "Climate change" ;
-                                                              skos:related <http://www.esri-hub.com/categories/climate> .
+                                                              skos:prefLabel "Climate change" .
 
 
 ###  https://www2.usgs.gov/science/science.php?thcode=2&term=1684

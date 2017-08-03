@@ -1,0 +1,171 @@
+#top tags for hub categories
+#source: Open Data site (18 months of data, Jan 2016 – June 2017)
+#http://kibana.koopernetes.com/
+
+,7/26/2017 Hub,top tags for category,related (dropdown)
+block,1837,"Census (360)
+Transportation (165)
+Population (157)
+Demographics (155)
+Police (153)","block groups - percentage children, percent asthma, percent diabetes, percent hh income, pop density"
+city,9957,"Boundaries (972)
+Transportation (762)
+Open Data (721)
+Planning (574)
+Police (452)","city of bellingham properties, """" neighborhoods, city owned parking lots, city flood zones"
+county,14453,"Boundaries (1,320)
+Transportation (1,160)
+Open Data (847)
+Planning (774)
+County (763)","county owned lands, county owned, county preserves, county managed"
+metro_area,226,"Transportation (119)
+Metro (111)
+Transit (100)
+Wmata (95)
+Bus (94)",-
+monument,609,"National Park Service (355)
+Imr (325)
+New Mexico (122)
+Transportation (97)
+Arizona (89)","monumentale, monumenten, monumental"
+neighborhood,743,"Boundaries (118)
+Neighborhoods (113)
+Neighborhood (90)
+Planning (80)
+Open Data (58)","neighborhood associations, """" police problems, """" organization boundaries, """" with snap data"
+parcel,2739,"Parcels (706)
+Parcel (296)
+Open Data (272)
+Property (260)
+Boundaries (169)","parcel boundaries, centroids, map index"
+park,6076,"Parks (980)
+National Park Service (943)
+Transportation (780)
+Imr (685)
+Parking (550)","park and ride, parking lots, parks and rec"
+school,2102,"Education (516)
+Schools (499)
+School (303)
+Boundaries (236)
+Open Data (149)","attendance, districts"
+
+Category,7/26/2017 Hub,top tags for category
+Safe,346,"A Safe City (81)
+La (81)
+Safety (63)
+County Of La (51)"
+Crime,347,"Crime (181)
+Police (124)
+Incident (56)
+Public Safety (48)
+Safety (47)"
+Disaster,400,"Disaster (128)
+Fema (110)
+Declarations (69)
+Designated (69)
+Cusco (60)"
+Emergency Response,1831,"Boundaries (211)
+Emergency (208)
+Emergency Response (138)
+California (110)
+Blight Problems (104)"
+Prosperous,640,"Nws (155)
+Noaa (145)
+Landscape (95)
+Weather (93)
+Idp-Gis (80)"
+Demographics,1517,"Demographics (727)
+Population (396)
+Census (308)
+Boundaries (294)
+People (145)"
+Economy,2001,"Economy (230)
+Economic Development (156)
+Economic (128)
+Planning (115)
+Society (111)"
+Education,1658,"Education (826)
+Schools (248)
+Population (150)
+Demographics (147)
+School (128)"
+Sustainable,640,"Noaa (183)
+Cyclones (182)
+Hurricanes (181)
+Tropical Storms. Tropical Depressions (181)
+Nws (126)"
+Climate,844,"Climate (214)
+Climate Change (166)
+Noaa (138)
+Landscape (85)
+Environment (83)"
+Energy,853,"Energy (171)
+Environment (92)
+Water (80)
+Landscape (78)
+Energie (65)"
+Infrastructure,2586,"Infrastructure (1,235)
+Water (410)
+Africa (252)
+Transportation (244)
+Osm (236)"
+Healthy,2017,"Health (1,129)
+Indiana (193)
+Sites (167)
+Facilities (164)
+Boundaries (145)"
+Agriculture,2276,"Agriculture (421)
+Water (318)
+Usda (248)
+U.S. Department Of Agriculture (236)
+Geospatial (222)"
+Disease,347,"Health (91)
+Water (87)
+Health Datapalooza (58)
+California (53)
+Irwm (50)"
+Health-Care,308,"Healthcare (146)
+Health (111)
+A-16 (68)
+A16 (65)
+Health Datapalooza (58)"
+Liveable,134,"A Livable City (79)
+La (79)
+Los Angeles (79)
+County Of La (50)
+Locations (39)"
+Culture,1077,"Cultural (149)
+Society (129)
+Environment (102)
+Culture (98)
+Maryland (81)"
+Housing,2300,"Housing (356)
+Noaa (257)
+Nws (221)
+Boundaries (148)
+Census (147)"
+Transportation,7472,"Transportation (4,156)
+Roads (594)
+Ohio (449)
+Open Data (426)
+Lbrs (403)"
+Well-Run,3863,"Boundaries (632)
+Administrative Boundaries (559)
+Administrative (466)
+Wfs (274)
+Wms (259)"
+Boundaries,11809,"Boundaries (3,784)
+Boundary (1,087)
+Noaa (1,013)
+Open Data (951)
+Enc (884)"
+Financial,626,"Finance (86)
+Kenya (59)
+Environment (56)
+Finance - Open Data (36)
+Idot (36)"
+Planning & Land Use,374,"Water (113)
+Irwm (94)
+Sierra Water Workgroup (94)
+Workgroup (94)
+California (70)"

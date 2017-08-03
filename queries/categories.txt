@@ -1,4 +1,6 @@
-#hub categories
+#hub categories (enter as search terms)
+#source:Hub Open Data site (08/03/2017)
+#https://hub.arcgis.com/pages/open-data
 safe
   crime
   disaster
@@ -23,6 +25,3 @@ well-run
   boundaries
   financial
   planning & land use
-
-#most common queries
-property, boundaries, parcels, crime, transportation, water, parks, roads, traffic, zoning, land use, infrastructure, salaries, building, potholes

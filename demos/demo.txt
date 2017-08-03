@@ -1,0 +1,30 @@
+Semantically-enabled search by category, language, geography:
+- LANGUAGE (Spanish, Japanese)
+- GEOGRAPHY (City, Neighborhood)...
+Expanded Tags (Synonyms, Translation)
+Broader, Narrower, Related, , )
+...
+
+Federally maintained thesauri [LCSH, USGS, (MIL, EPA, etc.)]
+Other thesauri [WordNet, DBpedia, (Schema.org, GD ont, etc.)]
+
+transportation (290)
+demographics (236)
+education (214)
+boundaries (195)
+* water (193)
+planning (179)
+health (128)
+agriculture (121)
+* flood (106)
+parcels (96)
+* water quality (63)
+* rivers (62)
+streets (54)
+school (46)
+* groundwater (24)
+* hydrography (19)
+* streamflow (8)
+* invasive (8)
+student (5)
+collision (2)

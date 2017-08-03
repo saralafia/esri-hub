@@ -1,0 +1,179 @@
+#top queries (exc. Geoplatform & UN queries)
+#source: Open Data site (18 months of data, Jan 2016 – June 2017)
+#http://kibana.koopernetes.com/
+
+boundaries (2,562)
+land use (2,329)
+water (2,429)
+property (1,462)
+roads (951)
+parcels (923)
+building (901)
+zoning (893)
+crime (747)
+traffic (733)
+parks (703)
+transportation (551)
+infrastructure (127)
+salaries (90)
+potholes (5)
+
+#place
+,7/26/2017 Hub,(Date Range) Kibana,top queries for string
+block,1837,638,"block	285
+ block group	184
+ census block	98
+ block groups	93
+ low to moderate income population by block group	34"
+city,9957,3107,"city	937
+ city limits	453
+ City Limits	393
+ city boundary	290
+ city boundaries	185"
+county,14453,7105,"county	1,272
+ County Services	570
+ County Facilities	488
+ county government	360
+ Local Authority District to County Lookup in England	291"
+metro_area,226,16,"metro area	7
+ dc metro area	2
+ *Washington, DC metro area	1
+ Metro FMR Area	1
+ Washington MEtro area	1"
+monument,609,109,"monument	74
+ National Monument	10
+ coastal range monument locations	7
+ tuzigoot national monument	4
+ *monument	4"
+neighborhood,743,336,"neighborhood	990
+ Neighborhood Associations	106
+ neighborhood clusters	89
+ neighborhood names	63
+ neighborhood boundaries	55"
+parcel,2739,1318,"parcel	8,098
+ *parcel	983
+ Tax Parcel Boundaries	665
+ Parcel	477
+ PARCEL	191"
+park,6076,2716,"park	2,170
+ Park	237
+ national park	102
+ state park	95
+ national park service	62"
+school,2102,1194,"school	1,739
+ school districts	365
+ school district	133
+ School Districts	117
+ School	92"
+
+ #category
+ Category,(Date Range) Kibana,top queries for string
+ Safe,45,"safe	20
+  safe routes to school	7
+  safe routes	5
+  a safe city	5
+  Safe	4"
+ Crime,747,"crime	3,520
+  Crime	393
+  *crime	221
+  crime incidents	121
+  crime incidents - 2016	85"
+ Disaster,41,"Disaster Management	172
+  disaster	41
+  natural disaster	6
+  national natural disaster inventory	5
+  Disaster	4
+  *disaster	"
+ Emergency Response,294,"emergency	344
+  Emergency	332
+  Emergency Response	205
+  Emergency Management	179
+  emergency response	31"
+ Prosperous,-,-
+ Demographics,201,"Demographics	4,028
+  demographics	2,604
+  DEMOGRAPHICS	331
+  ncrpo demographics	25
+  *demographics	19"
+ Economy,25,"Business and Economy	1,210
+  economy	1,066
+  Economy	367
+  business and economy	14
+  Business Economy	5"
+ Education,297,"education	3,955
+  Education	866
+  FFX-Education	161
+  education youth	72
+  arts and education	37"
+ Sustainable,22,"Sustainable cities	27
+  sustainable	14
+  sustainable communities regional planning grantees	4
+  sustainable community	4
+  Sustainable Communities Regional Planning Grantees	4"
+ Climate,107,"climate	449
+  atmosphere and climate	399
+  climate change	72
+  Climate Change	70
+  Climate	22"
+ Energy,235,"energy	357
+  Energy	111
+  renewable energy	31
+  Clean Energy	30
+  Department of Energy	28"
+ Infrastructure,127,"infrastructure	3,377
+  Infrastructure	3,367
+  TxDOT Infrastructure	338
+  Public Works, Infrastructure, Stormwater	210
+  stormwater infrastructure	78"
+ Healthy,27,"healthy food	9
+  healthy	6
+  828 healthy way	3
+  healthy corner stores	3
+  healthy corner	2"
+ Agriculture,122,"agriculture	966
+  Agriculture	614
+  Department of Agriculture	28
+  urban agriculture	11
+  *agriculture	7"
+ Disease,87,"disease	93
+  heart disease	20
+  disease statistics	10
+  Disease	9
+  lyme disease	5"
+ Health-Care,1065,"health	3,599
+  Public Health	1,608
+  Health	735
+  health and human resources	697
+  Health Lookups	412"
+ Liveable,1,*Liveable landscapes	1
+ Culture,37,"Arts and Culture and Tourism	295
+  culture	293
+  arts culture and history	171
+  Libraries Arts Culture	123
+  Arts Culture Tourism	96"
+ Housing,616,"housing	1,468
+  Public Housing Developments	803
+  Low Income Housing Tax Credit Properties	761
+  Housing Choice Vouchers by Tract	506
+  Public Housing Authorities	483"
+ Transportation,551,"transportation	14,357
+  Transportation	11,668
+  TRANSPORTATION	625
+  FFX-Transportation	368
+  vision zero safety (transportation)	257"
+ Well-Run,1,a well-run city	6
+ Boundaries,2562,"Boundaries	24,581
+  boundaries	12,454
+  CTYUA Boundaries	1,316
+  planning boundaries	1,184
+  Administrative Boundaries	1,163"
+ Financial,53,"Financial	94
+  financial	46
+  campaign financial contributions	19
+  Business and Financial	14
+  campaign financial expenditures	7"
+ Planning & Land Use,9,"Land Use Planning	6
+  land use planning	5
+  PLANNING land use	3
+  Planning Land Use By Parcel	3
+  land use planning areas	3"
